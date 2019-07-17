@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Bellamy">
+  
+  
+  
+  <link rel="prev" href="https://bellamy0.github.io/2019/markdown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/" />
+  
+  <link rel="canonical" href="https://bellamy0.github.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Hugo学习指南 | Bellamy
+       
+  </title>
+  <meta name="title" content="Hugo学习指南 | Bellamy">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/bellamy0.github.io\/"
+    },
+    "articleSection" : "posts",
+    "name" : "Hugo学习指南",
+    "headline" : "Hugo学习指南",
+    "description" : "一、安装hugo 准备  文件操作  创建一个新文件夹，D:\\Hugo 创建一个新文件夹，D:\\Hugo\\bin 创建一个新文件夹，D:\\Hugo\\Sites  下载hugo  在浏览器中打开 https:\/\/github.com\/spf13\/hugo\/releases。 当前的版本是 hugo_0.55.6_Windows-64bit.zip。 下载那个 ZIP 文件，并保存到 D:\\Hugo\\bin 文件夹中。 解压之后得到三个文件hugo.exe、LICENSE、README.md 确保 hugo.exe 文件在 D:\\Hugo\\bin 文件夹。（如果你没有在D:\\Hugo\\bin 请把它移动去） 把 hugo.exe 可执行文件添加到你的 PATH路径中。把hugo添加到path中的操作：\n我的电脑邮件右键属性，在高级里面，选择环境变量，在系统变量里面找到path。双击打开path编辑，新建路径输入D:\\hugo\\bin（作者这里是D:\\hugo\\bin，其他的自己改路径）\n   二、部署hugo  验证：打开cmd，用hugo help 验证，有提示输出则为安装成功 输入cmd命令\nD:\\Hugo\\Sites\x26gt; hugo new site 你的昵称.org 建网站  用cmd输入(bellamy0处改为你自己站点的名字):\nD:\\Hugo\\Sites\x26gt; hugo new site bellamy0.org\n这样就会在sites目录里面生成bellamy0.org的文件夹用来存放网站文件等。 创建about页面，输入：\nhugo new post\/first.md\n 创建第一篇文章，输入：\nhugo new about.md\n 打开 post\/first.md 编辑blog内容。\n发布时需要将draft：true改为draft：false  安装皮肤",
+    "inLanguage" : "en-us",
+    "author" : "Bellamy",
+    "creator" : "Bellamy",
+    "publisher": "Bellamy",
+    "accountablePerson" : "Bellamy",
+    "copyrightHolder" : "Bellamy",
+    "copyrightYear" : "2019",
+    "datePublished": "2019-07-14 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2019-07-14 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/bellamy0.github.io\/2019\/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97\/",
+    "wordCount" : "72",
+    "keywords" : [ "hugo","博客", "Bellamy"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.github.io/">Bellamy</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.github.io/">Bellamy</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Hugo学习指南</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://bellamy0.github.io/" rel="author">Bellamy</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2019-07-14 itemprop="datePublished">July 14, 2019</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://bellamy0.github.io/categories/%E5%8D%9A%E5%AE%A2%E5%AD%A6%E4%B9%A0/"> 博客学习 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h1 id="一-安装hugo">一、安装hugo</h1>
+
+<h2 id="准备">准备</h2>
+
+<ul>
+<li>文件操作
+
+<ol>
+<li>创建一个新文件夹，D:\Hugo</li>
+<li>创建一个新文件夹，D:\Hugo\bin</li>
+<li>创建一个新文件夹，D:\Hugo\Sites</li>
+</ol></li>
+<li>下载hugo
+
+<ol>
+<li>在浏览器中打开 <a href="https://github.com/spf13/hugo/releases。" rel="nofollow noreferrer" target="_blank">https://github.com/spf13/hugo/releases。</a></li>
+<li>当前的版本是 hugo_0.55.6_Windows-64bit.zip。</li>
+<li>下载那个 ZIP 文件，并保存到 D:\Hugo\bin 文件夹中。</li>
+<li>解压之后得到三个文件hugo.exe、LICENSE、README.md</li>
+<li>确保 hugo.exe 文件在 D:\Hugo\bin 文件夹。（如果你没有在D:\Hugo\bin 请把它移动去）</li>
+<li>把 hugo.exe 可执行文件添加到你的 PATH路径中。把hugo添加到path中的操作：<br />
+我的电脑邮件右键属性，在高级里面，选择环境变量，在系统变量里面找到path。双击打开path编辑，新建路径输入D:\hugo\bin（作者这里是D:\hugo\bin，其他的自己改路径）<br />
+<br /></li>
+</ol></li>
+</ul>
+
+<h1 id="二-部署hugo">二、部署hugo</h1>
+
+<ol>
+<li>验证：打开cmd，用hugo help 验证，有提示输出则为安装成功</li>
+<li>输入cmd命令<br />
+<code>D:\Hugo\Sites&gt; hugo new site 你的昵称.org</code></li>
+<li>建网站
+
+<ol>
+<li>用cmd输入(bellamy0处改为你自己站点的名字):<br />
+<code>D:\Hugo\Sites&gt; hugo new site bellamy0.org</code><br />
+这样就会在sites目录里面生成bellamy0.org的文件夹用来存放网站文件等。</li>
+<li>创建about页面，输入：<br />
+<code>hugo new post/first.md</code><br /></li>
+<li>创建第一篇文章，输入：<br />
+<code>hugo new about.md</code><br /></li>
+<li>打开 post/first.md 编辑blog内容。<br />
+发布时需要将draft：true改为draft：false</li>
+</ol></li>
+
+<li><p>安装皮肤</p>
+
+<ol>
+<li>在站点目录下生成themes文件夹，随后用cmd在站点下运行：<br />
+<code>cd themes</code><br />
+<code>git clone + 皮肤的github地址</code>
+<br /></li>
+</ol>
+
+<p>皮肤下载地址：<a href="https://www.gohugo.org/theme/" rel="nofollow noreferrer" target="_blank">https://www.gohugo.org/theme/</a><br />
+  根据不同皮肤的提示安装。</p></li>
+</ol>
+
+<h1 id="三-部署到github">三、部署到github</h1>
+
+<h1 id="四-问题">四、问题</h1>
+
+<ul>
+<li>中文乱码：修改编码方式为UTF-8
+<br />
+<br /></li>
+</ul>
+
+<h1 id="五-后续修改方式">五、后续修改方式</h1>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Bellamy </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://bellamy0.github.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/>https://bellamy0.github.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://bellamy0.github.io/tags/hugo/">
+                    #hugo</a></span>
+            
+            <span class="tag"><a href="https://bellamy0.github.io/tags/%E5%8D%9A%E5%AE%A2/">
+                    #博客</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://bellamy0.github.io/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://bellamy0.github.io/2019/markdown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/" class="prev" rel="prev" title="MarkDown语法学习"><i class="iconfont icon-left"></i>&nbsp;MarkDown语法学习</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2019</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://bellamy0.github.io/">Bellamy</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
