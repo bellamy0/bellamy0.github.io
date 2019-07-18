@@ -63,4 +63,4 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
-Sitemap: https://bellamy0.github.io/sitemap.xml
+Sitemap: https://bellamy0.gitHub.io/sitemap.xml

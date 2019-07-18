@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Bellamy</title>
-    <link>https://bellamy0.github.io/posts/</link>
+    <link>https://bellamy0.gitHub.io/posts/</link>
     <description>Recent content in Posts on Bellamy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 14 Jul 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://bellamy0.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://bellamy0.gitHub.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo学习指南</title>
-      <link>https://bellamy0.github.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</link>
+      <link>https://bellamy0.gitHub.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</link>
       <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://bellamy0.github.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</guid>
+      <guid>https://bellamy0.gitHub.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</guid>
       <description>一、安装hugo 准备  文件操作  创建一个新文件夹，D:\Hugo 创建一个新文件夹，D:\Hugo\bin 创建一个新文件夹，D:\Hugo\Sites  下载hugo  在浏览器中打开 https://github.com/spf13/hugo/releases。 当前的版本是 hugo_0.55.6_Windows-64bit.zip。 下载那个 ZIP 文件，并保存到 D:\Hugo\bin 文件夹中。 解压之后得到三个文件hugo.exe、LICENSE、README.md 确保 hugo.exe 文件在 D:\Hugo\bin 文件夹。（如果你没有在D:\Hugo\bin 请把它移动去） 把 hugo.exe 可执行文件添加到你的 PATH路径中。把hugo添加到path中的操作：
 我的电脑邮件右键属性，在高级里面，选择环境变量，在系统变量里面找到path。双击打开path编辑，新建路径输入D:\hugo\bin（作者这里是D:\hugo\bin，其他的自己改路径）
    二、部署hugo  验证：打开cmd，用hugo help 验证，有提示输出则为安装成功 输入cmd命令
@@ -32,28 +32,28 @@ hugo new about.md
     
     <item>
       <title>MarkDown语法学习</title>
-      <link>https://bellamy0.github.io/2019/markdown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/</link>
+      <link>https://bellamy0.gitHub.io/2019/markdown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/</link>
       <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://bellamy0.github.io/2019/markdown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/</guid>
+      <guid>https://bellamy0.gitHub.io/2019/markdown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/</guid>
       <description> 标题： # 第一级标题 `&amp;lt;h1&amp;gt;` ## 第二级标题 `&amp;lt;h2&amp;gt;` ### 第三级标题 `&amp;lt;h3&amp;gt;` #### 第二四级标题 `&amp;lt;h4&amp;gt;` ##### 第五级标题 `&amp;lt;h5&amp;gt;` ###### 第六级标题 `&amp;lt;h6&amp;gt;`  </description>
     </item>
     
     <item>
       <title>First</title>
-      <link>https://bellamy0.github.io/2019/first/</link>
+      <link>https://bellamy0.gitHub.io/2019/first/</link>
       <pubDate>Fri, 12 Jul 2019 12:01:01 +0800</pubDate>
       
-      <guid>https://bellamy0.github.io/2019/first/</guid>
+      <guid>https://bellamy0.gitHub.io/2019/first/</guid>
       <description>测试</description>
     </item>
     
     <item>
       <title>HTTP/2 Server Push in Hugo</title>
-      <link>https://bellamy0.github.io/2017/http2-server-push-in-hugo/</link>
+      <link>https://bellamy0.gitHub.io/2017/http2-server-push-in-hugo/</link>
       <pubDate>Mon, 24 Jul 2017 18:36:00 +0200</pubDate>
       
-      <guid>https://bellamy0.github.io/2017/http2-server-push-in-hugo/</guid>
+      <guid>https://bellamy0.gitHub.io/2017/http2-server-push-in-hugo/</guid>
       <description>Netlify recently announced support for HTTP/2 server push, and we have now added it to the gohugo.io sites for the main CSS and JS bundles, along with server-side 301 redirect support.
 If you navigate to https://gohugo.io and look in the Chrome developer network console, you should now see Push as the new source (&amp;ldquo;Initiator&amp;rdquo;) for the CSS and JSS:
 Setting up this in Hugo was easy:
@@ -62,10 +62,10 @@ Setting up this in Hugo was easy:
     
     <item>
       <title>(Hu)go Template Primer</title>
-      <link>https://bellamy0.github.io/2014/goisforlovers/</link>
+      <link>https://bellamy0.gitHub.io/2014/goisforlovers/</link>
       <pubDate>Mon, 28 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://bellamy0.github.io/2014/goisforlovers/</guid>
+      <guid>https://bellamy0.gitHub.io/2014/goisforlovers/</guid>
       <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
 This document is a brief primer on using go templates.</description>
     </item>

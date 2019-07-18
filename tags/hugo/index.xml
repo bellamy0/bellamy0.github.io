@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hugo on Bellamy</title>
-    <link>https://bellamy0.github.io/tags/hugo/</link>
+    <link>https://bellamy0.gitHub.io/tags/hugo/</link>
     <description>Recent content in hugo on Bellamy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 14 Jul 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://bellamy0.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://bellamy0.gitHub.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo学习指南</title>
-      <link>https://bellamy0.github.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</link>
+      <link>https://bellamy0.gitHub.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</link>
       <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://bellamy0.github.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</guid>
+      <guid>https://bellamy0.gitHub.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</guid>
       <description>一、安装hugo 准备  文件操作  创建一个新文件夹，D:\Hugo 创建一个新文件夹，D:\Hugo\bin 创建一个新文件夹，D:\Hugo\Sites  下载hugo  在浏览器中打开 https://github.com/spf13/hugo/releases。 当前的版本是 hugo_0.55.6_Windows-64bit.zip。 下载那个 ZIP 文件，并保存到 D:\Hugo\bin 文件夹中。 解压之后得到三个文件hugo.exe、LICENSE、README.md 确保 hugo.exe 文件在 D:\Hugo\bin 文件夹。（如果你没有在D:\Hugo\bin 请把它移动去） 把 hugo.exe 可执行文件添加到你的 PATH路径中。把hugo添加到path中的操作：
 我的电脑邮件右键属性，在高级里面，选择环境变量，在系统变量里面找到path。双击打开path编辑，新建路径输入D:\hugo\bin（作者这里是D:\hugo\bin，其他的自己改路径）
    二、部署hugo  验证：打开cmd，用hugo help 验证，有提示输出则为安装成功 输入cmd命令

@@ -2,7 +2,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://bellamy0.github.io/about/</loc>
+      <loc>https://bellamy0.gitHub.io/about/</loc>
       
       <lastmod>2019-07-14T00:00:00+00:00</lastmod>
       
@@ -12,19 +12,7 @@
     </url>
   
     <url>
-      <loc>https://bellamy0.github.io/</loc>
-      
-      <lastmod>2019-07-14T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://bellamy0.github.io/categories/</loc>
+      <loc>https://bellamy0.gitHub.io/</loc>
       
       <lastmod>2019-07-14T00:00:00+00:00</lastmod>
       
@@ -36,27 +24,7 @@
     </url>
   
     <url>
-      <loc>https://bellamy0.github.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</loc>
-      
-      <lastmod>2019-07-14T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://bellamy0.github.io/2019/markdown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/</loc>
-      
-      <lastmod>2019-07-14T00:00:00+00:00</lastmod>
-      
-      
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://bellamy0.github.io/posts/</loc>
+      <loc>https://bellamy0.gitHub.io/categories/</loc>
       
       <lastmod>2019-07-14T00:00:00+00:00</lastmod>
       
@@ -68,7 +36,27 @@
     </url>
   
     <url>
-      <loc>https://bellamy0.github.io/tags/</loc>
+      <loc>https://bellamy0.gitHub.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</loc>
+      
+      <lastmod>2019-07-14T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://bellamy0.gitHub.io/2019/markdown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/</loc>
+      
+      <lastmod>2019-07-14T00:00:00+00:00</lastmod>
+      
+      
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://bellamy0.gitHub.io/posts/</loc>
       
       <lastmod>2019-07-14T00:00:00+00:00</lastmod>
       
@@ -80,7 +68,7 @@
     </url>
   
     <url>
-      <loc>https://bellamy0.github.io/tags/hugo/</loc>
+      <loc>https://bellamy0.gitHub.io/tags/</loc>
       
       <lastmod>2019-07-14T00:00:00+00:00</lastmod>
       
@@ -92,7 +80,7 @@
     </url>
   
     <url>
-      <loc>https://bellamy0.github.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
+      <loc>https://bellamy0.gitHub.io/tags/hugo/</loc>
       
       <lastmod>2019-07-14T00:00:00+00:00</lastmod>
       
@@ -104,7 +92,7 @@
     </url>
   
     <url>
-      <loc>https://bellamy0.github.io/categories/%E5%8D%9A%E5%AE%A2%E5%AD%A6%E4%B9%A0/</loc>
+      <loc>https://bellamy0.gitHub.io/tags/%E5%8D%9A%E5%AE%A2/</loc>
       
       <lastmod>2019-07-14T00:00:00+00:00</lastmod>
       
@@ -116,7 +104,7 @@
     </url>
   
     <url>
-      <loc>https://bellamy0.github.io/tags/%E7%BD%91%E9%A1%B5/</loc>
+      <loc>https://bellamy0.gitHub.io/categories/%E5%8D%9A%E5%AE%A2%E5%AD%A6%E4%B9%A0/</loc>
       
       <lastmod>2019-07-14T00:00:00+00:00</lastmod>
       
@@ -128,7 +116,19 @@
     </url>
   
     <url>
-      <loc>https://bellamy0.github.io/2019/first/</loc>
+      <loc>https://bellamy0.gitHub.io/tags/%E7%BD%91%E9%A1%B5/</loc>
+      
+      <lastmod>2019-07-14T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://bellamy0.gitHub.io/2019/first/</loc>
       
       <lastmod>2019-07-12T12:01:01+08:00</lastmod>
       
@@ -138,7 +138,7 @@
     </url>
   
     <url>
-      <loc>https://bellamy0.github.io/2017/http2-server-push-in-hugo/</loc>
+      <loc>https://bellamy0.gitHub.io/2017/http2-server-push-in-hugo/</loc>
       
       <lastmod>2017-07-24T18:36:00+02:00</lastmod>
       
@@ -148,7 +148,7 @@
     </url>
   
     <url>
-      <loc>https://bellamy0.github.io/categories/blog/</loc>
+      <loc>https://bellamy0.gitHub.io/categories/blog/</loc>
       
       <lastmod>2017-07-24T18:36:00+02:00</lastmod>
       
@@ -160,7 +160,7 @@
     </url>
   
     <url>
-      <loc>https://bellamy0.github.io/2014/goisforlovers/</loc>
+      <loc>https://bellamy0.gitHub.io/2014/goisforlovers/</loc>
       
       <lastmod>2014-07-28T00:00:00+00:00</lastmod>
       
@@ -170,19 +170,7 @@
     </url>
   
     <url>
-      <loc>https://bellamy0.github.io/categories/uncategorized/</loc>
-      
-      <lastmod>2014-07-28T00:00:00+00:00</lastmod>
-      
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://bellamy0.github.io/tags/development/</loc>
+      <loc>https://bellamy0.gitHub.io/categories/uncategorized/</loc>
       
       <lastmod>2014-07-28T00:00:00+00:00</lastmod>
       
@@ -194,7 +182,7 @@
     </url>
   
     <url>
-      <loc>https://bellamy0.github.io/tags/go/</loc>
+      <loc>https://bellamy0.gitHub.io/tags/development/</loc>
       
       <lastmod>2014-07-28T00:00:00+00:00</lastmod>
       
@@ -206,7 +194,7 @@
     </url>
   
     <url>
-      <loc>https://bellamy0.github.io/tags/golang/</loc>
+      <loc>https://bellamy0.gitHub.io/tags/go/</loc>
       
       <lastmod>2014-07-28T00:00:00+00:00</lastmod>
       
@@ -218,7 +206,7 @@
     </url>
   
     <url>
-      <loc>https://bellamy0.github.io/tags/templates/</loc>
+      <loc>https://bellamy0.gitHub.io/tags/golang/</loc>
       
       <lastmod>2014-07-28T00:00:00+00:00</lastmod>
       
@@ -230,7 +218,19 @@
     </url>
   
     <url>
-      <loc>https://bellamy0.github.io/tags/themes/</loc>
+      <loc>https://bellamy0.gitHub.io/tags/templates/</loc>
+      
+      <lastmod>2014-07-28T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://bellamy0.gitHub.io/tags/themes/</loc>
       
       <lastmod>2014-07-28T00:00:00+00:00</lastmod>
       
