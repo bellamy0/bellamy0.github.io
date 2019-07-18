@@ -108,6 +108,14 @@
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;五-后续修改方式&#34;&gt;五、后续修改方式&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;用cmd进入public文件中，执行：&lt;br /&gt;
+&lt;code&gt;git add -A&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;git commit -m &amp;quot;xxxx&amp;quot;&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;git push -u orgin master&lt;/code&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     
