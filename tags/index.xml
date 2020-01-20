@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Bellamy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bellamy0.gitHub.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>html</title>
+      <link>https://bellamy0.gitHub.io/tags/html/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>前端</title>
+      <link>https://bellamy0.gitHub.io/tags/%E5%89%8D%E7%AB%AF/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/tags/%E5%89%8D%E7%AB%AF/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>hugo</title>
@@ -35,51 +53,6 @@
       <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bellamy0.gitHub.io/tags/%E7%BD%91%E9%A1%B5/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>development</title>
-      <link>https://bellamy0.gitHub.io/tags/development/</link>
-      <pubDate>Mon, 28 Jul 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://bellamy0.gitHub.io/tags/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>go</title>
-      <link>https://bellamy0.gitHub.io/tags/go/</link>
-      <pubDate>Mon, 28 Jul 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://bellamy0.gitHub.io/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>golang</title>
-      <link>https://bellamy0.gitHub.io/tags/golang/</link>
-      <pubDate>Mon, 28 Jul 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://bellamy0.gitHub.io/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>templates</title>
-      <link>https://bellamy0.gitHub.io/tags/templates/</link>
-      <pubDate>Mon, 28 Jul 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://bellamy0.gitHub.io/tags/templates/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>themes</title>
-      <link>https://bellamy0.gitHub.io/tags/themes/</link>
-      <pubDate>Mon, 28 Jul 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://bellamy0.gitHub.io/tags/themes/</guid>
       <description></description>
     </item>
     

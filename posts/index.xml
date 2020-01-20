@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Bellamy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bellamy0.gitHub.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>html学习①</title>
+      <link>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%B8%80/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid>
+      <description>#1.VSCode编辑器 ##快捷键的使用 ctrl + a:全选 ctrl + z、ctrl + y: 撤销、前进 shift + end：从头选中一行 shift + home：从尾部选中一行 shift + alt + ↓：快速复制一行 alt + ↑或↓：快速移动一行</description>
+    </item>
     
     <item>
       <title>Hugo学习指南</title>
@@ -37,37 +46,6 @@ hugo new about.md
       
       <guid>https://bellamy0.gitHub.io/2019/markdown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/</guid>
       <description> 标题： # 第一级标题 `&amp;lt;h1&amp;gt;` ## 第二级标题 `&amp;lt;h2&amp;gt;` ### 第三级标题 `&amp;lt;h3&amp;gt;` #### 第二四级标题 `&amp;lt;h4&amp;gt;` ##### 第五级标题 `&amp;lt;h5&amp;gt;` ###### 第六级标题 `&amp;lt;h6&amp;gt;`  </description>
-    </item>
-    
-    <item>
-      <title>First</title>
-      <link>https://bellamy0.gitHub.io/2019/first/</link>
-      <pubDate>Fri, 12 Jul 2019 12:01:01 +0800</pubDate>
-      
-      <guid>https://bellamy0.gitHub.io/2019/first/</guid>
-      <description>测试</description>
-    </item>
-    
-    <item>
-      <title>HTTP/2 Server Push in Hugo</title>
-      <link>https://bellamy0.gitHub.io/2017/http2-server-push-in-hugo/</link>
-      <pubDate>Mon, 24 Jul 2017 18:36:00 +0200</pubDate>
-      
-      <guid>https://bellamy0.gitHub.io/2017/http2-server-push-in-hugo/</guid>
-      <description>Netlify recently announced support for HTTP/2 server push, and we have now added it to the gohugo.io sites for the main CSS and JS bundles, along with server-side 301 redirect support.
-If you navigate to https://gohugo.io and look in the Chrome developer network console, you should now see Push as the new source (&amp;ldquo;Initiator&amp;rdquo;) for the CSS and JSS:
-Setting up this in Hugo was easy:
-1. Configure Netlify Output Formats Add a new custom media type and two new output formats to config.</description>
-    </item>
-    
-    <item>
-      <title>(Hu)go Template Primer</title>
-      <link>https://bellamy0.gitHub.io/2014/goisforlovers/</link>
-      <pubDate>Mon, 28 Jul 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://bellamy0.gitHub.io/2014/goisforlovers/</guid>
-      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.</description>
     </item>
     
   </channel>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端学习 on Bellamy</title>
+    <link>https://bellamy0.gitHub.io/categories/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 前端学习 on Bellamy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bellamy0.gitHub.io/categories/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>html学习①</title>
+      <link>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%B8%80/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid>
+      <description>#1.VSCode编辑器 ##快捷键的使用 ctrl + a:全选 ctrl + z、ctrl + y: 撤销、前进 shift + end：从头选中一行 shift + home：从尾部选中一行 shift + alt + ↓：快速复制一行 alt + ↑或↓：快速移动一行</description>
+    </item>
+    
+  </channel>
+</rss>
