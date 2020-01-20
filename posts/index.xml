@@ -17,7 +17,12 @@
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid>
-      <description>#1.VSCode编辑器 ##快捷键的使用 ctrl + a:全选 ctrl + z、ctrl + y: 撤销、前进 shift + end：从头选中一行 shift + home：从尾部选中一行 shift + alt + ↓：快速复制一行 alt + ↑或↓：快速移动一行</description>
+      <description>1.VSCode编辑器 快捷键的使用 ctrl + a:全选
+ctrl + z、ctrl + y: 撤销、前进
+shift + end：从头选中一行
+shift + home：从尾部选中一行
+shift + alt + ↓：快速复制一行
+alt + ↑或↓：快速移动一行</description>
     </item>
     
     <item>

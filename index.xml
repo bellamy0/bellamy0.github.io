@@ -14,13 +14,17 @@
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid>
-      <description>&lt;p&gt;#1.VSCode编辑器
-##快捷键的使用
-   &lt;code&gt;ctrl + a:全选&lt;/code&gt;
-   &lt;code&gt;ctrl + z、ctrl + y: 撤销、前进&lt;/code&gt;
-   &lt;code&gt;shift + end：从头选中一行&lt;/code&gt;
-   &lt;code&gt;shift + home：从尾部选中一行&lt;/code&gt;
-   &lt;code&gt;shift + alt + ↓：快速复制一行&lt;/code&gt;
+      <description>
+
+&lt;h1 id=&#34;1-vscode编辑器&#34;&gt;1.VSCode编辑器&lt;/h1&gt;
+
+&lt;h2 id=&#34;快捷键的使用&#34;&gt;快捷键的使用&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;ctrl + a:全选&lt;/code&gt;&lt;br /&gt;
+   &lt;code&gt;ctrl + z、ctrl + y: 撤销、前进&lt;/code&gt;&lt;br /&gt;
+   &lt;code&gt;shift + end：从头选中一行&lt;/code&gt;&lt;br /&gt;
+   &lt;code&gt;shift + home：从尾部选中一行&lt;/code&gt;&lt;br /&gt;
+   &lt;code&gt;shift + alt + ↓：快速复制一行&lt;/code&gt;&lt;br /&gt;
    &lt;code&gt;alt + ↑或↓：快速移动一行&lt;/code&gt;&lt;/p&gt;
 </description>
     </item>
