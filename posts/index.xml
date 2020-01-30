@@ -57,7 +57,9 @@ hugo new about.md
       <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bellamy0.gitHub.io/2019/markdown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/</guid>
-      <description> 1.标题：  · 代码 # 第一级标题 `&amp;lt;h1&amp;gt;` ## 第二级标题 `&amp;lt;h2&amp;gt;` ### 第三级标题 `&amp;lt;h3&amp;gt;` #### 第二四级标题 `&amp;lt;h4&amp;gt;` ##### 第五级标题 `&amp;lt;h5&amp;gt;` ###### 第六级标题 `&amp;lt;h6&amp;gt;` · 效果  第一级标题 第二级标题 第三级标题 第二四级标题 第五级标题 第六级标题 </description>
+      <description> 1.标题： · 代码  # 第一级标题 ## 第二级标题 ### 第三级标题 #### 第四级标题 ##### 第五级标题 ###### 第六级标题 
+· 效果
+第一级标题 第二级标题 第三级标题 第四级标题 第五级标题 第六级标题 </description>
     </item>
     
   </channel>
