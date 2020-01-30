@@ -16,7 +16,7 @@
       <guid>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid>
       <description>
 
-&lt;h1 id=&#34;1-vscode编辑器&#34;&gt;1.VSCode编辑器&lt;/h1&gt;
+&lt;h1 id=&#34;一-vscode编辑器&#34;&gt;一.VSCode编辑器&lt;/h1&gt;
 
 &lt;h2 id=&#34;快捷键的使用&#34;&gt;快捷键的使用&lt;/h2&gt;
 
@@ -25,7 +25,33 @@
    &lt;code&gt;shift + end：从头选中一行&lt;/code&gt;&lt;br /&gt;
    &lt;code&gt;shift + home：从尾部选中一行&lt;/code&gt;&lt;br /&gt;
    &lt;code&gt;shift + alt + ↓：快速复制一行&lt;/code&gt;&lt;br /&gt;
-   &lt;code&gt;alt + ↑或↓：快速移动一行&lt;/code&gt;&lt;/p&gt;
+   &lt;code&gt;alt + ↑或↓：快速移动一行&lt;/code&gt;&lt;br /&gt;
+   &lt;code&gt;单词+tab：快速形成标签&amp;lt;单词&amp;gt;&lt;/code&gt;&lt;br /&gt;
+   &lt;code&gt;!+tab:快速创建html初始代码&lt;/code&gt;&lt;br /&gt;
+   &lt;code&gt;ctrl+/:快速生成/删除注释&lt;/code&gt;&lt;br /&gt;
+   &lt;code&gt;shift+alt+a：快速生成/删除注释&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;二-html初始代码&#34;&gt;二.html初始代码&lt;/h1&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;      //文档声明：html文件
+   &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;    //html文件最外层标签：初始为英文网站(lang=&amp;quot;zh-CN&amp;quot;表示中文)
+    &amp;lt;head&amp;gt;       //头部（通常为输入网址的那一栏）
+            &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;  //元信息：编写网页中的赋值信息，此处为采用国际编码
+            &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; //头部处的标题
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;          //页面中的所有内容
+    &amp;lt;/body&amp;gt;
+   &amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;三-标题与段落&#34;&gt;三.标题与段落&lt;/h1&gt;
+
+&lt;h2 id=&#34;1-标题-双标签-h1-h1-h6-h6&#34;&gt;1.标题：双标签（&lt;h1&gt;&lt;/h1&gt;……&lt;h6&gt;&lt;/h6&gt;)&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;   一个页面中只能有一个h1，其余标题无限制。   
+   h5、h6在开发中不常用
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;2-段落-双标签-p-p&#34;&gt;2.段落：双标签（&lt;p&gt;&lt;/p&gt;）&lt;/h2&gt;
 </description>
     </item>
     
