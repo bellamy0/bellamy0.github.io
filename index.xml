@@ -18,7 +18,7 @@
 
 &lt;h1 id=&#34;一-vscode编辑器&#34;&gt;一.VSCode编辑器&lt;/h1&gt;
 
-&lt;h2 id=&#34;快捷键的使用&#34;&gt;快捷键的使用&lt;/h2&gt;
+&lt;h3 id=&#34;快捷键的使用&#34;&gt;快捷键的使用&lt;/h3&gt;
 
 &lt;p&gt;&lt;code&gt;ctrl + a:全选&lt;/code&gt;&lt;br /&gt;
    &lt;code&gt;ctrl + z、ctrl + y: 撤销、前进&lt;/code&gt;&lt;br /&gt;
@@ -33,25 +33,28 @@
 
 &lt;h1 id=&#34;二-html初始代码&#34;&gt;二.html初始代码&lt;/h1&gt;
 
-&lt;p&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;      //文档声明：html文件
-   &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;    //html文件最外层标签：初始为英文网站(lang=&amp;quot;zh-CN&amp;quot;表示中文)
-    &amp;lt;head&amp;gt;       //头部（通常为输入网址的那一栏）
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;      //文档声明：html文件
+    &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;    //html文件最外层标签：初始为英文网站(lang=&amp;quot;zh-CN&amp;quot;表示中文)
+        &amp;lt;head&amp;gt;       //头部（通常为输入网址的那一栏）
             &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;  //元信息：编写网页中的赋值信息，此处为采用国际编码
             &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; //头部处的标题
-    &amp;lt;/head&amp;gt;
-    &amp;lt;body&amp;gt;          //页面中的所有内容
+        &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;  
+        //页面中的所有内容
     &amp;lt;/body&amp;gt;
-   &amp;lt;/html&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&amp;lt;/html&amp;gt;`     
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h1 id=&#34;三-标题与段落&#34;&gt;三.标题与段落&lt;/h1&gt;
 
-&lt;h2 id=&#34;1-标题-双标签-h1-h1-h6-h6&#34;&gt;1.标题：双标签（&lt;h1&gt;&lt;/h1&gt;……&lt;h6&gt;&lt;/h6&gt;)&lt;/h2&gt;
+&lt;h2 id=&#34;1-标题-双标签-h1-h1-h6-h6&#34;&gt;1.标题：双标签（&amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;……&amp;lt;h6&amp;gt;&amp;lt;/h6&amp;gt;)&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;   一个页面中只能有一个h1，其余标题无限制。   
-   h5、h6在开发中不常用
-&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;一个页面中只能有一个h1，其余标题无限制。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;h5、h6在开发中不常用&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&#34;2-段落-双标签-p-p&#34;&gt;2.段落：双标签（&lt;p&gt;&lt;/p&gt;）&lt;/h2&gt;
+&lt;h2 id=&#34;2-段落-双标签-p-p&#34;&gt;2.段落：双标签（&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;）&lt;/h2&gt;
 </description>
     </item>
     
@@ -197,8 +200,7 @@
 &lt;p&gt;1.2 方法二: 在第一/二级标题下分别加=====/&amp;mdash;&amp;mdash;&amp;ndash;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;效果&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;效果&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;第一级标题&#34;&gt;第一级标题&lt;/h1&gt;
@@ -364,8 +366,9 @@
 
 &lt;blockquote&gt;
 &lt;p&gt;第一层&lt;br /&gt;
-&amp;gt; 第二层&lt;br /&gt;
-&amp;gt; &amp;gt; 第三层&lt;/p&gt;
+ &amp;gt; 第二层&lt;br /&gt;
+ &amp;gt;
+ &amp;gt; &amp;gt; 第三层&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h1 id=&#34;5-代码&#34;&gt;5.代码&lt;/h1&gt;
@@ -433,23 +436,23 @@
 &lt;li&gt;效果：&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://github.com/bellamy0/bellamy0.github.io/tree/master/images/0.jpg&#34; alt=&#34;表情包&#34; title=&#34;cat&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/0.jpg&#34; alt=&#34;表情包&#34; title=&#34;cat&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;7.2 对图片地址使用变量：&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;![属性文本][1]&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;[1]:https://github.com/bellamy0/bellamy0.github.io/tree/master/images/0.jpg&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;[1]:https://github.com/bellamy0/bellamy0.github.io/blob/master/images/0.jpg&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;7.3 指定图片高度与宽度：&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;https://github.com/bellamy0/bellamy0.github.io/tree/master/images/0.jpg&amp;quot; width=&amp;quot;50%&amp;quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;https://github.com/bellamy0/bellamy0.github.io/blob/master/images/0.jpg&amp;quot; width=&amp;quot;50%&amp;quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;效果：&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://github.com/bellamy0/bellamy0.github.io/tree/master/images/0.jpg&#34; width=&#34;50%&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;../images/0.jpg&#34; width=&#34;50%&#34;&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;8-表格&#34;&gt;8.表格&lt;/h1&gt;
 
@@ -493,6 +496,10 @@
 &lt;p&gt;&lt;code&gt;:-左对齐&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;:-: 居中对齐&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;9-转义&#34;&gt;9.转义&lt;/h1&gt;
+
+&lt;p&gt;9.1 方法：前面加&lt;/p&gt;
 </description>
     </item>
     
