@@ -197,14 +197,15 @@
 &lt;p&gt;注意：在最后一个#后必须有空格！&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;方法二: 在第一/二级标题下分别加=====/&amp;mdash;&amp;mdash;&amp;ndash;&lt;br /&gt;
+&lt;li&gt;&lt;p&gt;方法二: 在第一/二级标题下分别加=====/&amp;mdash;&amp;mdash;&amp;ndash;&lt;/p&gt;
 
+&lt;ul&gt;
+&lt;li&gt;效果&lt;br /&gt;
 &lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;效果&lt;/p&gt;
-
 &lt;h1 id=&#34;第一级标题&#34;&gt;第一级标题&lt;/h1&gt;
 
 &lt;h2 id=&#34;第二级标题&#34;&gt;第二级标题&lt;/h2&gt;
@@ -232,12 +233,10 @@
 
 &lt;p&gt;&lt;code&gt;_斜体文本_&lt;/code&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;效果：&lt;em&gt;斜体文本&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
 &lt;ul&gt;
-&lt;li&gt;粗体：&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;效果：&lt;em&gt;斜体文本&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;粗体：&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;code&gt;**粗体文本**&lt;/code&gt;&lt;/p&gt;
@@ -256,12 +255,10 @@
 
 &lt;p&gt;&lt;code&gt;___粗斜体文本___&lt;/code&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;效果：&lt;strong&gt;&lt;em&gt;粗斜体文本&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
 &lt;ul&gt;
-&lt;li&gt;分割线：在一行中用三个以上的星号、减号、底线来建立分割线、行内不能有其他东西（除空格）&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;效果：&lt;strong&gt;&lt;em&gt;粗斜体文本&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;分割线：在一行中用三个以上的星号、减号、底线来建立分割线、行内不能有其他东西（除空格）&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;code&gt;***&lt;/code&gt;&lt;/p&gt;
@@ -270,9 +267,9 @@
 
 &lt;p&gt;&lt;code&gt;___&lt;/code&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;效果：&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;效果：&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;hr /&gt;
 
@@ -282,19 +279,17 @@
 
 &lt;p&gt;&lt;code&gt;~~删除的文本~~&lt;/code&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;效果: &lt;del&gt;删除的文本&lt;/del&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
 &lt;ul&gt;
-&lt;li&gt;下划线：&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;效果: &lt;del&gt;删除的文本&lt;/del&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;下划线：&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;code&gt;&amp;lt;u&amp;gt;带下划线文本&amp;lt;/u&amp;gt;&lt;/code&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;效果：&lt;u&gt;带下划线文本&lt;/u&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;效果：&lt;u&gt;带下划线文本&lt;/u&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h1 id=&#34;3-列表&#34;&gt;3.列表&lt;/h1&gt;
 
@@ -308,57 +303,37 @@
 
 &lt;p&gt;&lt;code&gt;- 第一项&lt;/code&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;效果：&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;第一项&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;效果：&lt;br /&gt;
+&amp;gt; + 第一项&lt;br /&gt;
+&amp;gt;
+&amp;gt; + 第一项&lt;br /&gt;
+&amp;gt;
+&amp;gt; - 第一项&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;第一项&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;第一项&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;有序列表：数字+.+空格&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;有序列表：数字+.+空格&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;code&gt;1. 第一项&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;2. 第二项&lt;/code&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;第一项&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;第二项&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-
 &lt;ul&gt;
-&lt;li&gt;列表嵌套：  在子列表的选项中添加四个空格or一个tab键&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;效果：
+&amp;gt; 1. 第一项&lt;br /&gt;
+&amp;gt; 2. 第二项&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;列表嵌套：  在子列表的选项中添加四个空格or一个tab键&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;效果 :
+&amp;gt;
+&amp;gt; 1. 第一项：&lt;br /&gt;
+&amp;gt;     - 第一项嵌套元素&lt;br /&gt;
+&amp;gt;     - 第二项嵌套元素&lt;br /&gt;
+&amp;gt; 2.  第二项：
+&amp;gt;     - 第一项嵌套元素
+&amp;gt;     - 第二项嵌套元素&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;效果 :&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;第一项：&lt;br /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;第一项嵌套元素&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;第二项嵌套元素&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;第二项：
-
-&lt;ul&gt;
-&lt;li&gt;第一项嵌套元素&lt;/li&gt;
-&lt;li&gt;第二项嵌套元素&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
 
 &lt;h1 id=&#34;4-区块&#34;&gt;4.区块&lt;/h1&gt;
 
@@ -368,12 +343,10 @@
 
 &lt;p&gt;&lt;code&gt;&amp;gt; 内容&lt;/code&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;效果：&amp;mdash;-&lt;/p&gt;
-&lt;/blockquote&gt;
-
 &lt;ul&gt;
-&lt;li&gt;嵌套区块： &amp;gt;/&amp;gt;&amp;gt;/&amp;gt;&amp;gt;&amp;gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;效果：&amp;mdash;-&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;嵌套区块： &amp;gt;/&amp;gt;&amp;gt;/&amp;gt;&amp;gt;&amp;gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;code&gt;&amp;gt; 最外层&lt;/code&gt;&lt;/p&gt;
@@ -400,31 +373,25 @@
 
 &lt;p&gt;&lt;code&gt;&amp;gt; 1.第一项&lt;/code&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;效果:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;第一项&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-
 &lt;ul&gt;
-&lt;li&gt;列表中使用区块：在&amp;gt; 前加四个空格缩进&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;效果:
+&amp;gt; 1. 第一项&lt;/p&gt;&lt;/li&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;效果：&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;li&gt;&lt;p&gt;列表中使用区块：在&amp;gt; 前加四个空格缩进&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;效果：&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;第一项：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;gt; 内容1   
-&amp;gt;
-&amp;gt; 内容2   
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;内容1&lt;/p&gt;
+
+&lt;p&gt;内容2&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;第二项：&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;5-代码&#34;&gt;5.代码&lt;/h1&gt;
@@ -441,11 +408,9 @@
 &lt;li&gt;&lt;p&gt;代码区块法一：四个空格或一个tab&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;代码区块法二：用```包裹一段代码&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;效果：&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;li&gt;&lt;p&gt;效果：&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;  $(document).ready(function(){
       alert(&#39;RUNOOB&#39;);
@@ -466,21 +431,23 @@
 
 &lt;p&gt;&lt;code&gt;&amp;lt;链接地址&amp;gt;&lt;/code&gt;&lt;/p&gt;
 
+&lt;ul&gt;
+&lt;li&gt;效果：
+&amp;gt; 这是一个链接:&lt;a href=&#34;https://bellamy0.github.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;博客首页&lt;/a&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;blockquote&gt;
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;p&gt;这是一个链接:&lt;a href=&#34;https://bellamy0.github.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;博客首页&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;这是一个链接：&lt;a href=&#34;https://bellamy0.github.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://bellamy0.github.io/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-&lt;li&gt;高级链接：  链接可以用变量替代&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;高级链接：  链接可以用变量替代&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;效果：&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;效果：&lt;/p&gt;
-
 &lt;p&gt;这是一个链接：[博客首页][bokeshouye]&lt;/p&gt;
 
 &lt;p&gt;[bokeshouye]: &lt;a href=&#34;https://bellamy0.github.io&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://bellamy0.github.io&lt;/a&gt;&lt;/p&gt;
@@ -496,9 +463,9 @@
 
 &lt;p&gt;&lt;code&gt;![属性文本](图片地址 &amp;quot;可选标题&amp;quot;)&lt;/code&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;效果：&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;效果：&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;D:HugoSitesbellamy0.orgstaticimages0.jpg&#34; alt=&#34;表情包&#34; title=&#34;cat&#34; /&gt;&lt;/p&gt;
 
@@ -516,9 +483,9 @@
 
 &lt;p&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;D:\Hugo\Sites\bellamy0.org\static\images\0.jpg&amp;quot; width=&amp;quot;50%&amp;quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;效果：&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;效果：&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;D:\Hugo\Sites\bellamy0.org\static\images\0.jpg&#34; width=&#34;50%&#34;&gt;&lt;/p&gt;
 
@@ -532,11 +499,9 @@
 |单元格|单元格 |
 |单元格|单元格 |
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;blockquote&gt;
-&lt;p&gt;效果：&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;li&gt;&lt;p&gt;效果：&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
