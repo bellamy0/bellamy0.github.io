@@ -17,7 +17,7 @@
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid>
-      <description> 一.VSCode编辑器 快捷键的使用 ctrl + a:全选
+      <description>一.VSCode编辑器 快捷键的使用 ctrl + a:全选
 ctrl + z、ctrl + y: 撤销、前进
 shift + end：从头选中一行
 shift + home：从尾部选中一行
@@ -27,8 +27,12 @@ alt + ↑或↓：快速移动一行
 !+tab:快速创建html初始代码
 ctrl+/:快速生成/删除注释
 shift+alt+a：快速生成/删除注释
-二.html初始代码 &amp;lt;!DOCTYPE html&amp;gt; //文档声明：html文件 &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; //html文件最外层标签：初始为英文网站(lang=&amp;quot;zh-CN&amp;quot;表示中文) &amp;lt;head&amp;gt; //头部（通常为输入网址的那一栏） &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; //元信息：编写网页中的赋值信息，此处为采用国际编码 &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; //头部处的标题 &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; //页面中的所有内容 &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;`  三.标题与段落 1.标题：双标签（&amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;……&amp;lt;h6&amp;gt;&amp;lt;/h6&amp;gt;)  一个页面中只能有一个h1，其余标题无限制。
- h5、h6在开发中不常用  2.段落：双标签（&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;） </description>
+二.html初始代码 &amp;lt;!DOCTYPE html&amp;gt; //文档声明：html文件 &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; //html文件最外层标签：初始为英文网站(lang=&amp;quot;zh-CN&amp;quot;表示中文) &amp;lt;head&amp;gt; //头部（通常为输入网址的那一栏） &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; //元信息：编写网页中的赋值信息，此处为采用国际编码 &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; //头部处的标题 &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; //页面中的所有内容 &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;`  三.标题与段落 1.标题  双标签（&amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;……&amp;lt;h6&amp;gt;&amp;lt;/h6&amp;gt;)
+ 一个页面中只能有一个h1，其余标题无限制。
+ h5、h6在开发中不常用
+  2.段落  双标签（&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;）
+  3. 文本修饰标签  &amp;lt;strong&amp;gt;&amp;lt;/strong&amp;gt;:加粗
+ &amp;lt;em&amp;gt;&amp;lt;/em&amp;gt;:斜体</description>
     </item>
     
     <item>

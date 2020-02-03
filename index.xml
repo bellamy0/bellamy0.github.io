@@ -18,7 +18,7 @@
 
 &lt;h1 id=&#34;一-vscode编辑器&#34;&gt;一.VSCode编辑器&lt;/h1&gt;
 
-&lt;h3 id=&#34;快捷键的使用&#34;&gt;快捷键的使用&lt;/h3&gt;
+&lt;h4 id=&#34;快捷键的使用&#34;&gt;快捷键的使用&lt;/h4&gt;
 
 &lt;p&gt;&lt;code&gt;ctrl + a:全选&lt;/code&gt;&lt;br /&gt;
    &lt;code&gt;ctrl + z、ctrl + y: 撤销、前进&lt;/code&gt;&lt;br /&gt;
@@ -47,14 +47,375 @@
 
 &lt;h1 id=&#34;三-标题与段落&#34;&gt;三.标题与段落&lt;/h1&gt;
 
-&lt;h2 id=&#34;1-标题-双标签-h1-h1-h6-h6&#34;&gt;1.标题：双标签（&amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;……&amp;lt;h6&amp;gt;&amp;lt;/h6&amp;gt;)&lt;/h2&gt;
+&lt;h4 id=&#34;1-标题&#34;&gt;1.标题&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;一个页面中只能有一个h1，其余标题无限制。&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;h5、h6在开发中不常用&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;双标签（&amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;……&amp;lt;h6&amp;gt;&amp;lt;/h6&amp;gt;)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;一个页面中只能有一个h1，其余标题无限制。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;h5、h6在开发中不常用&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;2-段落-双标签-p-p&#34;&gt;2.段落：双标签（&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;）&lt;/h2&gt;
+&lt;h4 id=&#34;2-段落&#34;&gt;2.段落&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;双标签（&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;）&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;3-文本修饰标签&#34;&gt;3. 文本修饰标签&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;strong&amp;gt;&amp;lt;/strong&amp;gt;:加粗&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;em&amp;gt;&amp;lt;/em&amp;gt;:斜体&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;sub&amp;gt;&amp;lt;/sub&amp;gt;:下标&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;sup&amp;gt;&amp;lt;/sup&amp;gt;:上标&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;del&amp;gt;&amp;lt;/del&amp;gt;:删除文本&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;ins&amp;gt;&amp;lt;/ins&amp;gt;:插入文本&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;四-图片标签与图片属性&#34;&gt;四.图片标签与图片属性&lt;/h1&gt;
+
+&lt;h4 id=&#34;1-图片标志&#34;&gt;1.图片标志&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;img&amp;gt;单标签&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-形式&#34;&gt;2.形式&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;img src=&amp;ldquo;&amp;rdquo; alt=&amp;ldquo;&amp;rdquo;&amp;gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-图片属性&#34;&gt;2. 图片属性：&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;src：引入图片地址&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;alt：当图片出现问题时，显示一段图片提示文字&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;title: 提示信息（当鼠标移到图片上时）&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;width、height ：设置大小 (尽量加上宽高，能给用户更好体验)&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;五-引入文件的地址路径&#34;&gt;五.引入文件的地址路径&lt;/h1&gt;
+
+&lt;h4 id=&#34;1-相对路径&#34;&gt;1.相对路径&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;相对于某个文件&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&amp;rdquo;.&amp;ldquo;表示当前路径&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&amp;rdquo;..&amp;ldquo;表示上一级路径&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-绝对路径&#34;&gt;2.绝对路径&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;直接写整个地址、可去掉盘符用/开头&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;***注意尽量写&amp;rdquo;/&amp;ldquo;而非&amp;rdquo;\&amp;ldquo;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;六-跳转链接&#34;&gt;六.跳转链接&lt;/h1&gt;
+
+&lt;h4 id=&#34;1-标志&#34;&gt;1. 标志&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;a&amp;gt;&amp;lt;/a&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-形式-1&#34;&gt;2.形式&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;a herf=&amp;quot;http://www.baidu.com&amp;quot;&amp;gt;访问百度&amp;lt;/a&amp;gt; //用文字设置链接
+&amp;lt;a herf=&amp;quot;http://www/baidu.com&amp;quot;&amp;gt;
+    &amp;lt;img src=&amp;quot;.img/dog.jpg&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt; //用图片设置链接
+&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;3-属性&#34;&gt;3.属性&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;href属性：链接地址&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;target属性：可以改变链接打开的方式，默认为在当前页面打开：_self,在新页面打开为：_blank&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-改变链接默认行为的标签&#34;&gt;4.改变链接默认行为的标签&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&amp;lt;base&amp;gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;写在用于设置的&amp;lt;head&amp;gt;中,为单标签&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;形式&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;base target=&amp;quot;_blank&amp;quot;&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;七-跳转锚点&#34;&gt;七.跳转锚点&lt;/h1&gt;
+
+&lt;h4 id=&#34;1-标志-1&#34;&gt;1.标志&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;a&amp;gt;&amp;lt;/a&amp;gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-实现方法&#34;&gt;2.实现方法&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;#号 + id属性（id写在&amp;lt;h&amp;gt;内）&lt;/li&gt;
+&lt;li&gt;#号 + name属性（name写在&amp;lt;a&amp;gt;内）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-形式-2&#34;&gt;2.形式&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;body&amp;gt;
+    //法一
+    &amp;lt;a href=&amp;quot;#html&amp;quot;&amp;gt;HTML&amp;lt;/a&amp;gt;  //用href链接标题id，前面加#  
+    &amp;lt;h2 id=&amp;quot;html&amp;quot;&amp;gt;HTML超文本标记语言&amp;lt;/h2&amp;gt;
+    &amp;lt;p&amp;gt;模拟的段落&amp;lt;/p&amp;gt;
+    
+    //法二
+    &amp;lt;a href=&amp;quot;#html&amp;quot;&amp;gt;HTML&amp;lt;/a&amp;gt;  //用href链接标题id，前面加# 
+    
+    &amp;lt;a name=&amp;quot;html&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;
+    &amp;lt;h2 id=&amp;quot;html&amp;quot;&amp;gt;HTML超文本标记语言&amp;lt;/h2&amp;gt;
+    &amp;lt;p&amp;gt;模拟的段落&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;八-列表标签&#34;&gt;八. 列表标签&lt;/h1&gt;
+
+&lt;h4 id=&#34;1-无序标签&#34;&gt;1.无序标签&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;标志：&amp;lt;ul&amp;gt;&amp;lt;/ul&amp;gt;&amp;amp;&amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&amp;lt;ul&amp;gt;与&amp;lt;li&amp;gt;中间不能有别的标签,但是内部可以有别的标签，如&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;ul type=&amp;quot;value&amp;quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;有嵌套规范&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;形式&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;body&amp;gt;
+    &amp;lt;ul&amp;gt;
+        &amp;lt;li&amp;gt;第一项&amp;lt;/li&amp;gt;
+        &amp;lt;li&amp;gt;第二项&amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2-有序列表&#34;&gt;2.有序列表&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;标志：&amp;lt;ol&amp;gt;&amp;lt;/ol&amp;gt;&amp;amp;&amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;其余与无序列表相同&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;可用type改变 排序方式（用数字or罗马数字or英文字母排序）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;3-自定义列表&#34;&gt;3.自定义列表&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;标志：&amp;lt;dl&amp;gt;&amp;lt;\dl&amp;gt;、&amp;lt;dt&amp;gt;&amp;lt;/dt&amp;gt;、&amp;lt;dd&amp;gt;&amp;lt;/dd&amp;gt;&lt;/li&gt;
+&lt;li&gt;形式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;body&amp;gt;
+    &amp;lt;dl&amp;gt;
+        &amp;lt;dt&amp;gt;HTML&amp;lt;/dt&amp;gt;
+        &amp;lt;dd&amp;gt;超文本标记语言&amp;lt;/dd&amp;gt;
+    &amp;lt;/dl&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;有标题与标题内容的列表&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-嵌套列表&#34;&gt;4. 嵌套列表&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;形式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;body&amp;gt;
+    &amp;lt;ul&amp;gt;
+        &amp;lt;li&amp;gt;
+            四川省
+            &amp;lt;ul&amp;gt;
+                &amp;lt;li&amp;gt;成都市&amp;lt;/li&amp;gt;
+                &amp;lt;li&amp;gt;绵阳市&amp;lt;/li&amp;gt;
+            &amp;lt;/ul&amp;gt;
+        &amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;九-表格&#34;&gt;九.表格&lt;/h1&gt;
+
+&lt;h4 id=&#34;1-表格标签&#34;&gt;1.表格标签&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;table&amp;gt;:表格最外层容器&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;tr&amp;gt;:定义表格行&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;th&amp;gt;:定义表头&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;td&amp;gt;:定义表格单元&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;caption&amp;gt;:定义表格标题&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-形式-3&#34;&gt;2.形式&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;body&amp;gt;
+    &amp;lt;table&amp;gt;
+        &amp;lt;caption&amp;gt;天气预报&amp;lt;/caption&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;th&amp;gt;日期&amp;lt;/th&amp;gt;
+            &amp;lt;th&amp;gt;天气情况&amp;lt;/th&amp;gt;
+            &amp;lt;th&amp;gt;出行情况&amp;lt;/th&amp;gt;
+        &amp;lt;/tr&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;2020年2月3日&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;天气晴朗&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+    &amp;lt;/table&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;3-语义化标签&#34;&gt;3.语义化标签&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;更符合html规范 有利于合作：&amp;lt;tHead&amp;gt;、&amp;lt;tBody&amp;gt;、&amp;lt;tFood&amp;gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;body&amp;gt;
+    &amp;lt;table&amp;gt;
+        &amp;lt;caption&amp;gt;天气预报&amp;lt;/caption&amp;gt;
+        &amp;lt;tHead&amp;gt;
+            &amp;lt;tr&amp;gt;
+                &amp;lt;th&amp;gt;日期&amp;lt;/th&amp;gt;
+                &amp;lt;th&amp;gt;天气情况&amp;lt;/th&amp;gt;
+                &amp;lt;th&amp;gt;出行情况&amp;lt;/th&amp;gt;
+            &amp;lt;/tr&amp;gt;
+        &amp;lt;/tHead&amp;gt;
+        &amp;lt;tBody&amp;gt;
+            &amp;lt;tr&amp;gt;
+                &amp;lt;td&amp;gt;2020年2月3日&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;&amp;lt;img src=&amp;quot;&amp;quot; alt=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;天气晴朗&amp;lt;/td&amp;gt;
+            &amp;lt;/tr&amp;gt;
+        &amp;lt;/tBody&amp;gt;
+        &amp;lt;tFood&amp;gt;
+            
+        &amp;lt;/tFood&amp;gt;
+    &amp;lt;/table&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;注：在一个table中 ，tBody是可以多次出现的，tHead、tFood只能出现一次&lt;/p&gt;
+
+&lt;h4 id=&#34;4-表格属性&#34;&gt;4.表格属性&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;border：表格边框(加在&amp;lt;table&amp;gt;里)&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;cellpadding：单元格内的空间(加在&amp;lt;table&amp;gt;里)&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;cellspacing：单元格之间的空间(加在&amp;lt;table&amp;gt;里)&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;rowspan：合并行(加在&amp;lt;td&amp;gt;里)&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;colspan：合并列(加在&amp;lt;td&amp;gt;里)&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;align：左右对齐方式（right,left,center,加在&amp;lt;tr&amp;gt;里）&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;valign：上下对齐方式（top,middle,bottom,加在&amp;lt;tr&amp;gt;里）&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;十-表单&#34;&gt;十.表单&lt;/h1&gt;
+
+&lt;h4 id=&#34;1-表单标签&#34;&gt;1.表单标签&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;form&amp;gt;&amp;lt;/form&amp;gt;：表单的最外层容器&lt;/li&gt;
+&lt;li&gt;&amp;lt;input&amp;gt;：单标签，用于搜集用户信息，根据不同的type值展示不同的控件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;type属性&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;text&lt;/td&gt;
+&lt;td&gt;普通的文本输入框&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;password&lt;/td&gt;
+&lt;td&gt;密码输入框&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;checkbox&lt;/td&gt;
+&lt;td&gt;复选框&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;radio&lt;/td&gt;
+&lt;td&gt;单选框&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;file&lt;/td&gt;
+&lt;td&gt;上传文件&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;submit&lt;/td&gt;
+&lt;td&gt;提交按钮&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;reset&lt;/td&gt;
+&lt;td&gt;重置按钮&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+&lt;li&gt;形式&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;body&amp;gt;
+    &amp;lt;form action=&amp;quot;&amp;quot;&amp;gt;    //action为提交按钮的提交地址
+        &amp;lt;h2&amp;gt;输入框：&amp;lt;/h2&amp;gt;
+        &amp;lt;input type=&amp;quot;text&amp;quot; placeholder=&amp;quot;请输入用户名&amp;quot;&amp;gt;    //框内提示消息
+        &amp;lt;h2&amp;gt;密码框：&amp;lt;/h2&amp;gt;
+        &amp;lt;input type=&amp;quot;password&amp;quot; placeholder=&amp;quot;请输入密码&amp;quot;&amp;gt; //框内提示消息
+        &amp;lt;h2&amp;gt;复选框：&amp;lt;/h2&amp;gt;
+        &amp;lt;input type=&amp;quot;checkbox&amp;quot; checked&amp;gt;苹果       //checked让该项在开始就被选中
+        &amp;lt;input type=&amp;quot;checkbox&amp;quot; disabled&amp;gt;香蕉      //disabled禁止使用
+        &amp;lt;input type=&amp;quot;checkbox&amp;quot;&amp;gt;葡萄
+        &amp;lt;h2&amp;gt;单选框：&amp;lt;/h2&amp;gt;   //通过name使其成为一组，只能选一个
+        &amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;gender&amp;quot;&amp;gt;男
+        &amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;gender&amp;quot;&amp;gt;女
+        &amp;lt;h2&amp;gt;上传文件&amp;lt;/h2&amp;gt;
+        &amp;lt;input type=&amp;quot;file&amp;quot;&amp;gt;
+        &amp;lt;h2&amp;gt;提交按钮与重置按钮&amp;lt;/h2&amp;gt;
+        &amp;lt;input type=&amp;quot;submit&amp;quot;&amp;gt;
+        &amp;lt;input type=&amp;quot;reset&amp;quot;&amp;gt;    //重置整个表单
+    &amp;lt;/form&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -499,7 +860,7 @@
 
 &lt;h1 id=&#34;9-转义&#34;&gt;9.转义&lt;/h1&gt;
 
-&lt;p&gt;9.1 方法：前面加&lt;/p&gt;
+&lt;p&gt;9.1 方法：前面加\&lt;/p&gt;
 </description>
     </item>
     
