@@ -9,7 +9,7 @@
   
   
   
-  <link rel="prev" href="https://bellamy0.gitHub.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/" />
+  <link rel="prev" href="https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%BA%8C/" />
   
   <link rel="canonical" href="https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%B8%80/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -46,7 +46,7 @@
     "articleSection" : "posts",
     "name" : "html学习①",
     "headline" : "html学习①",
-    "description" : "一.VSCode编辑器 快捷键的使用 ctrl \x2b a:全选\nctrl \x2b z、ctrl \x2b y: 撤销、前进\nshift \x2b end：从头选中一行\nshift \x2b home：从尾部选中一行\nshift \x2b alt \x2b ↓：快速复制一行\nalt \x2b ↑或↓：快速移动一行\n单词\x2btab：快速形成标签\x26lt;单词\x26gt;\n!\x2btab:快速创建html初始代码\nctrl\x2b\/:快速生成\/删除注释\nshift\x2balt\x2ba：快速生成\/删除注释\n二.html初始代码 \x26lt;!DOCTYPE html\x26gt; \/\/文档声明：html文件 \x26lt;html lang=\x26quot;en\x26quot;\x26gt; \/\/html文件最外层标签：初始为英文网站(lang=\x26quot;zh-CN\x26quot;表示中文) \x26lt;head\x26gt; \/\/头部（通常为输入网址的那一栏） \x26lt;meta charset=\x26quot;UTF-8\x26quot;\x26gt; \/\/元信息：编写网页中的赋值信息，此处为采用国际编码 \x26lt;title\x26gt;Document\x26lt;\/title\x26gt; \/\/头部处的标题 \x26lt;\/head\x26gt; \x26lt;body\x26gt; \/\/页面中的所有内容 \x26lt;\/body\x26gt; \x26lt;\/html\x26gt;`  三.标题与段落 1.标题  双标签（\x26lt;h1\x26gt;\x26lt;\/h1\x26gt;……\x26lt;h6\x26gt;\x26lt;\/h6\x26gt;)\n 一个页面中只能有一个h1，其余标题无限制。\n h5、h6在开发中不常用\n  2.段落  双标签（\x26lt;p\x26gt;\x26lt;\/p\x26gt;）\n  3. 文本修饰标签  \x26lt;strong\x26gt;\x26lt;\/strong\x26gt;:加粗\n \x26lt;em\x26gt;\x26lt;\/em\x26gt;:斜体",
+    "description" : "[TOC]\n一.VSCode编辑器 快捷键的使用 ctrl \x2b a:全选\nctrl \x2b z、ctrl \x2b y: 撤销、前进\nshift \x2b end：从头选中一行\nshift \x2b home：从尾部选中一行\nshift \x2b alt \x2b ↓：快速复制一行\nalt \x2b ↑或↓：快速移动一行\n单词\x2btab：快速形成标签\x26lt;单词\x26gt;\n!\x2btab:快速创建html初始代码\nctrl\x2b\/:快速生成\/删除注释\nshift\x2balt\x2ba：快速生成\/删除注释\n二.html初始代码 \x26lt;!DOCTYPE html\x26gt; \/\/文档声明：html文件 \x26lt;html lang=\x26quot;en\x26quot;\x26gt; \/\/html文件最外层标签：初始为英文网站(lang=\x26quot;zh-CN\x26quot;表示中文) \x26lt;head\x26gt; \/\/头部（通常为输入网址的那一栏） \x26lt;meta charset=\x26quot;UTF-8\x26quot;\x26gt; \/\/元信息：编写网页中的赋值信息，此处为采用国际编码 \x26lt;title\x26gt;Document\x26lt;\/title\x26gt; \/\/头部处的标题 \x26lt;\/head\x26gt; \x26lt;body\x26gt; \/\/页面中的所有内容 \x26lt;\/body\x26gt; \x26lt;\/html\x26gt;`  三.标题与段落 1.标题  双标签（\x26lt;h1\x26gt;\x26lt;\/h1\x26gt;……\x26lt;h6\x26gt;\x26lt;\/h6\x26gt;)\n 一个页面中只能有一个h1，其余标题无限制。\n h5、h6在开发中不常用\n  2.段落  双标签（\x26lt;p\x26gt;\x26lt;\/p\x26gt;）\n  3. 文本修饰标签  \x26lt;strong\x26gt;\x26lt;\/strong\x26gt;:加粗",
     "inLanguage" : "en-us",
     "author" : "Bellamy",
     "creator" : "Bellamy",
@@ -57,7 +57,7 @@
     "datePublished": "2020-01-20 00:00:00 \x2b0000 UTC",
     "dateModified" : "2020-01-20 00:00:00 \x2b0000 UTC",
     "url" : "https:\/\/bellamy0.gitHub.io\/2020\/html%E5%AD%A6%E4%B9%A0%E4%B8%80\/",
-    "wordCount" : "314",
+    "wordCount" : "353",
     "keywords" : [ "html","前端", "Bellamy"]
 }
 </script>
@@ -147,6 +147,8 @@
           
 
           
+
+<p>[TOC]</p>
 
 <h1 id="一-vscode编辑器">一.VSCode编辑器</h1>
 
@@ -524,8 +526,12 @@
 </table>
 
 <ul>
-<li>形式<br /></li>
+<li>&lt;textarea&gt;&lt;/textarea&gt;：多行文本框<br /></li>
+<li>&lt;select&gt;……&lt;option&gt;&lt;/option&gt;……&lt;/select&gt;:下拉菜单<br /></li>
+<li>&lt;lable&gt;&lt;/lable&gt;：辅助表单，提升用户体验（点字也能选中）<br /></li>
 </ul>
+
+<p>形式</p>
 
 <pre><code class="language-html">&lt;body&gt;
     &lt;form action=&quot;&quot;&gt;    //action为提交按钮的提交地址
@@ -545,9 +551,35 @@
         &lt;h2&gt;提交按钮与重置按钮&lt;/h2&gt;
         &lt;input type=&quot;submit&quot;&gt;
         &lt;input type=&quot;reset&quot;&gt;    //重置整个表单
+        &lt;h2&gt;多行文本框&lt;/h2&gt;
+        &lt;textarea cols=&quot;&quot; rows=&quot;&quot;&gt;&lt;/textarea&gt;
+        &lt;h2&gt;下拉菜单&lt;/h2&gt;
+        &lt;select multiple size=&quot;&quot;&gt;   //multiple支持多选,size一次显示的个数
+            &lt;option selected disabled&gt;请选择&lt;/option&gt;  //selected为默认选中项,disabled为不能再次选择项目
+            &lt;option&gt;北京&lt;/option&gt;
+            &lt;option&gt;上海&lt;/option&gt; 
+            &lt;option&gt;杭州&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;h2&gt;单选框：&lt;/h2&gt;   //通过name使其成为一组，只能选一个
+        &lt;input type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;man&quot;&gt;&lt;lable for=&quot;man&quot;&gt;男&lt;/lable&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;gender&quot; id=&quot;woman&quot;&gt;&lt;lable for=&quot;woman&quot;&gt;女&lt;/lable&gt;
+        //for与id映射
     &lt;/form&gt;
 &lt;/body&gt;
 </code></pre>
+
+<h1 id="十一-特殊字符">十一.特殊字符</h1>
+
+<ul>
+<li>空格：插入&amp;nbsp;<br /></li>
+</ul>
+
+<h1 id="十二-div与span">十二.div与span</h1>
+
+<ul>
+<li>div（块）：划分区域的容器<br /></li>
+<li>span（内联）：修饰文字<br /></li>
+</ul>
 
     </div>
 
@@ -590,7 +622,7 @@
 
     <div class="post-nav">
         
-        <a href="https://bellamy0.gitHub.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/" class="prev" rel="prev" title="Hugo学习指南"><i class="iconfont icon-left"></i>&nbsp;Hugo学习指南</a>
+        <a href="https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%BA%8C/" class="prev" rel="prev" title="html学习②"><i class="iconfont icon-left"></i>&nbsp;html学习②</a>
          
         
     </div>

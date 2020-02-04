@@ -16,6 +16,8 @@
       <guid>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid>
       <description>
 
+&lt;p&gt;[TOC]&lt;/p&gt;
+
 &lt;h1 id=&#34;一-vscode编辑器&#34;&gt;一.VSCode编辑器&lt;/h1&gt;
 
 &lt;h4 id=&#34;快捷键的使用&#34;&gt;快捷键的使用&lt;/h4&gt;
@@ -392,8 +394,12 @@
 &lt;/table&gt;
 
 &lt;ul&gt;
-&lt;li&gt;形式&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;textarea&amp;gt;&amp;lt;/textarea&amp;gt;：多行文本框&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;select&amp;gt;……&amp;lt;option&amp;gt;&amp;lt;/option&amp;gt;……&amp;lt;/select&amp;gt;:下拉菜单&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;lable&amp;gt;&amp;lt;/lable&amp;gt;：辅助表单，提升用户体验（点字也能选中）&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;形式&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;body&amp;gt;
     &amp;lt;form action=&amp;quot;&amp;quot;&amp;gt;    //action为提交按钮的提交地址
@@ -413,9 +419,144 @@
         &amp;lt;h2&amp;gt;提交按钮与重置按钮&amp;lt;/h2&amp;gt;
         &amp;lt;input type=&amp;quot;submit&amp;quot;&amp;gt;
         &amp;lt;input type=&amp;quot;reset&amp;quot;&amp;gt;    //重置整个表单
+        &amp;lt;h2&amp;gt;多行文本框&amp;lt;/h2&amp;gt;
+        &amp;lt;textarea cols=&amp;quot;&amp;quot; rows=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/textarea&amp;gt;
+        &amp;lt;h2&amp;gt;下拉菜单&amp;lt;/h2&amp;gt;
+        &amp;lt;select multiple size=&amp;quot;&amp;quot;&amp;gt;   //multiple支持多选,size一次显示的个数
+            &amp;lt;option selected disabled&amp;gt;请选择&amp;lt;/option&amp;gt;  //selected为默认选中项,disabled为不能再次选择项目
+            &amp;lt;option&amp;gt;北京&amp;lt;/option&amp;gt;
+            &amp;lt;option&amp;gt;上海&amp;lt;/option&amp;gt; 
+            &amp;lt;option&amp;gt;杭州&amp;lt;/option&amp;gt;
+        &amp;lt;/select&amp;gt;
+        &amp;lt;h2&amp;gt;单选框：&amp;lt;/h2&amp;gt;   //通过name使其成为一组，只能选一个
+        &amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;gender&amp;quot; id=&amp;quot;man&amp;quot;&amp;gt;&amp;lt;lable for=&amp;quot;man&amp;quot;&amp;gt;男&amp;lt;/lable&amp;gt;
+        &amp;lt;input type=&amp;quot;radio&amp;quot; name=&amp;quot;gender&amp;quot; id=&amp;quot;woman&amp;quot;&amp;gt;&amp;lt;lable for=&amp;quot;woman&amp;quot;&amp;gt;女&amp;lt;/lable&amp;gt;
+        //for与id映射
     &amp;lt;/form&amp;gt;
 &amp;lt;/body&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;十一-特殊字符&#34;&gt;十一.特殊字符&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;空格：插入&amp;amp;nbsp;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;十二-div与span&#34;&gt;十二.div与span&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;div（块）：划分区域的容器&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;span（内联）：修饰文字&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>html学习②</title>
+      <link>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%BA%8C/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%BA%8C/</guid>
+      <description>
+
+&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;h1 id=&#34;一-css基础语法&#34;&gt;一.CSS基础语法&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;格式： 选择器{属性1：值1；属性2：值2}&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;基本样式：width、height、background-color&lt;/li&gt;
+&lt;li&gt;长度单位：px（像素）、%（相对于外容器的百分比）&lt;/li&gt;
+&lt;li&gt;css注释：/* 注释内容 */&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;形式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-HTML&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;
+    &amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;ie=edge&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt;
+    &amp;lt;style&amp;gt;     //&amp;lt;style&amp;gt; 内写css，此处为设置下方的div
+        div{ width:100px;height:100px;background-color:red }
+    &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;二-css样式的引入方式&#34;&gt;二.css样式的引入方式&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;内联样式：style属性&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;内部样式：style标签（可以复用标签，更优，看起来更简洁）&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;形式&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;
+    &amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;ie=edge&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt;
+    &amp;lt;style&amp;gt;     //&amp;lt;style&amp;gt; 内写css，此处为设置下方的div,内部样式
+        div{ width:100px;height:100px;background-color:red }
+    &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    //内联样式
+    &amp;lt;div style=&amp;quot;width:100px;height:100px;background-color:red&amp;quot;&amp;gt;
+        这是一个块
+    &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;外部样式：引入css文件&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;引入方式：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;法一：&amp;lt;link&amp;gt;引入外部资源&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;属性：rel（指定资源与页面的关系）、href（资源的地址）&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;法二：@import（不建议）&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;./common.css&amp;quot;&amp;gt; //法一
+    &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt;
+    &amp;lt;style&amp;gt;
+        @import url(&#39;./common.css&#39;);
+    &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;css文件形式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;div{ width:100px;height:100px;background-color:red }
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;三-css中的颜色表示法&#34;&gt;三.css中的颜色表示法&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;单词表示法&lt;/li&gt;
+&lt;li&gt;RGB表示法：rgb(0,0,0)~rgb(255,255,255)&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;十六进制表示法：#000000~#ffffff&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;提取颜色的下载地址： &lt;a href=&#34;https://www.baidufe.com/fehelper&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.baidufe.com/fehelper&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;四&#34;&gt;四.&lt;/h1&gt;
 </description>
     </item>
     
