@@ -6,19 +6,48 @@
     <description>Recent content in Posts on Bellamy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bellamy0.gitHub.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>CSS学习二</title>
+      <link>https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%BA%8C/</link>
+      <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%BA%8C/</guid>
+      <description>一.ID选择器  css：#elem{}
+ html：id=&amp;quot;elem&amp;quot;
+  &amp;lt;head&amp;gt; &amp;lt;style&amp;gt; #div1{ background: red;} #div2{ background: blue;} &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;quot;div1&amp;quot;&amp;gt; 这是一个块 &amp;lt;/div&amp;gt; &amp;lt;div id=&amp;quot;div2&amp;quot;&amp;gt; 这是另一个块 &amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt;   注意：
+ 在一个页面中ID值是唯一的，不可复用 命名的规范：由字母、下划线、中划线组成（第一位不能是数字） 快捷创建 容器名+#+id+tab
+ 小驼峰写法&amp;amp;短线写法&amp;amp;下划线写法
+   二.CLASS选择器  css：.elem{}
+ html：class=&amp;quot;elem&amp;quot;
+  &amp;lt;head&amp;gt; &amp;lt;style&amp;gt; .box{ background: red;} .content{ font-size:30px;} //④.启用下面时会过滤掉div中的仅使p生效 //p.box{ background:blue; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div class=&amp;quot;box&amp;quot;&amp;gt; 这是一个块 &amp;lt;/div&amp;gt; //①.可复用 &amp;lt;div class=&amp;quot;box&amp;quot;&amp;gt; 这又是一个块 &amp;lt;/div&amp;gt; //②.</description>
+    </item>
+    
+    <item>
+      <title>CSS学习一</title>
+      <link>https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%B8%80/</link>
+      <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid>
+      <description>一.CSS基础语法  格式： 选择器{属性1：值1；属性2：值2}
+ 基本样式：width、height、background-color 长度单位：px（像素）、%（相对于外容器的百分比） css注释：/* 注释内容 */
+ 形式  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;ie=edge&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; //&amp;lt;style&amp;gt; 内写css，此处为设置下方的div div{ width:100px;height:100px;background-color:red } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  二.css样式的引入方式  内联样式：style属性
+ 内部样式：style标签（可以复用标签，更优，看起来更简洁）
+ 形式
+  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;ie=edge&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; //&amp;lt;style&amp;gt; 内写css，此处为设置下方的div,内部样式 div{ width:100px;height:100px;background-color:red } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; //内联样式 &amp;lt;div style=&amp;quot;width:100px;height:100px;background-color:red&amp;quot;&amp;gt; 这是一个块 &amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;   外部样式：引入css文件</description>
+    </item>
+    
+    <item>
       <title>html学习①</title>
-      <link>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%B8%80/</link>
+      <link>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid>
-      <description>[TOC]
-一.VSCode编辑器 快捷键的使用 ctrl + a:全选
+      <guid>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0/</guid>
+      <description>一.VSCode编辑器 快捷键的使用 ctrl + a:全选
 ctrl + z、ctrl + y: 撤销、前进
 shift + end：从头选中一行
 shift + home：从尾部选中一行
@@ -32,22 +61,8 @@ shift+alt+a：快速生成/删除注释
  一个页面中只能有一个h1，其余标题无限制。
  h5、h6在开发中不常用
   2.段落  双标签（&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;）
-  3. 文本修饰标签  &amp;lt;strong&amp;gt;&amp;lt;/strong&amp;gt;:加粗</description>
-    </item>
-    
-    <item>
-      <title>html学习②</title>
-      <link>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%BA%8C/</link>
-      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0%E4%BA%8C/</guid>
-      <description>[TOC]
-一.CSS基础语法  格式： 选择器{属性1：值1；属性2：值2}
- 基本样式：width、height、background-color 长度单位：px（像素）、%（相对于外容器的百分比） css注释：/* 注释内容 */
- 形式  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;ie=edge&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; //&amp;lt;style&amp;gt; 内写css，此处为设置下方的div div{ width:100px;height:100px;background-color:red } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  二.css样式的引入方式  内联样式：style属性
- 内部样式：style标签（可以复用标签，更优，看起来更简洁）
- 形式
-  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;ie=edge&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;style&amp;gt; //&amp;lt;style&amp;gt; 内写css，此处为设置下方的div,内部样式 div{ width:100px;height:100px;background-color:red } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; //内联样式 &amp;lt;div style=&amp;quot;width:100px;height:100px;background-color:red&amp;quot;&amp;gt; 这是一个块 &amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;   外部样式：引入css文件</description>
+  3. 文本修饰标签  &amp;lt;strong&amp;gt;&amp;lt;/strong&amp;gt;:加粗
+ &amp;lt;em&amp;gt;&amp;lt;/em&amp;gt;:斜体</description>
     </item>
     
     <item>

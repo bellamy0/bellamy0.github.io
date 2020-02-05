@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Bellamy">
+  
+  
+  
+  <link rel="prev" href="https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0/" />
+  <link rel="next" href="https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%BA%8C/" />
+  <link rel="canonical" href="https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%B8%80/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           CSS学习一 | Bellamy
+       
+  </title>
+  <meta name="title" content="CSS学习一 | Bellamy">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/bellamy0.gitHub.io"
+    },
+    "articleSection" : "posts",
+    "name" : "CSS学习一",
+    "headline" : "CSS学习一",
+    "description" : "一.CSS基础语法  格式： 选择器{属性1：值1；属性2：值2}\n 基本样式：width、height、background-color 长度单位：px（像素）、%（相对于外容器的百分比） css注释：\/* 注释内容 *\/\n 形式  \x26lt;!DOCTYPE html\x26gt; \x26lt;html lang=\x26quot;en\x26quot;\x26gt; \x26lt;head\x26gt; \x26lt;meta charset=\x26quot;UTF-8\x26quot;\x26gt; \x26lt;meta name=\x26quot;viewport\x26quot; content=\x26quot;width=device-width, initial-scale=1.0\x26quot;\x26gt; \x26lt;meta http-equiv=\x26quot;X-UA-Compatible\x26quot; content=\x26quot;ie=edge\x26quot;\x26gt; \x26lt;title\x26gt;Document\x26lt;\/title\x26gt; \x26lt;style\x26gt; \/\/\x26lt;style\x26gt; 内写css，此处为设置下方的div div{ width:100px;height:100px;background-color:red } \x26lt;\/style\x26gt; \x26lt;\/head\x26gt; \x26lt;body\x26gt; \x26lt;\/body\x26gt; \x26lt;\/html\x26gt;  二.css样式的引入方式  内联样式：style属性\n 内部样式：style标签（可以复用标签，更优，看起来更简洁）\n 形式\n  \x26lt;!DOCTYPE html\x26gt; \x26lt;html lang=\x26quot;en\x26quot;\x26gt; \x26lt;head\x26gt; \x26lt;meta charset=\x26quot;UTF-8\x26quot;\x26gt; \x26lt;meta name=\x26quot;viewport\x26quot; content=\x26quot;width=device-width, initial-scale=1.0\x26quot;\x26gt; \x26lt;meta http-equiv=\x26quot;X-UA-Compatible\x26quot; content=\x26quot;ie=edge\x26quot;\x26gt; \x26lt;title\x26gt;Document\x26lt;\/title\x26gt; \x26lt;style\x26gt; \/\/\x26lt;style\x26gt; 内写css，此处为设置下方的div,内部样式 div{ width:100px;height:100px;background-color:red } \x26lt;\/style\x26gt; \x26lt;\/head\x26gt; \x26lt;body\x26gt; \/\/内联样式 \x26lt;div style=\x26quot;width:100px;height:100px;background-color:red\x26quot;\x26gt; 这是一个块 \x26lt;\/div\x26gt; \x26lt;\/body\x26gt; \x26lt;\/html\x26gt;   外部样式：引入css文件",
+    "inLanguage" : "en-us",
+    "author" : "Bellamy",
+    "creator" : "Bellamy",
+    "publisher": "Bellamy",
+    "accountablePerson" : "Bellamy",
+    "copyrightHolder" : "Bellamy",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-02-04 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2020-02-04 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/bellamy0.gitHub.io\/2020\/css%E5%AD%A6%E4%B9%A0%E4%B8%80\/",
+    "wordCount" : "244",
+    "keywords" : [ "CSS","前端", "Bellamy"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">CSS学习一</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://bellamy0.gitHub.io" rel="author">Bellamy</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-02-04 itemprop="datePublished">February 4, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://bellamy0.gitHub.io/categories/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"> 前端学习 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h1 id="一-css基础语法">一.CSS基础语法</h1>
+
+<ul>
+<li>格式： 选择器{属性1：值1；属性2：值2}<br /></li>
+<li>基本样式：width、height、background-color</li>
+<li>长度单位：px（像素）、%（相对于外容器的百分比）</li>
+<li>css注释：/* 注释内容 */<br /></li>
+<li>形式</li>
+</ul>
+
+<pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;     //&lt;style&gt; 内写css，此处为设置下方的div
+        div{ width:100px;height:100px;background-color:red }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h1 id="二-css样式的引入方式">二.css样式的引入方式</h1>
+
+<ul>
+<li>内联样式：style属性<br /></li>
+<li>内部样式：style标签（可以复用标签，更优，看起来更简洁）<br /></li>
+<li>形式<br /></li>
+</ul>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;     //&lt;style&gt; 内写css，此处为设置下方的div,内部样式
+        div{ width:100px;height:100px;background-color:red }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    //内联样式
+    &lt;div style=&quot;width:100px;height:100px;background-color:red&quot;&gt;
+        这是一个块
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<ul>
+<li><p>外部样式：引入css文件</p></li>
+
+<li><p>引入方式：</p>
+
+<ul>
+<li><p>法一：&lt;link&gt;引入外部资源</p></li>
+
+<li><p>属性：rel（指定资源与页面的关系）、href（资源的地址）</p></li>
+
+<li><p>法二：@import（不建议）</p></li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;./common.css&quot;&gt; //法一
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;style&gt;
+        @import url('./common.css');
+    &lt;/style&gt;
+&lt;/head&gt;
+</code></pre>
+
+<ul>
+<li>css文件形式</li>
+</ul>
+
+<pre><code class="language-css">div{ width:100px;height:100px;background-color:red }
+</code></pre></li>
+</ul>
+
+<h1 id="三-css中的颜色表示法">三.css中的颜色表示法</h1>
+
+<ul>
+<li>单词表示法：transparent<br /></li>
+<li>RGB表示法：rgb(0,0,0)~rgb(255,255,255)<br /></li>
+<li>十六进制表示法：#000000~#ffffff<br /></li>
+<li>提取颜色的下载地址： <a href="https://www.baidufe.com/fehelper" rel="nofollow noreferrer" target="_blank">https://www.baidufe.com/fehelper</a><br /></li>
+</ul>
+
+<h1 id="四-css背景样式">四.    css背景样式</h1>
+
+<ul>
+<li>background-color: 背景颜色<br /></li>
+<li>background-image:背景图片<br />
+
+<ul>
+<li><code>url（背景地址）</code>  默认会水平都铺满<br /></li>
+</ul></li>
+<li>background-repeat:平铺方式<br />
+
+<ul>
+<li><code>repeat-x</code> x轴平铺<br /></li>
+<li><code>repeat-y</code>  y轴平铺<br /></li>
+<li><code>repeat</code> x、y轴都平铺——默认值<br /></li>
+<li><code>no-repeat</code>  都不平铺<br /></li>
+</ul></li>
+<li>background-position:背景位置<code>x y</code><br />
+
+<ul>
+<li>用数字表示：px或%<br /></li>
+<li>用单词表示：<br />
+
+<ul>
+<li>x： left、center、right<br /></li>
+<li>y：top、center、bottom<br /></li>
+</ul></li>
+</ul></li>
+<li>background-attachment:背景图随滚动条移动的方式<br />
+
+<ul>
+<li><code>scroll</code>  按照当前元素进行偏移——默认值<br /></li>
+<li><code>fixed</code>  按照浏览器进行偏移<br /></li>
+</ul></li>
+</ul>
+
+<pre><code class="language-html">&lt;style&gt;
+    body{ height: 2000px;} 
+    div{
+        width:1440px;height:800px;background-color:red;
+        background-image:url(./img/dog.jpg);
+        background-repeat:no-repeat;
+        background-position:50% 50%;
+        background-attachment:fixed;
+    }
+&lt;/style&gt;
+</code></pre>
+
+<pre><code class="language-html">//背景实现视觉差效果    
+&lt;head&gt;
+    &lt;style&gt;
+        //用#+div+name 关联某个容器
+        #div1{ width:1440px;height:800px; background-image:url(./img/1.jpg);}
+        #div2{ width:1440px;height:800px; background-image:url(./img/2.jpg);}
+        #div3{ width:1440px;height:800px; background-image:url(./img/3.jpg);}
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;1&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;2&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;3&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h1 id="五-css边框样式">五.css边框样式</h1>
+
+<ul>
+<li>border-style:边框样式<br />
+
+<ul>
+<li>solid:实线</li>
+<li>dashed:虚线</li>
+<li>dotted:点线<br /></li>
+</ul></li>
+<li>border-width:边框大小<br /></li>
+<li>border-color:边框颜色<br /></li>
+<li>针对某一个边的单独设置： border-right/left/top/bottom-style……<br /></li>
+</ul>
+
+<h1 id="六-css文字样式">六. CSS文字样式</h1>
+
+<ul>
+<li><p>font-family:字体类型</p>
+
+<ul>
+<li><p>字体类型中存在空格时要加引号：&rsquo;Times New Roman&rsquo;、微软雅黑</p></li>
+
+<li><p>字体间用”，“设置多种字体，前一种无法显示时寻找后一种显示</p></li>
+</ul></li>
+
+<li><p>font-size：字体大小——默认16px</p>
+
+<ul>
+<li>字体大小建议为偶数px，更好实现文字对齐<br /></li>
+</ul></li>
+
+<li><p>font-weight:字体粗细</p>
+
+<ul>
+<li>单词设置<br /></li>
+<li>normal：正常</li>
+<li>bold：加粗<br /></li>
+<li>数值设置：<br /></li>
+<li>100、200、……、900<br /></li>
+<li>实际显示效果100-500为正常、600-900为加粗<br /></li>
+</ul></li>
+
+<li><p>font-style: 字体样式</p>
+
+<ul>
+<li>normal：正常<br /></li>
+<li>italic：斜体<br /></li>
+</ul></li>
+
+<li><p>font-color：字体颜色</p></li>
+</ul>
+
+<h1 id="七-文本">七.文本</h1>
+
+<h4 id="1-css段落样式">1.css段落样式</h4>
+
+<ul>
+<li>text-decoration: 文本修饰，通过空格添加多个文本修饰<br />
+
+<ul>
+<li>underline: 下划线<br /></li>
+<li>line-through: 删除线</li>
+<li>overline: 上划线<br /></li>
+<li>none：不添加任何<br /></li>
+</ul></li>
+<li>text-transform：设置大小写<br />
+
+<ul>
+<li>lowercase：小写</li>
+<li>uppercase：大写</li>
+<li>capitalize：首字母大写<br /></li>
+</ul></li>
+<li>text-indent：文本缩进
+
+<ul>
+<li>number+px ：绝对像素</li>
+<li>number+em: 相对于font-size的大小，首行缩进2个则为2em<br /></li>
+</ul></li>
+<li>text-align:文本对齐方式<br />
+
+<ul>
+<li>left、right、center、justify（两端对齐）<br /></li>
+</ul></li>
+<li>line-height：定义行高<code>number+px</code> 或<code>number</code>（表示比例值）<br />
+
+<ul>
+<li>默认行高不是固定值</li>
+</ul></li>
+<li>letter-spacing：字体间距<code>number+px</code><br /></li>
+<li>word-spacing：词之间的间距<br /></li>
+<li>word-break：break-all；（非常强烈的折行）<br /></li>
+<li>word-wrap：break-word；（不强烈的折行，会产生空白）<br /></li>
+</ul>
+
+<h1 id="八-css复合样式">八.css复合样式</h1>
+
+<ul>
+<li>复合的写法，是通过空格的方式实现的，有的不用关心顺序：如background、border。有的需要按顺序写：如font<br /></li>
+<li><code>background：red url（） repeat  0 0；</code><br /></li>
+<li><code>border：1px red solid；</code><br /></li>
+<li><code>font：size famliy</code> 至少有两个值 大小与字体类型（顺序不可调）<br />
+
+<ul>
+<li><code>weight style size/line-height famliy</code>前面可以任意 后俩位置固定<br /></li>
+<li>color不能加<br /></li>
+</ul></li>
+<li>单一与复合混用必须：先复合再单一 ！<br /></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Bellamy </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%B8%80/>https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%B8%80/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/css/">
+                    #CSS</a></span>
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/%E5%89%8D%E7%AB%AF/">
+                    #前端</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://bellamy0.gitHub.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0/" class="prev" rel="prev" title="html学习①"><i class="iconfont icon-left"></i>&nbsp;html学习①</a>
+         
+        
+        <a href="https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%BA%8C/" class="next" rel="next" title="CSS学习二">CSS学习二&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://bellamy0.gitHub.io">Bellamy</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
