@@ -6,10 +6,25 @@
     <description>Recent content in CSS on Bellamy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bellamy0.gitHub.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSS学习三</title>
+      <link>https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%B8%89/</link>
+      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%B8%89/</guid>
+      <description>一.CSS样式的继承  文字相关样式能被继承
+ 布局相关样式不能被继承（默认不能，但是可以设置继承属性inherit）
+  &amp;lt;head&amp;gt; &amp;lt;style&amp;gt; //div标签的属性能被用于子标签p上——继承 div{ width:300px; height:300px; color:red; border:1px; } //布局继承 p{ border:inherit; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div&amp;gt; &amp;lt;p&amp;gt;这是一个段落&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt;  二.CSS的优先级  相同样式：后面的优先级更高（不建议）
+ 内部样式与外部样式： 后引入的样式优先级高 单一样式优先级：style行间&amp;gt;id&amp;gt;class&amp;gt;tag&amp;gt;*&amp;gt;继承
+ !important ：提升样式优先级（不建议使用）
+ 标签+类与单类：标签+类&amp;gt;单类⑤
+ 同一样式下群组与单一：不分优先级，按顺序，靠后的优先级高 层次优先级：  权重比较：累加数值之比 约分比较   &amp;lt;head&amp;gt; &amp;lt;style&amp;gt; #elem{ color:red; } .box{ color: blue; } div{ color:blue; } *{ color:red; } //important的使用 #elem{ color:red; !important; } //⑤ div.</description>
+    </item>
     
     <item>
       <title>CSS学习二</title>

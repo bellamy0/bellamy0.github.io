@@ -5,8 +5,88 @@
     <description>Recent content in Bellamy on Bellamy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Feb 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>CSS学习三</title>
+      <link>https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%B8%89/</link>
+      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%B8%89/</guid>
+      <description>
+
+&lt;h1 id=&#34;一-css样式的继承&#34;&gt;一.CSS样式的继承&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;文字相关样式能被继承&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;布局相关样式不能被继承（默认不能，但是可以设置继承属性inherit）&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;style&amp;gt;
+        //div标签的属性能被用于子标签p上——继承
+        div{ width:300px; height:300px; color:red; border:1px; }
+        //布局继承
+        p{ border:inherit; }
+    &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div&amp;gt;
+        &amp;lt;p&amp;gt;这是一个段落&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;二-css的优先级&#34;&gt;二.CSS的优先级&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;相同样式：后面的优先级更高（不建议）&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;内部样式与外部样式： 后引入的样式优先级高&lt;/li&gt;
+&lt;li&gt;单一样式优先级：style行间&amp;gt;id&amp;gt;class&amp;gt;tag&amp;gt;*&amp;gt;继承&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;!important&lt;/code&gt;  ：提升样式优先级（不建议使用）&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;标签+类与单类：标签+类&amp;gt;单类⑤&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;同一样式下群组与单一：不分优先级，按顺序，靠后的优先级高&lt;/li&gt;
+&lt;li&gt;层次优先级：
+
+&lt;ul&gt;
+&lt;li&gt;权重比较：累加数值之比&lt;/li&gt;
+&lt;li&gt;约分比较&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;style&amp;gt;
+        #elem{ color:red; }
+        .box{ color: blue; }
+        div{ color:blue; }
+        *{ color:red; }
+        //important的使用
+        #elem{ color:red; !important; }
+        //⑤
+        div.box{ color:blue; }
+        .box{ color:red; }
+        //⑥
+        div.p{ color:red; }
+        div{ color:blue; }
+    &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div id=&amp;quot;elem&amp;quot; style=&amp;quot;color:blue;&amp;quot;&amp;gt;  //此处style优先级&amp;gt;id
+        这是一个块
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div id=&amp;quot;elem&amp;quot; class=&amp;quot;box&amp;quot;&amp;gt;  //此处id优先级&amp;gt;class
+        这是一个块
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div id=&amp;quot;elem&amp;quot; class=&amp;quot;box&amp;quot;&amp;gt;  //此处id优先级&amp;gt;class
+        这是一个块
+    &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;三-css盒子模型&#34;&gt;三.CSS盒子模型&lt;/h1&gt;
+</description>
+    </item>
     
     <item>
       <title>CSS学习二</title>
@@ -97,7 +177,225 @@
 
 &lt;h1 id=&#34;三-标签群组通配等选择器&#34;&gt;三.标签群组通配等选择器&lt;/h1&gt;
 
-&lt;h3 id=&#34;1-标签选择器&#34;&gt;1.标签选择器&lt;/h3&gt;
+&lt;h4 id=&#34;1-标签选择器-tag选择器&#34;&gt;1.标签选择器(TAG选择器)&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;css：标签{} eg：&lt;code&gt;div{}&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;html：标签 eg：&lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;使用场景：&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;去掉某些标签的默认样式中&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;复杂的选择器中，如 层次选择器&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-群组选择器-分组选择器&#34;&gt;2.群组选择器(分组选择器)&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;css:用“，”隔开，如：&lt;code&gt;div,#text,.title{ background-color=red; }&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;通过逗号的方式实现代码复用&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;3-通配选择器&#34;&gt;3.通配选择器&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;css：&lt;code&gt;*{ }-&amp;gt; div,ul,li,p,h1,h2....{}&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;注意：尽量避免使用通配选择器，会给所有标签添加样式&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;使用场景：去掉所有or大部分标签的默认样式中&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;四-层次选择器&#34;&gt;四.层次选择器&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;后代选择器：所有后代都能被选择到①&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;M N {}&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;父子：只有孩子能被选择到②&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;M &amp;gt; N {}&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;兄弟：当前M下的所有兄弟N标签③&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;M ~ N {}&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;相邻：当前M下面相邻的N标签④&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;M + N {}&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;实例：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;style&amp;gt;
+        //①
+        #list li { background:red; }
+        //②
+        #list&amp;gt;li { background:red; }
+        //③
+        div ~ h2{ background:red; }
+        //④
+        div + h2{ background:red; }        
+    &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    //①②
+    &amp;lt;ul id=&amp;quot;list&amp;quot;&amp;gt;
+        &amp;lt;li&amp;gt;
+            &amp;lt;ul&amp;gt;
+                &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+            &amp;lt;/ul&amp;gt;
+        &amp;lt;/li&amp;gt;
+        &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+        &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;
+    &amp;lt;ol&amp;gt;
+        &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+        &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+        &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;/ol&amp;gt;
+    //③
+    &amp;lt;h2&amp;gt;这是一个标题&amp;lt;/h2&amp;gt;
+    &amp;lt;div&amp;gt;这是一个块&amp;lt;/div&amp;gt;
+    &amp;lt;p&amp;gt;这是一个段落&amp;lt;/p&amp;gt;
+    &amp;lt;h2&amp;gt;这是一个标题&amp;lt;/h2&amp;gt;
+    &amp;lt;h2&amp;gt;这是一个标题&amp;lt;/h2&amp;gt;
+    //④
+    &amp;lt;div&amp;gt;这是一个块&amp;lt;/div&amp;gt;
+    &amp;lt;h2&amp;gt;这是一个标题&amp;lt;/h2&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;五-属性选择器&#34;&gt;五.属性选择器&lt;/h1&gt;
+
+&lt;p&gt;实例&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;style&amp;gt;
+        div[class]{ background:red; }
+        //完全匹配
+        div[class=box]{ background:red; }
+        //部分匹配（部分匹配的都可以被选择）
+        div[class*=search]{ background:red; }
+        //起始匹配
+        div[class^=search]{ background:red; }
+        //结束匹配
+        div[class$=search]{ background:red; }
+        //多个中括号组合匹配
+        div[class][id]{ background:red; }
+    &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div&amp;gt;aaaa&amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;quot;box&amp;quot;&amp;gt;bbbb&amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;quot;search&amp;quot;&amp;gt;cccc&amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;quot;search-button&amp;quot;&amp;gt;dddd&amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;quot;button-search&amp;quot;&amp;gt;eeee&amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;quot;box&amp;quot; id=&amp;quot;elem&amp;quot;&amp;gt;ffff&amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;六-伪类选择器&#34;&gt;六.伪类选择器&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;css：&lt;code&gt;M:伪类{}&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;伪类用于向某些元素添加特殊效果&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:link&lt;/code&gt;：访问前的样式 （只能给a标签）&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:visited&lt;/code&gt;：访问后的样式（只能给a标签）&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:hover&lt;/code&gt;：鼠标移入时的样式（可以给所有标签）&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:active&lt;/code&gt; ：鼠标按下时的样式（可以给所有标签）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;style&amp;gt;
+        div{ width:200px;height:200px;background:red; }
+        div:hover{ background:blue; }
+        div:active{ background:green; }
+        a:link{ color:green; }
+        a:visited{ color:yellow; }
+    &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;
+    &amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;这是一个链接&amp;lt;/a&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;注意：&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;四个伪类的顺序：L V H A&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;一般网站只设置：&lt;code&gt;a{}&lt;/code&gt; &lt;code&gt;a:hover{}&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;七-after等伪类选择器&#34;&gt;七.after等伪类选择器&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:after&lt;/code&gt; &lt;code&gt;:befor&lt;/code&gt;  :通过伪类的方式给元素添加一些文本内容（使用content属性分别为添加在前面与添加在后面）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:checked&lt;/code&gt; &lt;code&gt;:disabled&lt;/code&gt; &lt;code&gt;:focus&lt;/code&gt;  :都是针对表单元素的&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;style&amp;gt;
+        div:after{ content:world; color:red; }
+        div:before{ content:world; }
+        :checked{ width:100; height:100px; }    //被checked的会有该样式
+        :disabled{ width:100; height:100px; }   //disabled会有该样式
+        :focus{ background:red; }   //光标获取时有该样式
+    &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div&amp;gt; hello!&amp;lt;/div&amp;gt;
+    &amp;lt;input type=&amp;quot;checkbox&amp;quot;&amp;gt;
+    &amp;lt;input type=&amp;quot;checkbox&amp;quot;&amp;gt;
+    &amp;lt;input type=&amp;quot;checkbox&amp;quot; disabled&amp;gt;
+    &amp;lt;input type=&amp;quot;text&amp;quot;&amp;gt; 
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;八-结构性伪类选择器&#34;&gt;八.结构性伪类选择器&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;:nth-of-type()&lt;/code&gt;：角标是从1开始的|n值表示从0-无穷大（&lt;code&gt;nth-child&lt;/code&gt;  同理）
+
+&lt;ul&gt;
+&lt;li&gt;区别：type：同一个父亲且样式中的第n个&lt;/li&gt;
+&lt;li&gt;区别：child：同一个父亲下的第n个&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:first-of-type()&lt;/code&gt;：第一个&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:last-of-type()&lt;/code&gt;：最后一个&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;:only-of-type()&lt;/code&gt;：唯一一个&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;style&amp;gt;
+        //使用方式
+        li:nth-of-type(3){ background:red; }
+        //实现隔行换色
+        li:nth-of-type(2n){ background:red; }
+    &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;ul&amp;gt;
+        &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+        &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+        &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+        &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -381,7 +679,7 @@
     </item>
     
     <item>
-      <title>html学习①</title>
+      <title>html学习</title>
       <link>https://bellamy0.gitHub.io/2020/html%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       

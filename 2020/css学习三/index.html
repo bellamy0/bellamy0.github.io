@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Bellamy">
+  
+  
+  
+  <link rel="prev" href="https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%BA%8C/" />
+  
+  <link rel="canonical" href="https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%B8%89/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           CSS学习三 | Bellamy
+       
+  </title>
+  <meta name="title" content="CSS学习三 | Bellamy">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/bellamy0.gitHub.io"
+    },
+    "articleSection" : "posts",
+    "name" : "CSS学习三",
+    "headline" : "CSS学习三",
+    "description" : "一.CSS样式的继承  文字相关样式能被继承\n 布局相关样式不能被继承（默认不能，但是可以设置继承属性inherit）\n  \x26lt;head\x26gt; \x26lt;style\x26gt; \/\/div标签的属性能被用于子标签p上——继承 div{ width:300px; height:300px; color:red; border:1px; } \/\/布局继承 p{ border:inherit; } \x26lt;\/style\x26gt; \x26lt;\/head\x26gt; \x26lt;body\x26gt; \x26lt;div\x26gt; \x26lt;p\x26gt;这是一个段落\x26lt;\/p\x26gt; \x26lt;\/div\x26gt; \x26lt;\/body\x26gt;  二.CSS的优先级  相同样式：后面的优先级更高（不建议）\n 内部样式与外部样式： 后引入的样式优先级高 单一样式优先级：style行间\x26gt;id\x26gt;class\x26gt;tag\x26gt;*\x26gt;继承\n !important ：提升样式优先级（不建议使用）\n 标签\x2b类与单类：标签\x2b类\x26gt;单类⑤\n 同一样式下群组与单一：不分优先级，按顺序，靠后的优先级高 层次优先级：  权重比较：累加数值之比 约分比较   \x26lt;head\x26gt; \x26lt;style\x26gt; #elem{ color:red; } .box{ color: blue; } div{ color:blue; } *{ color:red; } \/\/important的使用 #elem{ color:red; !important; } \/\/⑤ div.",
+    "inLanguage" : "en-us",
+    "author" : "Bellamy",
+    "creator" : "Bellamy",
+    "publisher": "Bellamy",
+    "accountablePerson" : "Bellamy",
+    "copyrightHolder" : "Bellamy",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-02-06 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2020-02-06 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/bellamy0.gitHub.io\/2020\/css%E5%AD%A6%E4%B9%A0%E4%B8%89\/",
+    "wordCount" : "92",
+    "keywords" : [ "CSS","前端", "Bellamy"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">CSS学习三</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://bellamy0.gitHub.io" rel="author">Bellamy</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-02-06 itemprop="datePublished">February 6, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://bellamy0.gitHub.io/categories/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"> 前端学习 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h1 id="一-css样式的继承">一.CSS样式的继承</h1>
+
+<ul>
+<li>文字相关样式能被继承<br /></li>
+<li>布局相关样式不能被继承（默认不能，但是可以设置继承属性inherit）<br /></li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;style&gt;
+        //div标签的属性能被用于子标签p上——继承
+        div{ width:300px; height:300px; color:red; border:1px; }
+        //布局继承
+        p{ border:inherit; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+        &lt;p&gt;这是一个段落&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h1 id="二-css的优先级">二.CSS的优先级</h1>
+
+<ul>
+<li>相同样式：后面的优先级更高（不建议）<br /></li>
+<li>内部样式与外部样式： 后引入的样式优先级高</li>
+<li>单一样式优先级：style行间&gt;id&gt;class&gt;tag&gt;*&gt;继承<br /></li>
+<li><code>!important</code>  ：提升样式优先级（不建议使用）<br /></li>
+<li>标签+类与单类：标签+类&gt;单类⑤<br /></li>
+<li>同一样式下群组与单一：不分优先级，按顺序，靠后的优先级高</li>
+<li>层次优先级：
+
+<ul>
+<li>权重比较：累加数值之比</li>
+<li>约分比较</li>
+</ul></li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;style&gt;
+        #elem{ color:red; }
+        .box{ color: blue; }
+        div{ color:blue; }
+        *{ color:red; }
+        //important的使用
+        #elem{ color:red; !important; }
+        //⑤
+        div.box{ color:blue; }
+        .box{ color:red; }
+        //⑥
+        div.p{ color:red; }
+        div{ color:blue; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;elem&quot; style=&quot;color:blue;&quot;&gt;  //此处style优先级&gt;id
+        这是一个块
+    &lt;/div&gt;
+    &lt;div id=&quot;elem&quot; class=&quot;box&quot;&gt;  //此处id优先级&gt;class
+        这是一个块
+    &lt;/div&gt;
+    &lt;div id=&quot;elem&quot; class=&quot;box&quot;&gt;  //此处id优先级&gt;class
+        这是一个块
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h1 id="三-css盒子模型">三.CSS盒子模型</h1>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Bellamy </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%B8%89/>https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%B8%89/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/css/">
+                    #CSS</a></span>
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/%E5%89%8D%E7%AB%AF/">
+                    #前端</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://bellamy0.gitHub.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%BA%8C/" class="prev" rel="prev" title="CSS学习二"><i class="iconfont icon-left"></i>&nbsp;CSS学习二</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://bellamy0.gitHub.io">Bellamy</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
