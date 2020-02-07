@@ -85,6 +85,194 @@
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h1 id=&#34;三-css盒子模型&#34;&gt;三.CSS盒子模型&lt;/h1&gt;
+
+&lt;h4 id=&#34;1-盒子模型基础&#34;&gt;1.盒子模型基础&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;组成：content（物品） -&amp;gt; padding（填充物） -&amp;gt;border（包装盒） -&amp;gt;margin（盒子与盒子之间的间距）&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;content：内容区域  width和height组成的&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;padding：内边距（内填充）,也可以分别设置padding-left/right/top/bottom&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;只写一个值：30px（上下左右）&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;写两个值：30px 40px（上下），（左右）&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;写三个值（不建议）&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;写四个值：30px 40px 50px 60px （上、右、下、左）&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;margin：外边距（外填充）与padding相同&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;注意：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;背景色填充到margin以内的区域（不包括margin）&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;文字会在content区域&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;padding不能为负数，而margin可以为负数&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;box-sizing: 盒尺寸，可以改变盒子模型的展示形态①&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;content-box（默认值）：width、height ——&amp;gt;作用于content&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;border-box：width、height——&amp;gt;作用于content、padding、border&lt;/li&gt;
+&lt;li&gt;使用场景：&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;style&amp;gt;
+        #box{
+            width:200px; height:200px; background:red; border:10px blue solid;
+            padding:30px 50px;
+            box-sizing:border-box;//①
+        }
+    &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div id=&amp;quot;box&amp;quot;&amp;gt;这是一个盒子&amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;2-盒子模型的问题&#34;&gt;2.盒子模型的问题&lt;/h4&gt;
+
+&lt;h5 id=&#34;2-1-盒模型的叠加问题&#34;&gt;2.1 盒模型的叠加问题：&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;解决办法：
+
+&lt;ul&gt;
+&lt;li&gt;BFC规范&lt;/li&gt;
+&lt;li&gt;直接改变间距&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;style&amp;gt;
+        #box1{width:200px; height:200px; background:red; margin-bottom:30px}
+        #box2{width:200px; height:200px; background:blue; margin-top:30px}
+        //最终间距不是60px而是30px
+        //叠加时会选取较大的一个作为margin值
+    &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div id=&amp;quot;box1&amp;quot;&amp;gt;这是一个盒子&amp;lt;/div&amp;gt;
+    &amp;lt;div id=&amp;quot;box2&amp;quot;&amp;gt;这是一个盒子&amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;2-2-margin传递问题&#34;&gt;2.2 margin传递问题&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;出现在嵌套的结构中，只是针对margin-top的问题&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;解决办法
+
+&lt;ul&gt;
+&lt;li&gt;BFC规范&lt;/li&gt;
+&lt;li&gt;加边框border&lt;/li&gt;
+&lt;li&gt;不用margin用padding（通过计算加给父元素）&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;style&amp;gt;
+        #box1{width:200px; height:200px; background:red;}
+        #box2{width:200px; height:200px; background:blue; margin-top:100px;} 
+        
+    &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div id=&amp;quot;box1&amp;quot;&amp;gt;
+        &amp;lt;div id=&amp;quot;box2&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;3-盒子模型扩展&#34;&gt;3.盒子模型扩展&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;自适应：&lt;code&gt;margin:auto;&lt;/code&gt;  这个方式只能使左右可以自适应&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;宽高不设置时对盒子的影响：会自动计算容器大小，节省代码（与父容器相同）
+
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;四-标签分类&#34;&gt;四.标签分类&lt;/h1&gt;
+
+&lt;h4 id=&#34;1-按类型&#34;&gt;1.按类型&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;block：块&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;div、p、ul、ol、p、h1……&lt;/li&gt;
+&lt;li&gt;特性一：独占一行&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;特性二：支持所有样式&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;特性三：不写宽的时候，跟父元素的宽相同&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;特性四：所占区域是一个矩形&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;inline：内联&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;span、a、em、strong、img……&lt;/li&gt;
+&lt;li&gt;特性一：挨在一起的&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;特性二：有些样式不支持，例如：width、height、margin、padding&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;特性三：不写宽的时候，宽度跟内容有关&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;特性四：所占区域不一定为矩形&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;特性五：内联标签之间会有空隙，而空隙是由换行引起的&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;inline-block：内联块&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;input、select……&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;五-display显示框类型&#34;&gt;五.display显示框类型&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;display属性可以强行将标签换为block、inline、inline-block、none（不显示某项）&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;display:none;&lt;/code&gt; 与&lt;code&gt;visibility:hidden;&lt;/code&gt;区别：
+
+&lt;ul&gt;
+&lt;li&gt;前者不占空间的隐藏,后者为占空间的隐藏&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;style&amp;gt;
+        div{ width:100px; height:100px; background:red; display:inline; }
+        span{ width:100px; height:100px; background:red; display:block; }
+    &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div&amp;gt;块1&amp;lt;/div&amp;gt;
+    &amp;lt;div&amp;gt;块2&amp;lt;/div&amp;gt;
+    &amp;lt;span&amp;gt;内联1&amp;lt;/span&amp;gt;
+    &amp;lt;span&amp;gt;内联1&amp;lt;/span&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;六-标签嵌套规范&#34;&gt;六.标签嵌套规范&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;块能嵌套内联&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;块不一定能嵌套块&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;内联不能嵌套块标签（但有特殊a标签）&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;七-overflow溢出隐藏&#34;&gt;七.overflow溢出隐藏&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;visible：默认&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;hidden：&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

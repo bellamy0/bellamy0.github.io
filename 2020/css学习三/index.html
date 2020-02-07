@@ -57,7 +57,7 @@
     "datePublished": "2020-02-06 00:00:00 \x2b0000 UTC",
     "dateModified" : "2020-02-06 00:00:00 \x2b0000 UTC",
     "url" : "https:\/\/bellamy0.gitHub.io\/2020\/css%E5%AD%A6%E4%B9%A0%E4%B8%89\/",
-    "wordCount" : "92",
+    "wordCount" : "246",
     "keywords" : [ "CSS","前端", "Bellamy"]
 }
 </script>
@@ -217,6 +217,194 @@
 </code></pre>
 
 <h1 id="三-css盒子模型">三.CSS盒子模型</h1>
+
+<h4 id="1-盒子模型基础">1.盒子模型基础</h4>
+
+<ul>
+<li><p>组成：content（物品） -&gt; padding（填充物） -&gt;border（包装盒） -&gt;margin（盒子与盒子之间的间距）</p></li>
+
+<li><p>content：内容区域  width和height组成的</p></li>
+
+<li><p>padding：内边距（内填充）,也可以分别设置padding-left/right/top/bottom</p>
+
+<ul>
+<li>只写一个值：30px（上下左右）</li>
+
+<li><p>写两个值：30px 40px（上下），（左右）</p></li>
+
+<li><p>写三个值（不建议）</p></li>
+
+<li><p>写四个值：30px 40px 50px 60px （上、右、下、左）</p></li>
+</ul></li>
+
+<li><p>margin：外边距（外填充）与padding相同</p></li>
+
+<li><p>注意：</p>
+
+<ul>
+<li>背景色填充到margin以内的区域（不包括margin）<br /></li>
+<li>文字会在content区域<br /></li>
+<li>padding不能为负数，而margin可以为负数<br /></li>
+</ul></li>
+
+<li><p>box-sizing: 盒尺寸，可以改变盒子模型的展示形态①</p>
+
+<ul>
+<li>content-box（默认值）：width、height ——&gt;作用于content<br /></li>
+<li>border-box：width、height——&gt;作用于content、padding、border</li>
+<li>使用场景：<br /></li>
+</ul></li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;style&gt;
+        #box{
+            width:200px; height:200px; background:red; border:10px blue solid;
+            padding:30px 50px;
+            box-sizing:border-box;//①
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;box&quot;&gt;这是一个盒子&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h4 id="2-盒子模型的问题">2.盒子模型的问题</h4>
+
+<h5 id="2-1-盒模型的叠加问题">2.1 盒模型的叠加问题：</h5>
+
+<ul>
+<li>解决办法：
+
+<ul>
+<li>BFC规范</li>
+<li>直接改变间距</li>
+</ul></li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;style&gt;
+        #box1{width:200px; height:200px; background:red; margin-bottom:30px}
+        #box2{width:200px; height:200px; background:blue; margin-top:30px}
+        //最终间距不是60px而是30px
+        //叠加时会选取较大的一个作为margin值
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;box1&quot;&gt;这是一个盒子&lt;/div&gt;
+    &lt;div id=&quot;box2&quot;&gt;这是一个盒子&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h5 id="2-2-margin传递问题">2.2 margin传递问题</h5>
+
+<ul>
+<li>出现在嵌套的结构中，只是针对margin-top的问题<br /></li>
+<li>解决办法
+
+<ul>
+<li>BFC规范</li>
+<li>加边框border</li>
+<li>不用margin用padding（通过计算加给父元素）<br /></li>
+</ul></li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;style&gt;
+        #box1{width:200px; height:200px; background:red;}
+        #box2{width:200px; height:200px; background:blue; margin-top:100px;} 
+        
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;box1&quot;&gt;
+        &lt;div id=&quot;box2&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h4 id="3-盒子模型扩展">3.盒子模型扩展</h4>
+
+<ul>
+<li>自适应：<code>margin:auto;</code>  这个方式只能使左右可以自适应<br /></li>
+<li>宽高不设置时对盒子的影响：会自动计算容器大小，节省代码（与父容器相同）
+
+<br /></li>
+</ul>
+
+<h1 id="四-标签分类">四.标签分类</h1>
+
+<h4 id="1-按类型">1.按类型</h4>
+
+<ul>
+<li>block：块<br />
+
+<ul>
+<li>div、p、ul、ol、p、h1……</li>
+<li>特性一：独占一行<br /></li>
+<li>特性二：支持所有样式<br /></li>
+<li>特性三：不写宽的时候，跟父元素的宽相同<br /></li>
+<li>特性四：所占区域是一个矩形<br /></li>
+</ul></li>
+
+<li><p>inline：内联</p>
+
+<ul>
+<li>span、a、em、strong、img……</li>
+<li>特性一：挨在一起的<br /></li>
+<li>特性二：有些样式不支持，例如：width、height、margin、padding<br /></li>
+<li>特性三：不写宽的时候，宽度跟内容有关<br /></li>
+<li>特性四：所占区域不一定为矩形<br /></li>
+<li>特性五：内联标签之间会有空隙，而空隙是由换行引起的<br /></li>
+</ul></li>
+
+<li><p>inline-block：内联块</p>
+
+<ul>
+<li>input、select……<br /></li>
+</ul></li>
+</ul>
+
+<h1 id="五-display显示框类型">五.display显示框类型</h1>
+
+<ul>
+<li>display属性可以强行将标签换为block、inline、inline-block、none（不显示某项）<br /></li>
+<li><code>display:none;</code> 与<code>visibility:hidden;</code>区别：
+
+<ul>
+<li>前者不占空间的隐藏,后者为占空间的隐藏<br /></li>
+</ul></li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;style&gt;
+        div{ width:100px; height:100px; background:red; display:inline; }
+        span{ width:100px; height:100px; background:red; display:block; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;块1&lt;/div&gt;
+    &lt;div&gt;块2&lt;/div&gt;
+    &lt;span&gt;内联1&lt;/span&gt;
+    &lt;span&gt;内联1&lt;/span&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h1 id="六-标签嵌套规范">六.标签嵌套规范</h1>
+
+<ul>
+<li>块能嵌套内联<br /></li>
+<li>块不一定能嵌套块<br /></li>
+<li>内联不能嵌套块标签（但有特殊a标签）<br /></li>
+</ul>
+
+<h1 id="七-overflow溢出隐藏">七.overflow溢出隐藏</h1>
+
+<ul>
+<li>visible：默认<br /></li>
+<li>hidden：</li>
+</ul>
 
     </div>
 
