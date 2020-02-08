@@ -10,7 +10,7 @@
   
   
   <link rel="prev" href="https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%BA%8C/" />
-  
+  <link rel="next" href="https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E5%9B%9B/" />
   <link rel="canonical" href="https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%B8%89/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -57,7 +57,7 @@
     "datePublished": "2020-02-06 00:00:00 \x2b0000 UTC",
     "dateModified" : "2020-02-06 00:00:00 \x2b0000 UTC",
     "url" : "https:\/\/bellamy0.gitHub.io\/2020\/css%E5%AD%A6%E4%B9%A0%E4%B8%89\/",
-    "wordCount" : "246",
+    "wordCount" : "305",
     "keywords" : [ "CSS","前端", "Bellamy"]
 }
 </script>
@@ -402,8 +402,80 @@
 <h1 id="七-overflow溢出隐藏">七.overflow溢出隐藏</h1>
 
 <ul>
-<li>visible：默认<br /></li>
-<li>hidden：</li>
+<li><code>overflow:visible</code>：默认<br /></li>
+<li><code>overflow:hidden</code>：溢出文字会隐藏 ，直接剪裁<br /></li>
+<li><code>overflow:scroll</code>：添加滚动条<br /></li>
+
+<li><p><code>overflow:auto</code>：根据内容多少自动判断是否添加滚动条</p></li>
+
+<li><p><code>overflow-x</code>  <code>overflow-y</code></p></li>
+</ul>
+
+<h1 id="八-透明度与手势">八.透明度与手势</h1>
+
+<ul>
+<li>opacity:<code>opacity:0~1</code> 透明~不透明<br />
+
+<ul>
+<li>占空间<br /></li>
+<li>子内容也会透明<br /></li>
+</ul></li>
+<li>rgba：<code>background:rgba(num,num,num,0~1)</code><br />
+
+<ul>
+<li>可以让指定内容透明<br /></li>
+</ul></li>
+<li>cursor：手势（鼠标移入时的样式）<br />
+
+<ul>
+<li>默认箭头<br /></li>
+<li><code>cursor:pointer</code><br /></li>
+<li>自定义手势：</li>
+<li>准备图片：.cur 、.ico<br /></li>
+<li><code>cursor:url(./img/cursor.ico),auto</code><br /></li>
+</ul></li>
+</ul>
+
+<h1 id="九-最大最小宽高">九.最大最小宽高</h1>
+
+<ul>
+<li><p>min-width/height: 内容不能充满时最小容器宽高，超出时自适应</p></li>
+
+<li><p>max-width/height:内容最大容器宽高，小于时自适应</p></li>
+
+<li><p>%是根据父容器来判断的</p></li>
+
+<li><p>一个容器适应屏幕的高的方式：</p>
+
+<ul>
+<li><code>html,body{ height:100%; }</code></li>
+</ul>
+
+<p><code>.contrainer{ height:100%; }</code></p></li>
+</ul>
+
+<h1 id="十-css的简单reset">十.css的简单reset</h1>
+
+<ul>
+<li><p><code>*{ margin:0; padding:0; }</code>  :使用通配改变（低性能）</p></li>
+
+<li><p><code>ul{ list-style:none; }</code>：去掉列表的点</p></li>
+
+<li><p><code>a{ text-decoration:none; color:#999; }</code>  :去掉下划线，更改颜色</p></li>
+
+<li><p><code>img{ display:block; }</code>：图片跟容器底部有空隙（内联元素的对齐方式是按基线对齐而非文字底线）</p>
+
+<ul>
+<li><p>法一：</p></li>
+
+<li><p><code>img{ vertical-align:baseline; }</code>:基线对齐，默认值</p></li>
+
+<li><p><code>img{ vertical-align:bottom; }</code>:底线对齐</p></li>
+
+<li><p>法二：</p></li>
+
+<li><p><code>img{ display:block; }</code></p></li>
+</ul></li>
 </ul>
 
     </div>
@@ -449,6 +521,8 @@
         
         <a href="https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%BA%8C/" class="prev" rel="prev" title="CSS学习二"><i class="iconfont icon-left"></i>&nbsp;CSS学习二</a>
          
+        
+        <a href="https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E5%9B%9B/" class="next" rel="next" title="CSS学习四">CSS学习四&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 

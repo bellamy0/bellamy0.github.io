@@ -5,8 +5,20 @@
     <description>Recent content in Bellamy on Bellamy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Feb 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>CSS学习四</title>
+      <link>https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E5%9B%9B/</link>
+      <pubDate>Sat, 08 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E5%9B%9B/</guid>
+      <description>
+
+&lt;h1 id=&#34;一-float浮动&#34;&gt;一.float浮动&lt;/h1&gt;
+</description>
+    </item>
     
     <item>
       <title>CSS学习三</title>
@@ -270,8 +282,80 @@
 &lt;h1 id=&#34;七-overflow溢出隐藏&#34;&gt;七.overflow溢出隐藏&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;visible：默认&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;hidden：&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;overflow:visible&lt;/code&gt;：默认&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;overflow:hidden&lt;/code&gt;：溢出文字会隐藏 ，直接剪裁&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;overflow:scroll&lt;/code&gt;：添加滚动条&lt;br /&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;overflow:auto&lt;/code&gt;：根据内容多少自动判断是否添加滚动条&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;overflow-x&lt;/code&gt;  &lt;code&gt;overflow-y&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;八-透明度与手势&#34;&gt;八.透明度与手势&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;opacity:&lt;code&gt;opacity:0~1&lt;/code&gt; 透明~不透明&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;占空间&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;子内容也会透明&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;rgba：&lt;code&gt;background:rgba(num,num,num,0~1)&lt;/code&gt;&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;可以让指定内容透明&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;cursor：手势（鼠标移入时的样式）&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;默认箭头&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cursor:pointer&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;自定义手势：&lt;/li&gt;
+&lt;li&gt;准备图片：.cur 、.ico&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cursor:url(./img/cursor.ico),auto&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;九-最大最小宽高&#34;&gt;九.最大最小宽高&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;min-width/height: 内容不能充满时最小容器宽高，超出时自适应&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;max-width/height:内容最大容器宽高，小于时自适应&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;%是根据父容器来判断的&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;一个容器适应屏幕的高的方式：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;html,body{ height:100%; }&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;.contrainer{ height:100%; }&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;十-css的简单reset&#34;&gt;十.css的简单reset&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;*{ margin:0; padding:0; }&lt;/code&gt;  :使用通配改变（低性能）&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;ul{ list-style:none; }&lt;/code&gt;：去掉列表的点&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;a{ text-decoration:none; color:#999; }&lt;/code&gt;  :去掉下划线，更改颜色&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;img{ display:block; }&lt;/code&gt;：图片跟容器底部有空隙（内联元素的对齐方式是按基线对齐而非文字底线）&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;法一：&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;img{ vertical-align:baseline; }&lt;/code&gt;:基线对齐，默认值&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;img{ vertical-align:bottom; }&lt;/code&gt;:底线对齐&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;法二：&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;img{ display:block; }&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
