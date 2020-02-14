@@ -10,7 +10,7 @@
   
   
   <link rel="prev" href="https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%B8%89/" />
-  
+  <link rel="next" href="https://bellamy0.gitHub.io/2020/css%E9%98%B6%E6%AE%B5%E5%AE%9E%E6%88%98%E4%BD%9C%E4%B8%9A%E4%BC%81%E4%B8%9A%E9%A6%96%E9%A1%B5/" />
   <link rel="canonical" href="https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E5%9B%9B/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -46,7 +46,7 @@
     "articleSection" : "posts",
     "name" : "CSS学习四",
     "headline" : "CSS学习四",
-    "description" : " 一.float浮动 ",
+    "description" : "一.float浮动  文档流：文档流是文档中可显示对象在排列时所占用的位置\n float特性：加浮动元素（提高当前内容的层次），会脱离文档流（脱离body），会延迟父容器靠左或靠右排列，如果之前已经有浮动元素，会挨着浮动的元素进行排列\n float取值：left、right、none（默认） float注意点 ：  只会影响后面的元素 ① 内容默认提升半层（图文混排效果）\n 宽由内容决定（类似内联）（块是由父容器决定） 换行排列 针对内联也适用（不常用） 不方便居中\n   \x26lt;head\x26gt; \x26lt;style\x26gt; \/\/此时黄色在上，红色在下，按文档流中的块排列 body{ border:1px black solid;} #box1{ width:100px; height:100px; background:yellow; } #box2{ width:200px; height:200px; background:red; } \/\/此时黄色会浮在红色上方，依靠着由红色撑起来的父容器，向左排列 body{ border:1px black solid;} #box1{ width:100px; height:100px; background:yellow; float:left; } #box2{ width:200px; height:200px; background:red; } \/\/此时两者都浮动，文档流（body）部分无内容，两者并排 body{ border:1px black solid;} #box1{ width:100px; height:100px; background:yellow; float:left; } #box2{ width:200px; height:200px; background:red; float:left; } \/\/① 黄色依然在红色上方，区别是蓝色此时在红色底部 body{ border:1px black solid;} #box1{ width:100px; height:100px; background:yellow;} #box2{ width:200px; height:200px; background:red; float:left; } #box3{ width:300px; height:300px; background:blue; } \x26lt;\/style\x26gt; \x26lt;\/head\x26gt; \x26lt;body\x26gt; \x26lt;div id=\x26quot;box1\x26quot;\x26gt;\x26lt;\/div\x26gt; \x26lt;div id=\x26quot;box2\x26quot;\x26gt;\x26lt;\/div\x26gt; \x26lt;div id=\x26quot;box3\x26quot;\x26gt;\x26lt;\/div\x26gt; \x26lt;\/body\x26gt;   清除浮动",
     "inLanguage" : "en-us",
     "author" : "Bellamy",
     "creator" : "Bellamy",
@@ -57,7 +57,7 @@
     "datePublished": "2020-02-08 00:00:00 \x2b0000 UTC",
     "dateModified" : "2020-02-08 00:00:00 \x2b0000 UTC",
     "url" : "https:\/\/bellamy0.gitHub.io\/2020\/css%E5%AD%A6%E4%B9%A0%E5%9B%9B\/",
-    "wordCount" : "1",
+    "wordCount" : "275",
     "keywords" : [ "CSS","前端", "Bellamy"]
 }
 </script>
@@ -150,6 +150,219 @@
 
 <h1 id="一-float浮动">一.float浮动</h1>
 
+<ul>
+<li>文档流：文档流是文档中可显示对象在排列时所占用的位置<br /></li>
+<li>float特性：加浮动元素（提高当前内容的层次），会脱离文档流（脱离body），会延迟父容器靠左或靠右排列，如果之前已经有浮动元素，会挨着浮动的元素进行排列<br /></li>
+<li>float取值：left、right、none（默认）</li>
+<li>float注意点 ：
+
+<ul>
+<li>只会影响后面的元素 ①</li>
+<li>内容默认提升半层（图文混排效果）<br /></li>
+<li>宽由内容决定（类似内联）（块是由父容器决定）</li>
+<li>换行排列</li>
+<li>针对内联也适用（不常用）</li>
+<li>不方便居中<br /></li>
+</ul></li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;style&gt;
+        //此时黄色在上，红色在下，按文档流中的块排列  
+        body{ border:1px black solid;}
+        #box1{ width:100px; height:100px; background:yellow; }
+        #box2{ width:200px; height:200px; background:red; }
+        //此时黄色会浮在红色上方，依靠着由红色撑起来的父容器，向左排列
+        body{ border:1px black solid;}
+        #box1{ width:100px; height:100px; background:yellow; float:left; }
+        #box2{ width:200px; height:200px; background:red; }
+        //此时两者都浮动，文档流（body）部分无内容，两者并排
+        body{ border:1px black solid;}
+        #box1{ width:100px; height:100px; background:yellow; float:left; }
+        #box2{ width:200px; height:200px; background:red; float:left; }
+        //① 黄色依然在红色上方，区别是蓝色此时在红色底部
+        body{ border:1px black solid;}
+        #box1{ width:100px; height:100px; background:yellow;}
+        #box2{ width:200px; height:200px; background:red; float:left; }
+        #box3{ width:300px; height:300px; background:blue; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;box1&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;box2&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;box3&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+<ul>
+<li><p>清除浮动</p>
+
+<ul>
+<li>上下排列：clear属性：表示清除浮动的，值可以为left，both，right （clear属性只会操作块标签，对内联标签不起作用）<br /></li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;style&gt;
+        //此时黄色在上，红色在下，按文档流中的块排列  
+        body{ border:1px black solid;}
+        #box1{ width:100px; height:100px; background:yellow; float:left; }
+        #box2{ width:200px; height:200px; background:red; clear:left; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;box1&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;box2&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+<ul>
+<li><p>嵌套排列：</p></li>
+
+<li><p>固定宽高：不推荐，不能把高度固定死，不适合自适应</p></li>
+
+<li><p>父元素设置浮动：不推荐，在同一个层次上虽然能撑开，但是会影响后面的内容</p></li>
+
+<li><p><code>overflow:hidden</code>：不推荐，内容溢出时会被截掉</p></li>
+
+<li><p><code>display:inline-block</code>： 不推荐，更改了盒模型的排列</p></li>
+
+<li><p>设置空标签：不推荐，用空标签清除浮动，会多添加一个标签</p></li>
+</ul>
+
+<pre><code class="language-html">  &lt;head&gt;
+      &lt;style&gt;
+          #box1{ width:200px; border:1px black solid;}
+          #box2{ width:100px; height:200px; background:red; float:left; }
+          .clear{clear:both;}
+      &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;div id=&quot;box1&quot;&gt;
+        &lt;div id=&quot;box2&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      aaaaaaaa
+  &lt;/body&gt;
+</code></pre>
+
+<ul>
+<li><p>用after伪类：推荐，空标签加强版，（clear属性只会操作块标签，对内联标签不起作用）</p>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;style&gt;
+        #box1{ width:200px; border:1px black solid;}
+        #box2{ width:100px; height:200px; background:red; float:left; }
+        .clear:after{ content:''; clear:both; display:block; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;box1&quot; class=&quot;clear&quot;&gt;
+        &lt;div id=&quot;box2&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    aaaaaaaa
+&lt;/body&gt;
+</code></pre></li>
+</ul></li>
+
+<li><p>制造浮动又清除浮动的原因：制造浮动是为了让块元素并列显示，浮动容易打乱排版，清除浮动后仍然能并列显示</p></li>
+</ul>
+
+<h1 id="二-relative相对定位等">二.relative相对定位等</h1>
+
+<ul>
+<li><p>position定位：</p>
+
+<ul>
+<li><p>取值：static（默认），relative，absolute，fixed，sticky</p></li>
+
+<li><p>relative相对定位（不可层叠）：(上下左右是反的)</p></li>
+
+<li><p>如果没有定义偏移量，对元素没有任何影响</p></li>
+
+<li><p>不使元素脱离文档流（会占位）</p></li>
+
+<li><p>不影响其他元素布局</p></li>
+
+<li><p>是相对于当前元素自身位置偏移（左上角为（0，0））</p></li>
+</ul>
+
+<pre><code class="language-html">#box2{ width:100px; height:100px; background:red; position:relative; left:100px; }
+//可设置left、right、top、bottom
+</code></pre>
+
+<ul>
+<li><p>absolute绝对定位（可层叠）：</p></li>
+
+<li><p>使元素脱离文档流（类似浮动）</p></li>
+
+<li><p>可以让内联元素具备宽高（让内联具有块特性）</p></li>
+
+<li><p>使块元素默认宽高由内容决定（让块具有内联性）</p></li>
+
+<li><p>有定位祖先元素，则相对于祖先元素偏移，没有则相对于整个文档偏移</p></li>
+
+<li><p>fixed固定定位：（返回顶部功能，弹窗广告功能）</p></li>
+
+<li><p>使元素脱离文档流（类似浮动）</p></li>
+
+<li><p>可以让内联元素具备宽高（让内联具有块特性）</p></li>
+
+<li><p>使块元素默认宽高由内容决定（让块具有内联性）</p></li>
+
+<li><p>相对于整个浏览器窗口进行偏移</p></li>
+
+<li><p>sticky黏性定位：吸附效果（拖动到设置位置时会固定）</p></li>
+
+<li><p>z-index：提升层级（取值整数），几个position属性都适用，同一层级优先比较</p></li>
+</ul>
+
+<p><code>z-index:0;</code></p>
+
+<h1 id="三-css添加省略号">三.css添加省略号</h1>
+
+<ul>
+<li><code>text-overflow:ellipsis;</code>  ：添加省略号</li>
+<li><code>white-space:nowrap;</code>  ：内容不折行<br /></li>
+</ul>
+
+<h1 id="四-css精灵-雪碧图">四.css精灵（雪碧图）</h1>
+
+<ul>
+<li>特性：将网页涉及到的零星图片都包含到一张图上<br /></li>
+<li>好处：减少图片的质量，网页的图片加载速度快，减少图片的请求次数<br /></li>
+</ul>
+
+<h1 id="五-css圆角设置">五.css圆角设置</h1>
+
+<ul>
+<li><code>border-radius:number or %;</code>：圆的半径<br /></li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+&lt;style&gt;
+    //四个角
+    #box{ width:200px; height:200px; background:red; border-radius:100px; }
+    //容器的百分比
+    #box{ width:200px; height:200px; background:red; border-radius:50%; }
+    //两对角
+    #box{ width:200px; height:200px; background:red; border-radius:10px 20px; }
+    //四个角
+    #box{ width:200px; height:200px; background:red; border-radius:10px 20px 30px 40px; }
+    //椭圆角
+    #box{ width:200px; height:200px; background:red; border-radius:20px/40px; }
+&lt;/style&gt;
+&lt;/head&gt;
+</code></pre></li>
+</ul>
+
+<h1 id="六-pc端网页">六.pc端网页</h1>
+
+<ul>
+<li>通栏：自适应浏览器宽度</li>
+<li>版心：一个固定宽度并让容器居中<br /></li>
+<li></li>
+</ul>
+
     </div>
 
     <div class="post-copyright">
@@ -193,6 +406,8 @@
         
         <a href="https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E4%B8%89/" class="prev" rel="prev" title="CSS学习三"><i class="iconfont icon-left"></i>&nbsp;CSS学习三</a>
          
+        
+        <a href="https://bellamy0.gitHub.io/2020/css%E9%98%B6%E6%AE%B5%E5%AE%9E%E6%88%98%E4%BD%9C%E4%B8%9A%E4%BC%81%E4%B8%9A%E9%A6%96%E9%A1%B5/" class="next" rel="next" title="css阶段实战作业—企业首页">css阶段实战作业—企业首页&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 

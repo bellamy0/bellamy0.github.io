@@ -57,7 +57,7 @@
     "datePublished": "2020-02-06 00:00:00 \x2b0000 UTC",
     "dateModified" : "2020-02-06 00:00:00 \x2b0000 UTC",
     "url" : "https:\/\/bellamy0.gitHub.io\/2020\/css%E5%AD%A6%E4%B9%A0%E4%B8%89\/",
-    "wordCount" : "305",
+    "wordCount" : "307",
     "keywords" : [ "CSS","前端", "Bellamy"]
 }
 </script>
@@ -221,9 +221,8 @@
 <h4 id="1-盒子模型基础">1.盒子模型基础</h4>
 
 <ul>
-<li><p>组成：content（物品） -&gt; padding（填充物） -&gt;border（包装盒） -&gt;margin（盒子与盒子之间的间距）</p></li>
-
-<li><p>content：内容区域  width和height组成的</p></li>
+<li>组成：content（物品） -&gt; padding（填充物） -&gt;border（包装盒） -&gt;margin（盒子与盒子之间的间距）<br /></li>
+<li>content：内容区域  width和height组成的<br /></li>
 
 <li><p>padding：内边距（内填充）,也可以分别设置padding-left/right/top/bottom</p>
 
@@ -239,6 +238,8 @@
 
 <li><p>margin：外边距（外填充）与padding相同</p></li>
 
+<li><p>写几个值等于padding一样</p></li>
+
 <li><p>注意：</p>
 
 <ul>
@@ -250,8 +251,8 @@
 <li><p>box-sizing: 盒尺寸，可以改变盒子模型的展示形态①</p>
 
 <ul>
-<li>content-box（默认值）：width、height ——&gt;作用于content<br /></li>
-<li>border-box：width、height——&gt;作用于content、padding、border</li>
+<li>content-box（默认值，可能会超出盒子）：width、height ——&gt;作用于content<br /></li>
+<li>border-box（告诉浏览器去理解你设置的边框和内边距的值是包含在width内的。）：width、height——&gt;作用于content、padding、border</li>
 <li>使用场景：<br /></li>
 </ul></li>
 </ul>
@@ -304,7 +305,7 @@
 <li>解决办法
 
 <ul>
-<li>BFC规范</li>
+<li>BFC规范（给父元素加个overflow:hidden；）</li>
 <li>加边框border</li>
 <li>不用margin用padding（通过计算加给父元素）<br /></li>
 </ul></li>
@@ -338,14 +339,15 @@
 <h4 id="1-按类型">1.按类型</h4>
 
 <ul>
-<li>block：块<br />
+<li><p>block：块</p>
 
 <ul>
 <li>div、p、ul、ol、p、h1……</li>
 <li>特性一：独占一行<br /></li>
 <li>特性二：支持所有样式<br /></li>
 <li>特性三：不写宽的时候，跟父元素的宽相同<br /></li>
-<li>特性四：所占区域是一个矩形<br /></li>
+<li>特性四：所占区域是一个矩形<br />
+<br /></li>
 </ul></li>
 
 <li><p>inline：内联</p>
@@ -362,7 +364,9 @@
 <li><p>inline-block：内联块</p>
 
 <ul>
-<li>input、select……<br /></li>
+<li><p>对象作为内联对象，对象的内容作为块对象</p></li>
+
+<li><p>input、select……</p></li>
 </ul></li>
 </ul>
 
