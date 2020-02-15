@@ -375,11 +375,15 @@ body{ font-family: Arial; }
 
 &lt;p&gt;3.在磁盘创建一个用来存放git文件的文件夹（在git gui第一次运行时可以自动选择文件夹生成）&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/bellamy0/bellamy0.github.io/master/images/gitlearning/1.webp&#34; alt=&#34;Git gui&#34; /&gt;&lt;/p&gt;
+
 &lt;p&gt;4.将自己的项目文件夹拷贝到存放git文件的文件夹下&lt;/p&gt;
 
 &lt;p&gt;5.打开git gui&lt;/p&gt;
 
 &lt;p&gt;6.按顺序点击下方12345，在提示输入id与密码时输入&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/bellamy0/bellamy0.github.io/master/images/gitlearning/2.webp&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;7.如果是初次使用，会弹框提示你没有登录用户名，要打开命令行进行登录，命令行输入：
  git config –global username mygithub_name
@@ -387,9 +391,17 @@ body{ font-family: Arial; }
 
 &lt;p&gt;资源里面点击 git Bash ，在命令行里面输入你的账号和密码，按照上面的两行格式，然后关闭就可以了。&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/bellamy0/bellamy0.github.io/master/images/gitlearning/3.webp&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
 &lt;p&gt;8.提交成功会显示 success 然后在 github 官网就能看到提交成功的项目了。&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/bellamy0/bellamy0.github.io/master/images/gitlearning/4.webp&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
 &lt;p&gt;9.进入github的该项目，点击settings，下拉找到GitHub Pages，按照图片进行设置&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/bellamy0/bellamy0.github.io/master/images/gitlearning/5.webp&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/bellamy0/bellamy0.github.io/master/images/gitlearning/6.webp&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;10.该页面地址为&lt;code&gt;https://你的github用户名.github.io/项目名/文件夹名/文件名.html&lt;/code&gt;&lt;/p&gt;
 
