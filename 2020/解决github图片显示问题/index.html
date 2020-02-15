@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Bellamy">
+  
+  
+  
+  <link rel="prev" href="https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E5%9B%9B/" />
+  <link rel="next" href="https://bellamy0.gitHub.io/2020/%E4%B8%8A%E4%BC%A0html%E9%A1%B9%E7%9B%AE%E5%88%B0github/" />
+  <link rel="canonical" href="https://bellamy0.gitHub.io/2020/%E8%A7%A3%E5%86%B3github%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           解决Github图片显示问题 | Bellamy
+       
+  </title>
+  <meta name="title" content="解决Github图片显示问题 | Bellamy">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/bellamy0.gitHub.io"
+    },
+    "articleSection" : "posts",
+    "name" : "解决Github图片显示问题",
+    "headline" : "解决Github图片显示问题",
+    "description" : "解决Github图片显示问题 一.问题： GitHub中图片无法正常显示，甚至连头像也会裂开\n按f12打开控制台查看错误原因\nFailed to load resource: net::ERR_CERT_COMMON_NAME_INVALID\n有博主认为：实际上，可以认为，ERR_CERT_COMMON_NAME_INVALID就是用一个错误的域名访问了某个节点的https资源。导致这个错误的原因，基本是：\n dns污染 host设置错误 官方更新了dns，但是dns缓存没有被更新，导致错误解析。  二.解决办法： 主要思路就是使用本地hosts文件对网站进行域名解析，一般的DNS问题都可以通过修改hosts文件来解决，github的CDN域名被污染问题也不例外，同样可以通过修改hosts文件解决，将域名解析直接指向IP地址来绕过DNS的解析，以此解决污染问题。\n2.1 找到URL 打开GitHub带有任意挂掉图片的网页，使用元素选择器（Ctrl\x2bShift\x2bC），放在显示不了的图片上，或者在挂掉的图片上右键-检查元素，找到该元素的标签，复制其URL（src引号里的内容）\nhttps:\/\/avatars0.githubusercontent.com\/u\/44628130?s=460\x26amp;amp;v=4\n2.2 获取ip地址 之后打开ipaddress 在搜索框搜索二级域名avatars0.githubusercontent.com ，随后能看到该域名的ip address，写下博客时为：199.232.28.133\n随后我们用该ip地址与域名映射起来\n2.3修改hosts 用sublime打开C:\\Windows\\System32\\drivers\\etc\\hosts\n第一次更改时先在末尾添加：\n# GitHub Start 192.30.253.112 github.com 192.30.253.119 gist.github.com 151.101.184.133 assets-cdn.github.com 151.101.184.133 raw.githubusercontent.com 151.101.184.133 gist.githubusercontent.com 151.101.184.133 cloud.githubusercontent.com 151.101.184.133 camo.githubusercontent.com 151.101.184.133 avatars0.githubusercontent.com 151.101.184.133 avatars1.githubusercontent.com 151.101.184.133 avatars2.githubusercontent.com 151.101.184.133 avatars3.githubusercontent.com 151.101.184.133 avatars4.githubusercontent.com 151.101.184.133 avatars5.githubusercontent.com 151.101.184.133 avatars6.githubusercontent.com 151.101.184.133 avatars7.githubusercontent.com 151.101.184.133 avatars8.githubusercontent.com # GitHub End  非第一次修改则直接找查询的域名，更改对应域名的旧ip为新ip",
+    "inLanguage" : "en-us",
+    "author" : "Bellamy",
+    "creator" : "Bellamy",
+    "publisher": "Bellamy",
+    "accountablePerson" : "Bellamy",
+    "copyrightHolder" : "Bellamy",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-02-09 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2020-02-09 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/bellamy0.gitHub.io\/2020\/%E8%A7%A3%E5%86%B3github%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98\/",
+    "wordCount" : "69",
+    "keywords" : [ "Github","方法", "Bellamy"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">解决Github图片显示问题</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://bellamy0.gitHub.io" rel="author">Bellamy</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-02-09 itemprop="datePublished">February 9, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://bellamy0.gitHub.io/categories/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"> 解决办法 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h1 id="解决github图片显示问题">解决Github图片显示问题</h1>
+
+<h2 id="一-问题">一.问题：</h2>
+
+<p>GitHub中图片无法正常显示，甚至连头像也会裂开</p>
+
+<p>按f12打开控制台查看错误原因</p>
+
+<p><code>Failed to load resource: net::ERR_CERT_COMMON_NAME_INVALID</code></p>
+
+<p>有博主认为：实际上，可以认为，ERR_CERT_COMMON_NAME_INVALID就是用一个错误的域名访问了某个节点的https资源。导致这个错误的原因，基本是：</p>
+
+<ul>
+<li>dns污染</li>
+<li>host设置错误</li>
+<li>官方更新了dns，但是dns缓存没有被更新，导致错误解析。</li>
+</ul>
+
+<h2 id="二-解决办法">二.解决办法：</h2>
+
+<p>主要思路就是使用本地<code>hosts</code>文件对网站进行域名解析，一般的DNS问题都可以通过修改hosts文件来解决，github的CDN域名被污染问题也不例外，同样可以通过修改hosts文件解决，将域名解析直接指向IP地址来绕过DNS的解析，以此解决污染问题。</p>
+
+<h3 id="2-1-找到url">2.1 找到URL</h3>
+
+<p>打开GitHub带有任意挂掉图片的网页，使用元素选择器（Ctrl+Shift+C），放在显示不了的图片上，或者在挂掉的图片上右键-检查元素，找到该元素的标签，复制其URL（src引号里的内容）</p>
+
+<p><code>https://avatars0.githubusercontent.com/u/44628130?s=460&amp;amp;v=4</code></p>
+
+<h3 id="2-2-获取ip地址">2.2 获取ip地址</h3>
+
+<p>之后打开<a href="https://www.ipaddress.com/" rel="nofollow noreferrer" target="_blank">ipaddress</a> 在搜索框搜索二级域名<code>avatars0.githubusercontent.com</code>  ，随后能看到该域名的ip address，写下博客时为：199.232.28.133</p>
+
+<p>随后我们用该ip地址与域名映射起来</p>
+
+<h3 id="2-3修改hosts">2.3修改hosts</h3>
+
+<p>用sublime打开<code>C:\Windows\System32\drivers\etc\hosts</code></p>
+
+<p>第一次更改时先在末尾添加：</p>
+
+<pre><code># GitHub Start 
+192.30.253.112    github.com 
+192.30.253.119    gist.github.com
+151.101.184.133    assets-cdn.github.com
+151.101.184.133    raw.githubusercontent.com
+151.101.184.133    gist.githubusercontent.com
+151.101.184.133    cloud.githubusercontent.com
+151.101.184.133    camo.githubusercontent.com
+151.101.184.133    avatars0.githubusercontent.com
+151.101.184.133    avatars1.githubusercontent.com
+151.101.184.133    avatars2.githubusercontent.com
+151.101.184.133    avatars3.githubusercontent.com
+151.101.184.133    avatars4.githubusercontent.com
+151.101.184.133    avatars5.githubusercontent.com
+151.101.184.133    avatars6.githubusercontent.com
+151.101.184.133    avatars7.githubusercontent.com
+151.101.184.133    avatars8.githubusercontent.com
+
+ # GitHub End
+</code></pre>
+
+<p>非第一次修改则直接找查询的域名，更改对应域名的旧ip为新ip</p>
+
+<p>PS：如果后续挂掉再修改即可</p>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Bellamy </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://bellamy0.gitHub.io/2020/%E8%A7%A3%E5%86%B3github%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/>https://bellamy0.gitHub.io/2020/%E8%A7%A3%E5%86%B3github%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/github/">
+                    #Github</a></span>
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/%E6%96%B9%E6%B3%95/">
+                    #方法</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://bellamy0.gitHub.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://bellamy0.gitHub.io/2020/css%E5%AD%A6%E4%B9%A0%E5%9B%9B/" class="prev" rel="prev" title="CSS学习四"><i class="iconfont icon-left"></i>&nbsp;CSS学习四</a>
+         
+        
+        <a href="https://bellamy0.gitHub.io/2020/%E4%B8%8A%E4%BC%A0html%E9%A1%B9%E7%9B%AE%E5%88%B0github/" class="next" rel="next" title="上传HTML项目到Github">上传HTML项目到Github&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://bellamy0.gitHub.io">Bellamy</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

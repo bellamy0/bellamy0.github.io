@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>解决办法 on Bellamy</title>
+    <link>https://bellamy0.gitHub.io/categories/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+    <description>Recent content in 解决办法 on Bellamy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bellamy0.gitHub.io/categories/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>解决Github图片显示问题</title>
+      <link>https://bellamy0.gitHub.io/2020/%E8%A7%A3%E5%86%B3github%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sun, 09 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/%E8%A7%A3%E5%86%B3github%E5%9B%BE%E7%89%87%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98/</guid>
+      <description>解决Github图片显示问题 一.问题： GitHub中图片无法正常显示，甚至连头像也会裂开
+按f12打开控制台查看错误原因
+Failed to load resource: net::ERR_CERT_COMMON_NAME_INVALID
+有博主认为：实际上，可以认为，ERR_CERT_COMMON_NAME_INVALID就是用一个错误的域名访问了某个节点的https资源。导致这个错误的原因，基本是：
+ dns污染 host设置错误 官方更新了dns，但是dns缓存没有被更新，导致错误解析。  二.解决办法： 主要思路就是使用本地hosts文件对网站进行域名解析，一般的DNS问题都可以通过修改hosts文件来解决，github的CDN域名被污染问题也不例外，同样可以通过修改hosts文件解决，将域名解析直接指向IP地址来绕过DNS的解析，以此解决污染问题。
+2.1 找到URL 打开GitHub带有任意挂掉图片的网页，使用元素选择器（Ctrl+Shift+C），放在显示不了的图片上，或者在挂掉的图片上右键-检查元素，找到该元素的标签，复制其URL（src引号里的内容）
+https://avatars0.githubusercontent.com/u/44628130?s=460&amp;amp;amp;v=4
+2.2 获取ip地址 之后打开ipaddress 在搜索框搜索二级域名avatars0.githubusercontent.com ，随后能看到该域名的ip address，写下博客时为：199.232.28.133
+随后我们用该ip地址与域名映射起来
+2.3修改hosts 用sublime打开C:\Windows\System32\drivers\etc\hosts
+第一次更改时先在末尾添加：
+# GitHub Start 192.30.253.112 github.com 192.30.253.119 gist.github.com 151.101.184.133 assets-cdn.github.com 151.101.184.133 raw.githubusercontent.com 151.101.184.133 gist.githubusercontent.com 151.101.184.133 cloud.githubusercontent.com 151.101.184.133 camo.githubusercontent.com 151.101.184.133 avatars0.githubusercontent.com 151.101.184.133 avatars1.githubusercontent.com 151.101.184.133 avatars2.githubusercontent.com 151.101.184.133 avatars3.githubusercontent.com 151.101.184.133 avatars4.githubusercontent.com 151.101.184.133 avatars5.githubusercontent.com 151.101.184.133 avatars6.githubusercontent.com 151.101.184.133 avatars7.githubusercontent.com 151.101.184.133 avatars8.githubusercontent.com # GitHub End  非第一次修改则直接找查询的域名，更改对应域名的旧ip为新ip</description>
+    </item>
+    
+  </channel>
+</rss>

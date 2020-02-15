@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>工具类学习 on Bellamy</title>
-    <link>https://bellamy0.gitHub.io/categories/%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%AD%A6%E4%B9%A0/</link>
-    <description>Recent content in 工具类学习 on Bellamy</description>
+    <title>方法学习 on Bellamy</title>
+    <link>https://bellamy0.gitHub.io/categories/%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 方法学习 on Bellamy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://bellamy0.gitHub.io/categories/%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://bellamy0.gitHub.io/categories/%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>上传HTML项目到Github</title>
-      <link>https://bellamy0.gitHub.io/2020/git%E5%AD%A6%E4%B9%A0/</link>
+      <link>https://bellamy0.gitHub.io/2020/%E4%B8%8A%E4%BC%A0html%E9%A1%B9%E7%9B%AE%E5%88%B0github/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bellamy0.gitHub.io/2020/git%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>https://bellamy0.gitHub.io/2020/%E4%B8%8A%E4%BC%A0html%E9%A1%B9%E7%9B%AE%E5%88%B0github/</guid>
       <description>上传HTML项目到Github 1.注册github
 2.下载git gui
 3.在磁盘创建一个用来存放git文件的文件夹（在git gui第一次运行时可以自动选择文件夹生成）

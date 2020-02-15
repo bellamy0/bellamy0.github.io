@@ -6,18 +6,21 @@
     <description>Recent content in CSS on Bellamy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bellamy0.gitHub.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>css阶段实战作业—企业首页</title>
+      <title>Css阶段实战作业—企业首页</title>
       <link>https://bellamy0.gitHub.io/2020/css%E9%98%B6%E6%AE%B5%E5%AE%9E%E6%88%98%E4%BD%9C%E4%B8%9A%E4%BC%81%E4%B8%9A%E9%A6%96%E9%A1%B5/</link>
-      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 14 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bellamy0.gitHub.io/2020/css%E9%98%B6%E6%AE%B5%E5%AE%9E%E6%88%98%E4%BD%9C%E4%B8%9A%E4%BC%81%E4%B8%9A%E9%A6%96%E9%A1%B5/</guid>
-      <description></description>
+      <description>页面效果请到：
+https://bellamy0.github.io/Basic-learning-of-CSS-One/htmlExercise/index.html
+(本页面仅为css页面效果展示，无js交互)
+源码（html部分） &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt; &amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;ie=edge&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;./css/common.css&amp;quot; id=&amp;quot;&amp;quot;&amp;gt; &amp;lt;style&amp;gt; #banner{position: relative;} #banner .banner_list{ width: 100%; height: 469px; position: relative;} #banner .banner_list li{width: 100%; height: 100%; background:center 0 no-repeat; position:absolute; top: 0;left: 0; opacity: 0; z-index: 1; } #banner .banner_list li.active{opacity: 1;z-index: 10;} #banner .banner_list li a{display: block; width:100%; height: 100%;} #banner .banner_btn{width:100%; position: absolute; bottom: 19px;z-index: 20; font-size: 0; text-align: center; } #banner .</description>
     </item>
     
     <item>
