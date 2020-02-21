@@ -6,10 +6,58 @@
     <description>Recent content in Posts on Bellamy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bellamy0.gitHub.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>javascript学习二——DOM</title>
+      <link>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%89/</link>
+      <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%89/</guid>
+      <description>1.节点  DOM——&amp;gt;document
+ 节点
+ 文本节点：无标签包裹的 元素节点：标签中的  获取子节点：
+ childNotes：获取某标签下所有节点 children：获取某标签下元素节点 oUl.children
+ 只算第一层  父节点：
+ 查找父节点：parentNode  父节点应用：隐藏列表项
+  &amp;lt;head&amp;gt; &amp;lt;script&amp;gt; window.onload=function(){ var aA=document.getElementsByTypeName(&amp;quot;a&amp;quot;); for(var i=0;i&amp;lt;aA.lenght;i++){ aA[i].onclick=function(){ this.parentNode.display=hidden; }; }; }; &amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;javascript:;&amp;quot;&amp;gt;a&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;javascript:;&amp;quot;&amp;gt;b&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;javascript:;&amp;quot;&amp;gt;c&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/body&amp;gt;   offsetParent：获取元素在页面上的实际位置 firstChild/lastChild：获取收尾子节点 nextSibling/previousSibling：兄弟节点  2.操作元素的方式：  用点操作 用方括号操作 DOM：（一般不用）  setAttribute(&amp;ldquo;属性名&amp;rdquo;,&amp;ldquo;值&amp;rdquo;)：设置某属性的值 getAttribute（&amp;rdquo;属性名&amp;rdquo;）：获取某属性的值 removeAttribute(&amp;ldquo;属性名&amp;rdquo;)：删除某属性的值   &amp;lt;head&amp;gt; &amp;lt;script&amp;gt; window.onload=function(){ var oTxt=document.</description>
+    </item>
+    
+    <item>
+      <title>javascript学习二——定时器</title>
+      <link>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%8C/</link>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%8C/</guid>
+      <description>1.打开定时器 1.1 setInterval  用法：setInterval(函数名，时间ms) 作用：每个一段时间执行一次函数 返回值：打开的那个定时器  1.2 setTimeout  用法：setTimeout(函数名，时间ms) 作用：只执行一次，且时间为多久后消失  2.关闭定时器 2.1 clearInterval  用法：clearInterval(需要关闭的定时器) ，此处括号的内容需setInterval返回  2.2 clearTimeout  用法：同上  3.打开与关闭实例 &amp;lt;script&amp;gt; window.onload=function(){ var oBtn1=document.getElementId(&amp;quot;btn1&amp;quot;); var oBtn2=document.getElementId(&amp;quot;btn2&amp;quot;); //设置打开按钮 oBtn1.onclick=function(){ //timer用于获取当前打开的是哪个定时器 timer=setInterval(function(){ alert(&amp;quot;a&amp;quot;); },1000); }; //设置关闭按钮 oBtn2.onclick=function(){ clearInterval(timer); }; }; &amp;lt;/script&amp;gt;  4.Date对象 4.1 getHours  作用：获取当前时间  4.2 getMinutes  作用：获取当前分钟  4.3 getSecond  作用：获取当前秒  4.4 getFullYear  作用：获取年份  4.5 getMonth  作用：获取月份，从0开始，需要+1  4.</description>
+    </item>
+    
+    <item>
+      <title>javascript学习一——基础语法</title>
+      <link>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%80/</link>
+      <pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid>
+      <description>一、JS基础语法知识 1. JavaScript组成：  ECMAscript
+ DOM：文档
+ BOM：浏览器
+  2. 属性：  type=&amp;lsquo;text/javascript&amp;rsquo;说明标签内的文本格式 src引入外部js文件  &amp;lt;script src=&amp;quot;demo.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+3. 注意点：  可以有多个&amp;lt;script&amp;gt;标签，但js是按代码顺序执行的 一个标签只能做一件事情（要么引入，要么直接在里面写代码） js代码需要有分号！  4. js中的输出方法：  alert()：弹出一个警告框 document.write()：在页面上输出内容  如果括号内有html标签会自动解析，不会以文本形式输出  console.log()：在控制台上输入内容  一般用于代码调试，不影响用户（招聘简介放在）   5、常量  数据类型：  数字： 类型：number 例子：100、-20、3.14 布尔值： 类型：Boolean 例子：true、false 字符串： 类型：所有单引号或双引号的内容（都一样） 例子：“100”，“hello” 复合/引用数据类型： 特殊数据类型：null、undefined（没有初始化）、NaN   6、变量  声明变量关键字：var  7、变量弱引用  定义：变量赋值是什么类型，就是什么类型 注意：不建议改变变量的数据类型  8、三目运算符 num % 2 = 0 ?</description>
+    </item>
+    
+    <item>
+      <title>CSS进阶学习一</title>
+      <link>https://bellamy0.gitHub.io/2020/css%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E4%B8%80/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/css%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid>
+      <description> 一、b标签与i标签  strong与b、em与i的相同点：都可以实现相同效果（加粗与斜体），但前者是语义化的（有含义的），后者不具备语义化（无含义）
+ b与i存在的意义：简化选择器的操作，可以直接区分，而不用额外添加class
+  二、引用相关标签 </description>
+    </item>
     
     <item>
       <title>Css阶段实战作业—企业首页</title>
@@ -171,17 +219,20 @@ shift+alt+a：快速生成/删除注释
       <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>https://bellamy0.gitHub.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</guid>
-      <description>一、安装hugo 准备  文件操作  创建一个新文件夹，D:\Hugo 创建一个新文件夹，D:\Hugo\bin 创建一个新文件夹，D:\Hugo\Sites  下载hugo  在浏览器中打开 https://github.com/spf13/hugo/releases。 当前的版本是 hugo_0.55.6_Windows-64bit.zip。 下载那个 ZIP 文件，并保存到 D:\Hugo\bin 文件夹中。 解压之后得到三个文件hugo.exe、LICENSE、README.md 确保 hugo.exe 文件在 D:\Hugo\bin 文件夹。（如果你没有在D:\Hugo\bin 请把它移动去） 把 hugo.exe 可执行文件添加到你的 PATH路径中。把hugo添加到path中的操作：
+      <description>一、安装hugo 准备  文件操作
+ 创建一个新文件夹，D:\Hugo 创建一个新文件夹，D:\Hugo\bin 创建一个新文件夹，D:\Hugo\Sites  下载hugo
+ 在浏览器中打开 https://github.com/spf13/hugo/releases。 当前的版本是 hugo_0.55.6_Windows-64bit.zip。 下载那个 ZIP 文件，并保存到 D:\Hugo\bin 文件夹中。 解压之后得到三个文件hugo.exe、LICENSE、README.md 确保 hugo.exe 文件在 D:\Hugo\bin 文件夹。（如果你没有在D:\Hugo\bin 请把它移动去） 把 hugo.exe 可执行文件添加到你的 PATH路径中。把hugo添加到path中的操作：
 我的电脑邮件右键属性，在高级里面，选择环境变量，在系统变量里面找到path。双击打开path编辑，新建路径输入D:\hugo\bin（作者这里是D:\hugo\bin，其他的自己改路径）
    二、部署hugo  验证：打开cmd，用hugo help 验证，有提示输出则为安装成功 输入cmd命令
-D:\Hugo\Sites&amp;gt; hugo new site 你的昵称.org 建网站  用cmd输入(bellamy0处改为你自己站点的名字):
+D:\Hugo\Sites&amp;gt; hugo new site 你的昵称.org
+ 建网站
+ 用cmd输入(bellamy0处改为你自己站点的名字):
 D:\Hugo\Sites&amp;gt; hugo new site bellamy0.org
 这样就会在sites目录里面生成bellamy0.org的文件夹用来存放网站文件等。 创建about页面，输入：
 hugo new post/first.md
  创建第一篇文章，输入：
 hugo new about.md
- 打开 post/first.md 编辑blog内容。
-发布时需要将draft：true改为draft：false  安装皮肤</description>
+ 打开 post/first.md 编辑blog内容。</description>
     </item>
     
     <item>

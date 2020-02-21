@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Bellamy">
+  
+  
+  
+  <link rel="prev" href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%8C/" />
+  
+  <link rel="canonical" href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%89/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           javascript学习二——DOM | Bellamy
+       
+  </title>
+  <meta name="title" content="javascript学习二——DOM | Bellamy">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/bellamy0.gitHub.io"
+    },
+    "articleSection" : "posts",
+    "name" : "javascript学习二——DOM",
+    "headline" : "javascript学习二——DOM",
+    "description" : "1.节点  DOM——\x26gt;document\n 节点\n 文本节点：无标签包裹的 元素节点：标签中的  获取子节点：\n childNotes：获取某标签下所有节点 children：获取某标签下元素节点 oUl.children\n 只算第一层  父节点：\n 查找父节点：parentNode  父节点应用：隐藏列表项\n  \x26lt;head\x26gt; \x26lt;script\x26gt; window.onload=function(){ var aA=document.getElementsByTypeName(\x26quot;a\x26quot;); for(var i=0;i\x26lt;aA.lenght;i\x2b\x2b){ aA[i].onclick=function(){ this.parentNode.display=hidden; }; }; }; \x26lt;\/script\x26gt; \x26lt;\/head\x26gt; \x26lt;body\x26gt; \x26lt;ul\x26gt; \x26lt;li\x26gt;\x26lt;a href=\x26quot;javascript:;\x26quot;\x26gt;a\x26lt;\/a\x26gt;\x26lt;\/li\x26gt; \x26lt;li\x26gt;\x26lt;a href=\x26quot;javascript:;\x26quot;\x26gt;b\x26lt;\/a\x26gt;\x26lt;\/li\x26gt; \x26lt;li\x26gt;\x26lt;a href=\x26quot;javascript:;\x26quot;\x26gt;c\x26lt;\/a\x26gt;\x26lt;\/li\x26gt; \x26lt;\/ul\x26gt; \x26lt;\/body\x26gt;   offsetParent：获取元素在页面上的实际位置 firstChild\/lastChild：获取收尾子节点 nextSibling\/previousSibling：兄弟节点  2.操作元素的方式：  用点操作 用方括号操作 DOM：（一般不用）  setAttribute(\x26ldquo;属性名\x26rdquo;,\x26ldquo;值\x26rdquo;)：设置某属性的值 getAttribute（\x26rdquo;属性名\x26rdquo;）：获取某属性的值 removeAttribute(\x26ldquo;属性名\x26rdquo;)：删除某属性的值   \x26lt;head\x26gt; \x26lt;script\x26gt; window.onload=function(){ var oTxt=document.",
+    "inLanguage" : "en-us",
+    "author" : "Bellamy",
+    "creator" : "Bellamy",
+    "publisher": "Bellamy",
+    "accountablePerson" : "Bellamy",
+    "copyrightHolder" : "Bellamy",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-02-21 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2020-02-21 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/bellamy0.gitHub.io\/2020\/javascript%E5%AD%A6%E4%B9%A0%E4%B8%89\/",
+    "wordCount" : "181",
+    "keywords" : [ "JavaScript","前端", "Bellamy"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">javascript学习二——DOM</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://bellamy0.gitHub.io" rel="author">Bellamy</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-02-21 itemprop="datePublished">February 21, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://bellamy0.gitHub.io/categories/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"> 前端学习 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="1-节点">1.节点</h2>
+
+<ul>
+<li><p>DOM——&gt;document</p></li>
+
+<li><p>节点</p>
+
+<ul>
+<li>文本节点：无标签包裹的</li>
+<li>元素节点：标签中的</li>
+</ul></li>
+
+<li><p>获取子节点：</p>
+
+<ul>
+<li>childNotes：获取某标签下所有节点</li>
+<li>children：获取某标签下元素节点</li>
+<li><code>oUl.children</code><br /></li>
+<li>只算第一层</li>
+</ul></li>
+
+<li><p>父节点：</p>
+
+<ul>
+<li>查找父节点：parentNode</li>
+</ul></li>
+
+<li><p>父节点应用：隐藏列表项</p></li>
+</ul>
+
+<pre><code class="language-html">  &lt;head&gt;
+      &lt;script&gt;
+          window.onload=function(){
+              var aA=document.getElementsByTypeName(&quot;a&quot;);
+              
+              for(var i=0;i&lt;aA.lenght;i++){
+                  aA[i].onclick=function(){
+                      this.parentNode.display=hidden;
+                  };
+            };
+          };
+      &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;javascript:;&quot;&gt;a&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;javascript:;&quot;&gt;b&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;javascript:;&quot;&gt;c&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+  &lt;/body&gt;
+</code></pre>
+
+<ul>
+<li>offsetParent：获取元素在页面上的实际位置</li>
+<li>firstChild/lastChild：获取收尾子节点</li>
+<li>nextSibling/previousSibling：兄弟节点</li>
+</ul>
+
+<h2 id="2-操作元素的方式">2.操作元素的方式：</h2>
+
+<ul>
+<li>用点操作</li>
+<li>用方括号操作</li>
+<li>DOM：（一般不用）
+
+<ul>
+<li>setAttribute(&ldquo;属性名&rdquo;,&ldquo;值&rdquo;)：设置某属性的值</li>
+<li>getAttribute（&rdquo;属性名&rdquo;）：获取某属性的值</li>
+<li>removeAttribute(&ldquo;属性名&rdquo;)：删除某属性的值</li>
+</ul></li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;script&gt;
+        window.onload=function(){
+            var oTxt=document.getElementById(&quot;txt1&quot;);
+            var oBtn=document.getElementById(&quot;btn1&quot;);
+            
+            oBtn.onclick=function(){
+                //法一：用点操作元素
+                oTxt.value=&quot;adf&quot;;
+                //法二：用方括号操作元素
+                oTxt[&quot;value&quot;]=&quot;adf&quot;;
+                //法三：DOM
+                oTxt.setAttribute(&quot;value&quot;,&quot;adf&quot;);
+            };
+        };
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input id=&quot;txt1&quot; type=&quot;text&quot;&gt;
+    &lt;input id=&quot;btn1&quot; type=&quot;button&quot; value=&quot;按钮&quot;&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h2 id="3-用classname选择元素">3.用className选择元素</h2>
+
+<ul>
+<li>封装getByClass函数</li>
+<li>o开头表示：object</li>
+<li>a开头表示：array</li>
+<li>s开头表示：string</li>
+</ul>
+
+<pre><code class="language-js">//oParent表示父标签，sclass表示所需要找的class
+function getByClass(oParent,sClass){
+    //*为通配符，表示任何标签
+    var aEle=oParent.getElementsByTagName(&quot;*&quot;);
+    //用于放找到的元素
+    var aResult=[];
+    
+    for(var i=0;i&lt;aEle.length;i++){
+        if(aEle[i].class==sClass){
+            aResult.push(aEle[i]);
+        };
+    };
+    return aResult；
+};
+//调用方式
+var aBox=getByClass(oUl,&quot;box&quot;);
+</code></pre>
+
+<h2 id="4-dom操作应用">4.DOM操作应用</h2>
+
+<h4 id="4-1-创建dom元素">4.1 创建DOM元素</h4>
+
+<ul>
+<li><code>var oLi = document.createElement(&quot;标签名&quot;);</code>：仅为创建元素存入内存</li>
+
+<li><p><code>oUl.appendChild(oLi);</code>:为oUl元素添加子节点oLi到末尾（父级.appendchild(子节点)）</p></li>
+
+<li><p>实例：实现用输入框输入的文字生成新的表单项</p></li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;script&gt;
+       window.onload=function(){
+            var oBtn=document.getElementById(&quot;btn1&quot;);
+            var oTxt=document.getElementById(&quot;txt1&quot;);
+            var oUl=document.getElementById(&quot;ul1&quot;);
+        
+            oBtn.onclick=function(){
+                var oLi=document.createElement(&quot;li&quot;);
+                //将txt1中的数值放入表单项的内容中
+                oLi.innerHTML=oTxt.value;
+                oUl.appendChild(oLi);
+            };
+       };
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type=&quot;text&quot; id=&quot;txt1&quot;&gt;
+    &lt;input type=&quot;button&quot; id=&quot;btn1&quot;&gt;
+    &lt;ul id=&quot;ul1&quot;&gt;&lt;/ul&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h4 id="4-2-插入dom元素">4.2 插入DOM元素</h4>
+
+<ul>
+<li><code>oUl.insertBefore(oLi,在谁之前)</code>：插入到某一个位置</li>
+</ul>
+
+<h4 id="4-3-删除dome元素">4.3 删除DOME元素</h4>
+
+<ul>
+<li><code>oUl.removeChild(某元素)</code></li>
+</ul>
+
+<h4 id="4-4-文档碎片-用处极小">4.4 文档碎片（用处极小）</h4>
+
+<ul>
+<li><p>文档碎片可以提高低级浏览器上的DOM操作性能（先放入文档碎片中，最后统一进行渲染，而不用插一次元素渲染一次）</p></li>
+
+<li><p>文档碎片可以提高低级浏览器上的DOM操作性能（先放入文档碎片中，最后统一进行渲染，而不用插一次元素渲染一次）</p></li>
+
+<li><p><code>var oFrag=document.createDocumentFragment();</code>：创建文档碎片的语句</p></li>
+</ul>
+
+<h1 id="5-表格">5.表格</h1>
+
+<h4 id="5-1">5.1</h4>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;script&gt;
+        
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;table&gt;
+        &lt;thead border=&quot;1px&quot; width=&quot;500px&quot;&gt;
+            &lt;td&gt;ID&lt;/td&gt;
+            &lt;td&gt;姓名&lt;/td&gt;
+            &lt;td&gt;年龄&lt;/td&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;1&lt;/td&gt;
+                &lt;td&gt;Red&lt;/td&gt;
+                &lt;td&gt;27&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;2&lt;/td&gt;
+                &lt;td&gt;Blue&lt;/td&gt;
+                &lt;td&gt;28&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h1 id="6-表单">6.表单</h1>
+
+<h4 id="6-1">6.1</h4>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Bellamy </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%89/>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%89/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/javascript/">
+                    #JavaScript</a></span>
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/%E5%89%8D%E7%AB%AF/">
+                    #前端</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://bellamy0.gitHub.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%8C/" class="prev" rel="prev" title="javascript学习二——定时器"><i class="iconfont icon-left"></i>&nbsp;javascript学习二——定时器</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://bellamy0.gitHub.io">Bellamy</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

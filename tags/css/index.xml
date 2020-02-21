@@ -6,10 +6,21 @@
     <description>Recent content in CSS on Bellamy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 15 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bellamy0.gitHub.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSS进阶学习一</title>
+      <link>https://bellamy0.gitHub.io/2020/css%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E4%B8%80/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/css%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid>
+      <description> 一、b标签与i标签  strong与b、em与i的相同点：都可以实现相同效果（加粗与斜体），但前者是语义化的（有含义的），后者不具备语义化（无含义）
+ b与i存在的意义：简化选择器的操作，可以直接区分，而不用额外添加class
+  二、引用相关标签 </description>
+    </item>
     
     <item>
       <title>Css阶段实战作业—企业首页</title>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Bellamy">
+  
+  
+  
+  <link rel="prev" href="https://bellamy0.gitHub.io/2020/css%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E4%B8%80/" />
+  <link rel="next" href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%8C/" />
+  <link rel="canonical" href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%80/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           javascript学习一——基础语法 | Bellamy
+       
+  </title>
+  <meta name="title" content="javascript学习一——基础语法 | Bellamy">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/bellamy0.gitHub.io"
+    },
+    "articleSection" : "posts",
+    "name" : "javascript学习一——基础语法",
+    "headline" : "javascript学习一——基础语法",
+    "description" : "一、JS基础语法知识 1. JavaScript组成：  ECMAscript\n DOM：文档\n BOM：浏览器\n  2. 属性：  type=\x26lsquo;text\/javascript\x26rsquo;说明标签内的文本格式 src引入外部js文件  \x26lt;script src=\x26quot;demo.js\x26quot;\x26gt;\x26lt;\/script\x26gt;\n3. 注意点：  可以有多个\x26lt;script\x26gt;标签，但js是按代码顺序执行的 一个标签只能做一件事情（要么引入，要么直接在里面写代码） js代码需要有分号！  4. js中的输出方法：  alert()：弹出一个警告框 document.write()：在页面上输出内容  如果括号内有html标签会自动解析，不会以文本形式输出  console.log()：在控制台上输入内容  一般用于代码调试，不影响用户（招聘简介放在）   5、常量  数据类型：  数字： 类型：number 例子：100、-20、3.14 布尔值： 类型：Boolean 例子：true、false 字符串： 类型：所有单引号或双引号的内容（都一样） 例子：“100”，“hello” 复合\/引用数据类型： 特殊数据类型：null、undefined（没有初始化）、NaN   6、变量  声明变量关键字：var  7、变量弱引用  定义：变量赋值是什么类型，就是什么类型 注意：不建议改变变量的数据类型  8、三目运算符 num % 2 = 0 ?",
+    "inLanguage" : "en-us",
+    "author" : "Bellamy",
+    "creator" : "Bellamy",
+    "publisher": "Bellamy",
+    "accountablePerson" : "Bellamy",
+    "copyrightHolder" : "Bellamy",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-02-16 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2020-02-16 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/bellamy0.gitHub.io\/2020\/javascript%E5%AD%A6%E4%B9%A0%E4%B8%80\/",
+    "wordCount" : "211",
+    "keywords" : [ "JavaScript","前端", "Bellamy"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">javascript学习一——基础语法</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://bellamy0.gitHub.io" rel="author">Bellamy</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-02-16 itemprop="datePublished">February 16, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://bellamy0.gitHub.io/categories/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"> 前端学习 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h1 id="一-js基础语法知识">一、JS基础语法知识</h1>
+
+<h4 id="1-javascript组成">1. JavaScript组成：</h4>
+
+<ul>
+<li><p>ECMAscript</p></li>
+
+<li><p>DOM：文档</p></li>
+
+<li><p>BOM：浏览器</p></li>
+</ul>
+
+<h4 id="2-属性">2. 属性：</h4>
+
+<ul>
+<li>type=&lsquo;text/javascript&rsquo;说明标签内的文本格式</li>
+<li>src引入外部js文件</li>
+</ul>
+
+<p><code>&lt;script src=&quot;demo.js&quot;&gt;&lt;/script&gt;</code></p>
+
+<h4 id="3-注意点">3. 注意点：</h4>
+
+<ul>
+<li>可以有多个&lt;script&gt;标签，但js是按代码顺序执行的</li>
+<li>一个标签只能做一件事情（要么引入，要么直接在里面写代码）</li>
+<li>js代码需要有分号！</li>
+</ul>
+
+<h4 id="4-js中的输出方法">4. js中的输出方法：</h4>
+
+<ul>
+<li><code>alert()</code>：弹出一个警告框</li>
+<li><code>document.write()</code>：在页面上输出内容
+
+<ul>
+<li>如果括号内有html标签会自动解析，不会以文本形式输出</li>
+</ul></li>
+<li><code>console.log()</code>：在控制台上输入内容
+
+<ul>
+<li>一般用于代码调试，不影响用户（招聘简介放在）</li>
+</ul></li>
+</ul>
+
+<h4 id="5-常量">5、常量</h4>
+
+<ul>
+<li>数据类型：
+
+<ul>
+<li>数字：</li>
+<li>类型：number</li>
+<li>例子：100、-20、3.14</li>
+<li>布尔值：</li>
+<li>类型：Boolean</li>
+<li>例子：true、false</li>
+<li>字符串：</li>
+<li>类型：所有单引号或双引号的内容（都一样）</li>
+<li>例子：“100”，“hello”</li>
+<li>复合/引用数据类型：</li>
+<li>特殊数据类型：null、undefined（没有初始化）、NaN</li>
+</ul></li>
+</ul>
+
+<h4 id="6-变量">6、变量</h4>
+
+<ul>
+<li>声明变量关键字：var</li>
+</ul>
+
+<h4 id="7-变量弱引用">7、变量弱引用</h4>
+
+<ul>
+<li>定义：变量赋值是什么类型，就是什么类型</li>
+<li>注意：不建议改变变量的数据类型</li>
+</ul>
+
+<h4 id="8-三目运算符">8、三目运算符</h4>
+
+<pre><code class="language-js">num % 2 = 0 ? alert(偶数):alert(奇数)；
+</code></pre>
+
+<h4 id="9-函数">9、函数</h4>
+
+<ul>
+<li>语法：声明函数</li>
+</ul>
+
+<pre><code class="language-js">function 函数名(形参){}
+</code></pre>
+
+<ul>
+<li>执行时需要用<code>函数名(参数);</code>调用<br /></li>
+</ul>
+
+<ol>
+<li>事件驱动函数<br /></li>
+</ol>
+
+<p>1.1 onclick：失去光标时触发</p>
+
+<p>1.2 onblur：失去焦点时触发</p>
+
+<ol>
+<li>匿名函数：无函数名，通过变量调用或直接调用</li>
+</ol>
+
+<pre><code class="language-html">   &lt;script&gt;
+       window.onload()=function(){
+           //1.通过变量调用
+           var obj1=function(){
+               alert(&quot;通过变量调用&quot;);
+           }
+           obj1();
+           
+           //2.直接调用，函数必须加括号包裹，且让其执行需在尾部添加括号
+           (function(){
+               alert(&quot;直接调用&quot;)
+           })();
+       }
+   &lt;/script&gt;
+</code></pre>
+
+<h4 id="10-字符串">10、字符串</h4>
+
+<ul>
+<li><p>字符串重点方法：</p>
+
+<ul>
+<li><p>substring：</p></li>
+
+<li><p>格式：<code>字符串.substring(start,end);</code></p></li>
+
+<li><p>功能：将字符串中的[start,end]提出出来生成新的字符串</p></li>
+
+<li><p>返回值：新生成的字符串</p></li>
+
+<li><p>substr：</p></li>
+
+<li><p>格式：<code>字符串.substr(start,end)</code></p></li>
+
+<li><p>返回值：新生成的字符串</p></li>
+
+<li><p>slice（是数组）</p></li>
+
+<li><p>格式：<code>字符串.slice(start,end)</code></p></li>
+
+<li><p>replace():</p></li>
+
+<li><p>格式：<code>字符串.replace(oldstr,newstr)</code></p></li>
+
+<li><p>功能：用newstr替换oldstr</p></li>
+
+<li><p>参数：</p>
+
+<ul>
+<li><p>第一个参数传入的是字符串则只能替换一次</p></li>
+
+<li><p>第一个参数传入正则表达式<code>/xxx/ig</code> ，参数i代表忽略大小写，g代表全局匹配</p></li>
+</ul>
+
+<p><code>字符串.replace(/xxx/ig,newstr)</code></p></li>
+
+<li><p>split()：</p></li>
+
+<li><p>格式：<code>字符串.split(分隔符, length)</code></p></li>
+
+<li><p>参数：</p>
+
+<ul>
+<li>第一个参数，用这个分隔符对愿字符串进行分割</li>
+<li>第二个参数，控制返回数组的元素格式，一般不用</li>
+</ul></li>
+
+<li><p>注意：分隔符是空字符串时<code>&quot;&quot;</code>，直接将每一个字符单独分割为字串返回</p></li>
+
+<li><p>toLowerCase()</p></li>
+
+<li><p>toUperCase()</p></li>
+
+<li><p>concat:字符串拼接（一般情况下用+比较多）</p></li>
+
+<li><p>格式：<code>字符串.concat(字符串1，字符串2，……)</code></p></li>
+
+<li><p>indexof</p></li>
+</ul></li>
+
+<li><p>表单验证实例</p></li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;script&gt;
+        function func(){
+            //根据id获取标签的方法——&gt;document.getElementId(&quot;id&quot;)
+            var oUsername=document.getElementId(&quot;username&quot;);
+            var oUsernameSpan=document.getElementId(&quot;username_span&quot;);
+            
+            //拿到输入框中的内容
+            var oValue=oUsername.value;
+            
+            //判断
+            //用户名是否复合长度
+            if(oValue.length&gt;18 || oValue.length&lt;6){
+                oUsernameSpan.innerHTML=&quot;!长度必须在6~18个字符内&quot;；
+            }else if(!isABC(oValue[0])){
+                oUsernameSpan.innerHTML=&quot;地址必须以英文字母开头&quot;；
+            }
+        }
+        
+        function isABC(charStr){
+            if(charStr &gt;= &quot;a&quot;&amp;&amp; charStr&lt;=&quot;z&quot; || charStr&gt;=&quot;A&quot;&amp;&amp;charStr &lt;=&quot;Z&quot;){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;div1&quot;&gt;
+        &lt;input id = &quot;username&quot; type=&quot;text&quot; placeholder=&quot;用户名&quot; onblur=&quot;func();&quot;&gt;
+        &lt;span id=&quot;username_span&quot;&gt;6~18个字符，可使用、字母、数字、下划线开头&lt;/span&gt;
+        &lt;input type=&quot;text&quot; placeholder=&quot;密码&quot;&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h1 id="二-js与html部分交互的部分函数">二、js与html部分交互的部分函数</h1>
+
+<h4 id="1-getelementid">1.getElementId</h4>
+
+<ul>
+<li>语法：<code>x=document.getElementId(&quot;id&quot;)</code></li>
+<li>作用：用id返回（获取）某个标签</li>
+</ul>
+
+<h4 id="2-getelementsbytagname">2.getElementsByTagName</h4>
+
+<ul>
+<li>语法：<code>var x=document.getElementByTagName(&quot;标签名&quot;)</code></li>
+<li>作用：返回所有该标签，每一个存入一个数组中，可以计算标签个数<code>x.length</code></li>
+</ul>
+
+<h4 id="3-innerhtml">3.innerHTML</h4>
+
+<ul>
+<li>语法：<code>x.innerHTML</code></li>
+<li>作用：用于表示标签中的内容</li>
+</ul>
+
+<h4 id="4-onmouseover">4.onmouseover</h4>
+
+<ul>
+<li>语法：可写入html作为一个属性、也可写入js中</li>
+</ul>
+
+<p><code>&lt;element onmouseover=&quot;&quot;&gt;</code></p>
+
+<p><code>object.onmouseover=function(){};</code></p>
+
+<ul>
+<li>作用：事件会在鼠标移入到指定元素上发生</li>
+</ul>
+
+<h4 id="5-onmouseout">5.onmouseout</h4>
+
+<ul>
+<li>语法同上</li>
+<li>作用：事件会在鼠标移出到指定元素上发生</li>
+</ul>
+
+<h1 id="三-认识bom">三、认识BOM</h1>
+
+<h4 id="1-系统对话框">1.系统对话框</h4>
+
+<ul>
+<li>window方法（一般情况下window可以省略）
+
+<ul>
+<li><code>window.alert()</code>：弹出警告框</li>
+<li><code>window.confirm()</code>：弹出一个带确定和取消的提示框（确定返回值为true，点击取消返回false）</li>
+<li><code>window.prompt()</code>：弹出一个带输入框的提示框</li>
+<li>参数：第一个参数：面板上显示的内容；第二个参数输入框里的默认（可以不填）</li>
+<li>返回值：点击确定返回输入框的内容，点击取消返回null</li>
+<li><code>window.onload()=fuction(){}</code>：在方法用于在网页加载完毕后立刻执行操作</li>
+</ul></li>
+<li>open方法
+
+<ul>
+<li>第一个参数：url，跳转该url</li>
+<li>第二个参数：字符串，给打开的窗口起一个名字，随后继续点则打开该名字的窗口</li>
+<li>第三个参数：一串特殊含义的字符串，可以设置很多属性……</li>
+</ul></li>
+</ul>
+
+<h1 id="四-认识this-未完">四、认识this(未完)</h1>
+
+<h4 id="1-方法中的this">1.方法中的this</h4>
+
+<ul>
+<li>含义：在对象方法中，this指向调用它所在的方法的对象</li>
+</ul>
+
+<pre><code class="language-html">&lt;body&gt;
+    &lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+    &lt;script&gt;
+        //创建一个对象
+        var person={
+            
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Bellamy </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%80/>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%80/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/javascript/">
+                    #JavaScript</a></span>
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/%E5%89%8D%E7%AB%AF/">
+                    #前端</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://bellamy0.gitHub.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://bellamy0.gitHub.io/2020/css%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E4%B8%80/" class="prev" rel="prev" title="CSS进阶学习一"><i class="iconfont icon-left"></i>&nbsp;CSS进阶学习一</a>
+         
+        
+        <a href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%8C/" class="next" rel="next" title="javascript学习二——定时器">javascript学习二——定时器&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://bellamy0.gitHub.io">Bellamy</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

@@ -46,7 +46,7 @@
     "articleSection" : "posts",
     "name" : "Hugo学习指南",
     "headline" : "Hugo学习指南",
-    "description" : "一、安装hugo 准备  文件操作  创建一个新文件夹，D:\\Hugo 创建一个新文件夹，D:\\Hugo\\bin 创建一个新文件夹，D:\\Hugo\\Sites  下载hugo  在浏览器中打开 https:\/\/github.com\/spf13\/hugo\/releases。 当前的版本是 hugo_0.55.6_Windows-64bit.zip。 下载那个 ZIP 文件，并保存到 D:\\Hugo\\bin 文件夹中。 解压之后得到三个文件hugo.exe、LICENSE、README.md 确保 hugo.exe 文件在 D:\\Hugo\\bin 文件夹。（如果你没有在D:\\Hugo\\bin 请把它移动去） 把 hugo.exe 可执行文件添加到你的 PATH路径中。把hugo添加到path中的操作：\n我的电脑邮件右键属性，在高级里面，选择环境变量，在系统变量里面找到path。双击打开path编辑，新建路径输入D:\\hugo\\bin（作者这里是D:\\hugo\\bin，其他的自己改路径）\n   二、部署hugo  验证：打开cmd，用hugo help 验证，有提示输出则为安装成功 输入cmd命令\nD:\\Hugo\\Sites\x26gt; hugo new site 你的昵称.org 建网站  用cmd输入(bellamy0处改为你自己站点的名字):\nD:\\Hugo\\Sites\x26gt; hugo new site bellamy0.org\n这样就会在sites目录里面生成bellamy0.org的文件夹用来存放网站文件等。 创建about页面，输入：\nhugo new post\/first.md\n 创建第一篇文章，输入：\nhugo new about.md\n 打开 post\/first.md 编辑blog内容。\n发布时需要将draft：true改为draft：false  安装皮肤",
+    "description" : "一、安装hugo 准备  文件操作\n 创建一个新文件夹，D:\\Hugo 创建一个新文件夹，D:\\Hugo\\bin 创建一个新文件夹，D:\\Hugo\\Sites  下载hugo\n 在浏览器中打开 https:\/\/github.com\/spf13\/hugo\/releases。 当前的版本是 hugo_0.55.6_Windows-64bit.zip。 下载那个 ZIP 文件，并保存到 D:\\Hugo\\bin 文件夹中。 解压之后得到三个文件hugo.exe、LICENSE、README.md 确保 hugo.exe 文件在 D:\\Hugo\\bin 文件夹。（如果你没有在D:\\Hugo\\bin 请把它移动去） 把 hugo.exe 可执行文件添加到你的 PATH路径中。把hugo添加到path中的操作：\n我的电脑邮件右键属性，在高级里面，选择环境变量，在系统变量里面找到path。双击打开path编辑，新建路径输入D:\\hugo\\bin（作者这里是D:\\hugo\\bin，其他的自己改路径）\n   二、部署hugo  验证：打开cmd，用hugo help 验证，有提示输出则为安装成功 输入cmd命令\nD:\\Hugo\\Sites\x26gt; hugo new site 你的昵称.org\n 建网站\n 用cmd输入(bellamy0处改为你自己站点的名字):\nD:\\Hugo\\Sites\x26gt; hugo new site bellamy0.org\n这样就会在sites目录里面生成bellamy0.org的文件夹用来存放网站文件等。 创建about页面，输入：\nhugo new post\/first.md\n 创建第一篇文章，输入：\nhugo new about.md\n 打开 post\/first.md 编辑blog内容。",
     "inLanguage" : "en-us",
     "author" : "Bellamy",
     "creator" : "Bellamy",
@@ -57,7 +57,7 @@
     "datePublished": "2019-07-14 00:00:00 \x2b0000 UTC",
     "dateModified" : "2019-07-14 00:00:00 \x2b0000 UTC",
     "url" : "https:\/\/bellamy0.gitHub.io\/2019\/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97\/",
-    "wordCount" : "118",
+    "wordCount" : "119",
     "keywords" : [ "hugo","博客", "Bellamy"]
 }
 </script>
@@ -153,14 +153,15 @@
 <h2 id="准备">准备</h2>
 
 <ul>
-<li>文件操作
+<li><p>文件操作</p>
 
 <ol>
 <li>创建一个新文件夹，D:\Hugo</li>
 <li>创建一个新文件夹，D:\Hugo\bin</li>
 <li>创建一个新文件夹，D:\Hugo\Sites</li>
 </ol></li>
-<li>下载hugo
+
+<li><p>下载hugo</p>
 
 <ol>
 <li>在浏览器中打开 <a href="https://github.com/spf13/hugo/releases。" rel="nofollow noreferrer" target="_blank">https://github.com/spf13/hugo/releases。</a></li>
@@ -169,8 +170,7 @@
 <li>解压之后得到三个文件hugo.exe、LICENSE、README.md</li>
 <li>确保 hugo.exe 文件在 D:\Hugo\bin 文件夹。（如果你没有在D:\Hugo\bin 请把它移动去）</li>
 <li>把 hugo.exe 可执行文件添加到你的 PATH路径中。把hugo添加到path中的操作：<br />
-我的电脑邮件右键属性，在高级里面，选择环境变量，在系统变量里面找到path。双击打开path编辑，新建路径输入D:\hugo\bin（作者这里是D:\hugo\bin，其他的自己改路径）<br />
-<br /></li>
+我的电脑邮件右键属性，在高级里面，选择环境变量，在系统变量里面找到path。双击打开path编辑，新建路径输入D:\hugo\bin（作者这里是D:\hugo\bin，其他的自己改路径）<br /></li>
 </ol></li>
 </ul>
 
@@ -178,9 +178,12 @@
 
 <ol>
 <li>验证：打开cmd，用hugo help 验证，有提示输出则为安装成功</li>
-<li>输入cmd命令<br />
-<code>D:\Hugo\Sites&gt; hugo new site 你的昵称.org</code></li>
-<li>建网站
+
+<li><p>输入cmd命令</p>
+
+<p><code>D:\Hugo\Sites&gt; hugo new site 你的昵称.org</code></p></li>
+
+<li><p>建网站</p>
 
 <ol>
 <li>用cmd输入(bellamy0处改为你自己站点的名字):<br />
@@ -221,24 +224,23 @@
    <code>git push -u origin master</code><br />
    按要求输入用户名和密码，即成功</p>
 
+<p>​</p>
+
 <h1 id="四-问题">四、问题</h1>
 
 <ul>
-<li>中文乱码：修改编码方式为UTF-8
-<br />
-<br /></li>
+<li>中文乱码：修改编码方式为UTF-8</li>
 </ul>
 
 <h1 id="五-后续修改方式">五、后续修改方式</h1>
 
 <ol>
 <li>用cmd进入站点，执行：<br />
-<code>hugo</code><br /></li>
+  <code>hugo</code><br /></li>
 <li>进入public执行：<br />
-<code>git add -A</code><br />
-<code>git commit -m &quot;xxxx&quot;</code><br />
-<code>git push -u origin master</code><br />
-<br /></li>
+  <code>git add -A</code><br />
+  <code>git commit -m &quot;xxxx&quot;</code><br />
+  <code>git push -u origin master</code><br /></li>
 </ol>
 
     </div>

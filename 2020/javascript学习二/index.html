@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Bellamy">
+  
+  
+  
+  <link rel="prev" href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%80/" />
+  <link rel="next" href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%89/" />
+  <link rel="canonical" href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%8C/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           javascript学习二——定时器 | Bellamy
+       
+  </title>
+  <meta name="title" content="javascript学习二——定时器 | Bellamy">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/bellamy0.gitHub.io"
+    },
+    "articleSection" : "posts",
+    "name" : "javascript学习二——定时器",
+    "headline" : "javascript学习二——定时器",
+    "description" : "1.打开定时器 1.1 setInterval  用法：setInterval(函数名，时间ms) 作用：每个一段时间执行一次函数 返回值：打开的那个定时器  1.2 setTimeout  用法：setTimeout(函数名，时间ms) 作用：只执行一次，且时间为多久后消失  2.关闭定时器 2.1 clearInterval  用法：clearInterval(需要关闭的定时器) ，此处括号的内容需setInterval返回  2.2 clearTimeout  用法：同上  3.打开与关闭实例 \x26lt;script\x26gt; window.onload=function(){ var oBtn1=document.getElementId(\x26quot;btn1\x26quot;); var oBtn2=document.getElementId(\x26quot;btn2\x26quot;); \/\/设置打开按钮 oBtn1.onclick=function(){ \/\/timer用于获取当前打开的是哪个定时器 timer=setInterval(function(){ alert(\x26quot;a\x26quot;); },1000); }; \/\/设置关闭按钮 oBtn2.onclick=function(){ clearInterval(timer); }; }; \x26lt;\/script\x26gt;  4.Date对象 4.1 getHours  作用：获取当前时间  4.2 getMinutes  作用：获取当前分钟  4.3 getSecond  作用：获取当前秒  4.4 getFullYear  作用：获取年份  4.5 getMonth  作用：获取月份，从0开始，需要\x2b1  4.",
+    "inLanguage" : "en-us",
+    "author" : "Bellamy",
+    "creator" : "Bellamy",
+    "publisher": "Bellamy",
+    "accountablePerson" : "Bellamy",
+    "copyrightHolder" : "Bellamy",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-02-20 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2020-02-20 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/bellamy0.gitHub.io\/2020\/javascript%E5%AD%A6%E4%B9%A0%E4%BA%8C\/",
+    "wordCount" : "283",
+    "keywords" : [ "JavaScript","前端", "Bellamy"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">javascript学习二——定时器</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://bellamy0.gitHub.io" rel="author">Bellamy</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-02-20 itemprop="datePublished">February 20, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://bellamy0.gitHub.io/categories/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"> 前端学习 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="1-打开定时器">1.打开定时器</h2>
+
+<h4 id="1-1-setinterval">1.1 setInterval</h4>
+
+<ul>
+<li>用法：<code>setInterval(函数名，时间ms)</code></li>
+<li>作用：每个一段时间执行一次函数</li>
+<li>返回值：打开的那个定时器</li>
+</ul>
+
+<h4 id="1-2-settimeout">1.2 setTimeout</h4>
+
+<ul>
+<li>用法：<code>setTimeout(函数名，时间ms)</code></li>
+<li>作用：只执行一次，且时间为多久后消失</li>
+</ul>
+
+<h2 id="2-关闭定时器">2.关闭定时器</h2>
+
+<h4 id="2-1-clearinterval">2.1 clearInterval</h4>
+
+<ul>
+<li>用法：<code>clearInterval(需要关闭的定时器)</code> ，此处括号的内容需setInterval返回</li>
+</ul>
+
+<h4 id="2-2-cleartimeout">2.2 clearTimeout</h4>
+
+<ul>
+<li>用法：同上</li>
+</ul>
+
+<h2 id="3-打开与关闭实例">3.打开与关闭实例</h2>
+
+<pre><code class="language-html">&lt;script&gt;
+    window.onload=function(){
+        var oBtn1=document.getElementId(&quot;btn1&quot;);
+        var oBtn2=document.getElementId(&quot;btn2&quot;);
+        
+        //设置打开按钮
+        oBtn1.onclick=function(){
+            //timer用于获取当前打开的是哪个定时器
+            timer=setInterval(function(){
+                alert(&quot;a&quot;);
+            },1000);
+        };
+        
+        //设置关闭按钮
+        oBtn2.onclick=function(){
+            clearInterval(timer);
+        };
+    };
+&lt;/script&gt;
+</code></pre>
+
+<h2 id="4-date对象">4.Date对象</h2>
+
+<h4 id="4-1-gethours">4.1 getHours</h4>
+
+<ul>
+<li>作用：获取当前时间</li>
+</ul>
+
+<h4 id="4-2-getminutes">4.2 getMinutes</h4>
+
+<ul>
+<li>作用：获取当前分钟</li>
+</ul>
+
+<h4 id="4-3-getsecond">4.3 getSecond</h4>
+
+<ul>
+<li>作用：获取当前秒</li>
+</ul>
+
+<h4 id="4-4-getfullyear">4.4 getFullYear</h4>
+
+<ul>
+<li>作用：获取年份</li>
+</ul>
+
+<h4 id="4-5-getmonth">4.5 getMonth</h4>
+
+<ul>
+<li>作用：获取月份，从0开始，需要+1</li>
+</ul>
+
+<h4 id="4-6-getdate">4.6 getDate</h4>
+
+<ul>
+<li>作用：获取日期</li>
+</ul>
+
+<h4 id="4-7-getday">4.7 getDay</h4>
+
+<ul>
+<li>作用：获取星期（0代表周日，以此类推）</li>
+</ul>
+
+<pre><code class="language-html">var oDate=new Date();
+var oHours=oDate.getHours();
+</code></pre>
+
+<h2 id="5-date实例">5.Date实例</h2>
+
+<ul>
+<li>时间显示器</li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;script&gt;
+        //新建函数用于将每一位都变为两位数字
+        function toDou(n){
+            if(n&lt;10){
+                return &quot;0&quot;+n;
+            }else{
+                return &quot; &quot;+n;
+                //空字符串保证了返回一定为字符串
+            }
+        }
+        window.onload=function(){
+            //新建一个数组存放所有img标签
+            var aImag=document.getElementsByTypeNmae(&quot;img&quot;);
+            //tick的设置是为了防止setInterval带来的一秒空隙
+            function tick(){
+                //新建oDate读取当前系统时间
+                var oDate = new Date();
+                //拼src数组
+                var str=toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+  
+                //修改每一个img的src
+                for(var i=0; i&lt;aImag.length;i++){
+                    aImage[i].src=&quot;img/&quot;+src[i]+&quot;.png&quot;;
+                    }
+                };
+             tick();
+             setInterval(tick,1000);
+            }  
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;img src=&quot;img/0.png&quot;&gt;
+    &lt;img src=&quot;img/0.png&quot;&gt;
+    :
+    &lt;img src=&quot;img/0.png&quot;&gt;
+    &lt;img src=&quot;img/0.png&quot;&gt;
+    :
+    &lt;img src=&quot;img/0.png&quot;&gt;
+    &lt;img src=&quot;img/0.png&quot;&gt;
+&lt;/body&gt;
+</code></pre>
+
+<ul>
+<li>注：低版本浏览器不兼容<code>str[i]</code>的方式，则需要使用<code>str.charAt(i)</code></li>
+</ul>
+
+<h2 id="6-延时提示框">6.延时提示框</h2>
+
+<ul>
+<li>实例：电脑版qq，鼠标移入头像处显示资料页</li>
+</ul>
+
+<pre><code class="language-HTML">&lt;head&gt;
+    &lt;style&gt;
+        //设置两个类似头像与资料页的版块
+        div{ float:left; margin:10px;}
+        #div1{width:50px; height:50px; background:red; }
+        #div2{width:100px; height:100px; background: #CCC; display:none; }
+    &lt;/style&gt;
+    &lt;script&gt;
+        window.onload=function(){
+            var oDiv1=document.getElementById(&quot;div1&quot;);
+            var oDiv2=document.getElementById(&quot;div2&quot;);
+            var timer=null;
+            var timer2=null;
+            //设置鼠标移入时执行的函数——更改display
+            oDiv1.onmouseover=function(){
+                //此处的clearTimeout的作用是移回div1时防止不能及时出现div2
+                clearTimeout(timer2);
+                oDiv1.style.display=&quot;block&quot;;
+            };
+            //设置鼠标移出时执行的函数——更改display
+            oDiv1.onmouseout=function(){
+                //设置资料页显示时间
+                timer=setTimeout(function(){
+                    oDiv2.style.display=&quot;none&quot;;
+                },500);
+            };
+            
+            //当移入div2时，关闭timer定时器，则div2不会消失
+            oDiv2.onmouseover=function(){
+                clearTimeout(timer);
+            };
+            //当移出div2时，关闭div2
+            oDiv2.onmouseout=function(){
+                //此处setTimeout作用，防止从div2到div1的闪动
+                timer2=setTimeout(function(){
+                    oDiv2.style.display=&quot;none&quot;; 
+                },500);
+            };
+        };
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;div1&quot;&gt;&lt;/div&gt;
+    &lt;div id=&quot;div2&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+
+</code></pre>
+
+<ul>
+<li>简化代码</li>
+</ul>
+
+<pre><code class="language-html"> oDiv1.onmouseout=oDiv2.onmouseout=function(){
+                //此处setTimeout作用，防止从div2到div1的闪动
+                timer2=setTimeout(function(){
+                    oDiv2.style.display=&quot;none&quot;; 
+                },500);
+            };
+</code></pre>
+
+<h2 id="7-无缝滚动">7.无缝滚动</h2>
+
+<ul>
+<li>offsetLeft/offsetRight/offsetWidth/offsetHeight：获取物体左右间距、宽高</li>
+<li><code>&lt;a href=&quot;javascript:;&quot;&gt;&lt;/a&gt;</code>作用：
+
+<ul>
+<li>通过超链接调用js，而不进行页面跳转（<code>href=&quot;url&quot;</code>）或刷新（<code>href=&quot;&quot;</code>）或回到顶部<code>href=&quot;#&quot;</code></li>
+</ul></li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;style&gt;
+        *{margin:0; padding:0px;}
+        #div1{width:712px;height:108px;margin:100px auto;position:relative; overflow:hidden;}
+        //让ul移动能高效，用li移动复杂
+        #div1 ul{position:absolute;}
+        #div1 ul li{float:left; width:178px; height:108px;list-style:none;}
+    &lt;/style&gt;
+    &lt;script&gt;
+       window.onload=function(){
+           //获取标签
+            var oDiv=document.getElementId(&quot;div1&quot;);
+            var oUl=oDiv.getElementsByTypeName(&quot;ul&quot;);
+            var aLi=oUl.getElementsByTypeName(&quot;li&quot;);
+           
+            var speed=2;
+           //增加长度到二倍
+           oUl.innerHTML=oUl.innerHTML+oUl.innerHTML;
+           //宽度设置为动态的
+           oUl.style.width=aLi[0].offsetWidth*aLi.length+&quot;px&quot;;
+           function move(){
+               //当滚动过半时（回到第一张图）清零left边距
+               //取复制是因为ul为相对位置，最左边边界出为0，再向左走则为负值，而width不能为负
+               if(oUl.offsetLeft&lt;-oUl.offsetWidth/2){
+                    oUl.style.left=&quot;0&quot;;
+                  }
+               //设置滚动速度
+               oUl.style.left=oUl.offsetLeft-2+&quot;px&quot;;
+               //取30在学习运动时分析
+           }
+           var timer = setInterval(move,30);
+           
+           //设置鼠标移入移出的暂停与运动
+           oDiv.onmouseover=function(){
+                clearInterval(timer);
+           };
+           oDiv.onmouseout=function(){
+                timer = setInterval(move,30);
+           };
+           //更改speed，更改走的方向
+           document.getElementsByTagName(&quot;a&quot;)[0].onclick=function(){
+               speed=-2;
+           };
+           document.getElementsByTagName(&quot;a&quot;)[1].onclick=function(){
+               speed=2;
+           };
+       };
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;a href=&quot;javascript:;&quot;&gt;向左走&lt;/a&gt;
+    &lt;a href=&quot;javascript:;&quot;&gt;向右走&lt;/a&gt;
+    &lt;div id=&quot;div1&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;img src=&quot;&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src=&quot;&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src=&quot;&quot;&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Bellamy </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%8C/>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%8C/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/javascript/">
+                    #JavaScript</a></span>
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/%E5%89%8D%E7%AB%AF/">
+                    #前端</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://bellamy0.gitHub.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%80/" class="prev" rel="prev" title="javascript学习一——基础语法"><i class="iconfont icon-left"></i>&nbsp;javascript学习一——基础语法</a>
+         
+        
+        <a href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%89/" class="next" rel="next" title="javascript学习二——DOM">javascript学习二——DOM&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://bellamy0.gitHub.io">Bellamy</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

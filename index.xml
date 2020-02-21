@@ -5,8 +5,881 @@
     <description>Recent content in Bellamy on Bellamy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Feb 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>javascript学习二——DOM</title>
+      <link>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%89/</link>
+      <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%89/</guid>
+      <description>
+
+&lt;h2 id=&#34;1-节点&#34;&gt;1.节点&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;DOM——&amp;gt;document&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;节点&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;文本节点：无标签包裹的&lt;/li&gt;
+&lt;li&gt;元素节点：标签中的&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;获取子节点：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;childNotes：获取某标签下所有节点&lt;/li&gt;
+&lt;li&gt;children：获取某标签下元素节点&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;oUl.children&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;只算第一层&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;父节点：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;查找父节点：parentNode&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;父节点应用：隐藏列表项&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;  &amp;lt;head&amp;gt;
+      &amp;lt;script&amp;gt;
+          window.onload=function(){
+              var aA=document.getElementsByTypeName(&amp;quot;a&amp;quot;);
+              
+              for(var i=0;i&amp;lt;aA.lenght;i++){
+                  aA[i].onclick=function(){
+                      this.parentNode.display=hidden;
+                  };
+            };
+          };
+      &amp;lt;/script&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+      &amp;lt;ul&amp;gt;
+          &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;javascript:;&amp;quot;&amp;gt;a&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+          &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;javascript:;&amp;quot;&amp;gt;b&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+          &amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;javascript:;&amp;quot;&amp;gt;c&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+      &amp;lt;/ul&amp;gt;
+  &amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;offsetParent：获取元素在页面上的实际位置&lt;/li&gt;
+&lt;li&gt;firstChild/lastChild：获取收尾子节点&lt;/li&gt;
+&lt;li&gt;nextSibling/previousSibling：兄弟节点&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;2-操作元素的方式&#34;&gt;2.操作元素的方式：&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;用点操作&lt;/li&gt;
+&lt;li&gt;用方括号操作&lt;/li&gt;
+&lt;li&gt;DOM：（一般不用）
+
+&lt;ul&gt;
+&lt;li&gt;setAttribute(&amp;ldquo;属性名&amp;rdquo;,&amp;ldquo;值&amp;rdquo;)：设置某属性的值&lt;/li&gt;
+&lt;li&gt;getAttribute（&amp;rdquo;属性名&amp;rdquo;）：获取某属性的值&lt;/li&gt;
+&lt;li&gt;removeAttribute(&amp;ldquo;属性名&amp;rdquo;)：删除某属性的值&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;script&amp;gt;
+        window.onload=function(){
+            var oTxt=document.getElementById(&amp;quot;txt1&amp;quot;);
+            var oBtn=document.getElementById(&amp;quot;btn1&amp;quot;);
+            
+            oBtn.onclick=function(){
+                //法一：用点操作元素
+                oTxt.value=&amp;quot;adf&amp;quot;;
+                //法二：用方括号操作元素
+                oTxt[&amp;quot;value&amp;quot;]=&amp;quot;adf&amp;quot;;
+                //法三：DOM
+                oTxt.setAttribute(&amp;quot;value&amp;quot;,&amp;quot;adf&amp;quot;);
+            };
+        };
+    &amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;input id=&amp;quot;txt1&amp;quot; type=&amp;quot;text&amp;quot;&amp;gt;
+    &amp;lt;input id=&amp;quot;btn1&amp;quot; type=&amp;quot;button&amp;quot; value=&amp;quot;按钮&amp;quot;&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;3-用classname选择元素&#34;&gt;3.用className选择元素&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;封装getByClass函数&lt;/li&gt;
+&lt;li&gt;o开头表示：object&lt;/li&gt;
+&lt;li&gt;a开头表示：array&lt;/li&gt;
+&lt;li&gt;s开头表示：string&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;//oParent表示父标签，sclass表示所需要找的class
+function getByClass(oParent,sClass){
+    //*为通配符，表示任何标签
+    var aEle=oParent.getElementsByTagName(&amp;quot;*&amp;quot;);
+    //用于放找到的元素
+    var aResult=[];
+    
+    for(var i=0;i&amp;lt;aEle.length;i++){
+        if(aEle[i].class==sClass){
+            aResult.push(aEle[i]);
+        };
+    };
+    return aResult；
+};
+//调用方式
+var aBox=getByClass(oUl,&amp;quot;box&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;4-dom操作应用&#34;&gt;4.DOM操作应用&lt;/h2&gt;
+
+&lt;h4 id=&#34;4-1-创建dom元素&#34;&gt;4.1 创建DOM元素&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;var oLi = document.createElement(&amp;quot;标签名&amp;quot;);&lt;/code&gt;：仅为创建元素存入内存&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;oUl.appendChild(oLi);&lt;/code&gt;:为oUl元素添加子节点oLi到末尾（父级.appendchild(子节点)）&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;实例：实现用输入框输入的文字生成新的表单项&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;script&amp;gt;
+       window.onload=function(){
+            var oBtn=document.getElementById(&amp;quot;btn1&amp;quot;);
+            var oTxt=document.getElementById(&amp;quot;txt1&amp;quot;);
+            var oUl=document.getElementById(&amp;quot;ul1&amp;quot;);
+        
+            oBtn.onclick=function(){
+                var oLi=document.createElement(&amp;quot;li&amp;quot;);
+                //将txt1中的数值放入表单项的内容中
+                oLi.innerHTML=oTxt.value;
+                oUl.appendChild(oLi);
+            };
+       };
+    &amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;input type=&amp;quot;text&amp;quot; id=&amp;quot;txt1&amp;quot;&amp;gt;
+    &amp;lt;input type=&amp;quot;button&amp;quot; id=&amp;quot;btn1&amp;quot;&amp;gt;
+    &amp;lt;ul id=&amp;quot;ul1&amp;quot;&amp;gt;&amp;lt;/ul&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;4-2-插入dom元素&#34;&gt;4.2 插入DOM元素&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;oUl.insertBefore(oLi,在谁之前)&lt;/code&gt;：插入到某一个位置&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-3-删除dome元素&#34;&gt;4.3 删除DOME元素&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;oUl.removeChild(某元素)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-4-文档碎片-用处极小&#34;&gt;4.4 文档碎片（用处极小）&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;文档碎片可以提高低级浏览器上的DOM操作性能（先放入文档碎片中，最后统一进行渲染，而不用插一次元素渲染一次）&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;文档碎片可以提高低级浏览器上的DOM操作性能（先放入文档碎片中，最后统一进行渲染，而不用插一次元素渲染一次）&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;code&gt;var oFrag=document.createDocumentFragment();&lt;/code&gt;：创建文档碎片的语句&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;5-表格&#34;&gt;5.表格&lt;/h1&gt;
+
+&lt;h4 id=&#34;5-1&#34;&gt;5.1&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;script&amp;gt;
+        
+    &amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;table&amp;gt;
+        &amp;lt;thead border=&amp;quot;1px&amp;quot; width=&amp;quot;500px&amp;quot;&amp;gt;
+            &amp;lt;td&amp;gt;ID&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;姓名&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;年龄&amp;lt;/td&amp;gt;
+        &amp;lt;/thead&amp;gt;
+        &amp;lt;tbody&amp;gt;
+            &amp;lt;tr&amp;gt;
+                &amp;lt;td&amp;gt;1&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;Red&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;27&amp;lt;/td&amp;gt;
+            &amp;lt;/tr&amp;gt;
+            &amp;lt;tr&amp;gt;
+                &amp;lt;td&amp;gt;2&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;Blue&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;28&amp;lt;/td&amp;gt;
+            &amp;lt;/tr&amp;gt;
+        &amp;lt;/tbody&amp;gt;
+    &amp;lt;/table&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;6-表单&#34;&gt;6.表单&lt;/h1&gt;
+
+&lt;h4 id=&#34;6-1&#34;&gt;6.1&lt;/h4&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>javascript学习二——定时器</title>
+      <link>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%8C/</link>
+      <pubDate>Thu, 20 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%8C/</guid>
+      <description>
+
+&lt;h2 id=&#34;1-打开定时器&#34;&gt;1.打开定时器&lt;/h2&gt;
+
+&lt;h4 id=&#34;1-1-setinterval&#34;&gt;1.1 setInterval&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;用法：&lt;code&gt;setInterval(函数名，时间ms)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;作用：每个一段时间执行一次函数&lt;/li&gt;
+&lt;li&gt;返回值：打开的那个定时器&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;1-2-settimeout&#34;&gt;1.2 setTimeout&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;用法：&lt;code&gt;setTimeout(函数名，时间ms)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;作用：只执行一次，且时间为多久后消失&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;2-关闭定时器&#34;&gt;2.关闭定时器&lt;/h2&gt;
+
+&lt;h4 id=&#34;2-1-clearinterval&#34;&gt;2.1 clearInterval&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;用法：&lt;code&gt;clearInterval(需要关闭的定时器)&lt;/code&gt; ，此处括号的内容需setInterval返回&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-2-cleartimeout&#34;&gt;2.2 clearTimeout&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;用法：同上&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;3-打开与关闭实例&#34;&gt;3.打开与关闭实例&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;script&amp;gt;
+    window.onload=function(){
+        var oBtn1=document.getElementId(&amp;quot;btn1&amp;quot;);
+        var oBtn2=document.getElementId(&amp;quot;btn2&amp;quot;);
+        
+        //设置打开按钮
+        oBtn1.onclick=function(){
+            //timer用于获取当前打开的是哪个定时器
+            timer=setInterval(function(){
+                alert(&amp;quot;a&amp;quot;);
+            },1000);
+        };
+        
+        //设置关闭按钮
+        oBtn2.onclick=function(){
+            clearInterval(timer);
+        };
+    };
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;4-date对象&#34;&gt;4.Date对象&lt;/h2&gt;
+
+&lt;h4 id=&#34;4-1-gethours&#34;&gt;4.1 getHours&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;作用：获取当前时间&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-2-getminutes&#34;&gt;4.2 getMinutes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;作用：获取当前分钟&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-3-getsecond&#34;&gt;4.3 getSecond&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;作用：获取当前秒&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-4-getfullyear&#34;&gt;4.4 getFullYear&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;作用：获取年份&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-5-getmonth&#34;&gt;4.5 getMonth&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;作用：获取月份，从0开始，需要+1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-6-getdate&#34;&gt;4.6 getDate&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;作用：获取日期&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-7-getday&#34;&gt;4.7 getDay&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;作用：获取星期（0代表周日，以此类推）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;var oDate=new Date();
+var oHours=oDate.getHours();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;5-date实例&#34;&gt;5.Date实例&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;时间显示器&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;script&amp;gt;
+        //新建函数用于将每一位都变为两位数字
+        function toDou(n){
+            if(n&amp;lt;10){
+                return &amp;quot;0&amp;quot;+n;
+            }else{
+                return &amp;quot; &amp;quot;+n;
+                //空字符串保证了返回一定为字符串
+            }
+        }
+        window.onload=function(){
+            //新建一个数组存放所有img标签
+            var aImag=document.getElementsByTypeNmae(&amp;quot;img&amp;quot;);
+            //tick的设置是为了防止setInterval带来的一秒空隙
+            function tick(){
+                //新建oDate读取当前系统时间
+                var oDate = new Date();
+                //拼src数组
+                var str=toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+  
+                //修改每一个img的src
+                for(var i=0; i&amp;lt;aImag.length;i++){
+                    aImage[i].src=&amp;quot;img/&amp;quot;+src[i]+&amp;quot;.png&amp;quot;;
+                    }
+                };
+             tick();
+             setInterval(tick,1000);
+            }  
+    &amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;img src=&amp;quot;img/0.png&amp;quot;&amp;gt;
+    &amp;lt;img src=&amp;quot;img/0.png&amp;quot;&amp;gt;
+    :
+    &amp;lt;img src=&amp;quot;img/0.png&amp;quot;&amp;gt;
+    &amp;lt;img src=&amp;quot;img/0.png&amp;quot;&amp;gt;
+    :
+    &amp;lt;img src=&amp;quot;img/0.png&amp;quot;&amp;gt;
+    &amp;lt;img src=&amp;quot;img/0.png&amp;quot;&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;注：低版本浏览器不兼容&lt;code&gt;str[i]&lt;/code&gt;的方式，则需要使用&lt;code&gt;str.charAt(i)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;6-延时提示框&#34;&gt;6.延时提示框&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;实例：电脑版qq，鼠标移入头像处显示资料页&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-HTML&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;style&amp;gt;
+        //设置两个类似头像与资料页的版块
+        div{ float:left; margin:10px;}
+        #div1{width:50px; height:50px; background:red; }
+        #div2{width:100px; height:100px; background: #CCC; display:none; }
+    &amp;lt;/style&amp;gt;
+    &amp;lt;script&amp;gt;
+        window.onload=function(){
+            var oDiv1=document.getElementById(&amp;quot;div1&amp;quot;);
+            var oDiv2=document.getElementById(&amp;quot;div2&amp;quot;);
+            var timer=null;
+            var timer2=null;
+            //设置鼠标移入时执行的函数——更改display
+            oDiv1.onmouseover=function(){
+                //此处的clearTimeout的作用是移回div1时防止不能及时出现div2
+                clearTimeout(timer2);
+                oDiv1.style.display=&amp;quot;block&amp;quot;;
+            };
+            //设置鼠标移出时执行的函数——更改display
+            oDiv1.onmouseout=function(){
+                //设置资料页显示时间
+                timer=setTimeout(function(){
+                    oDiv2.style.display=&amp;quot;none&amp;quot;;
+                },500);
+            };
+            
+            //当移入div2时，关闭timer定时器，则div2不会消失
+            oDiv2.onmouseover=function(){
+                clearTimeout(timer);
+            };
+            //当移出div2时，关闭div2
+            oDiv2.onmouseout=function(){
+                //此处setTimeout作用，防止从div2到div1的闪动
+                timer2=setTimeout(function(){
+                    oDiv2.style.display=&amp;quot;none&amp;quot;; 
+                },500);
+            };
+        };
+    &amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div id=&amp;quot;div1&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+    &amp;lt;div id=&amp;quot;div2&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;简化代码&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt; oDiv1.onmouseout=oDiv2.onmouseout=function(){
+                //此处setTimeout作用，防止从div2到div1的闪动
+                timer2=setTimeout(function(){
+                    oDiv2.style.display=&amp;quot;none&amp;quot;; 
+                },500);
+            };
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;7-无缝滚动&#34;&gt;7.无缝滚动&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;offsetLeft/offsetRight/offsetWidth/offsetHeight：获取物体左右间距、宽高&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;javascript:;&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;&lt;/code&gt;作用：
+
+&lt;ul&gt;
+&lt;li&gt;通过超链接调用js，而不进行页面跳转（&lt;code&gt;href=&amp;quot;url&amp;quot;&lt;/code&gt;）或刷新（&lt;code&gt;href=&amp;quot;&amp;quot;&lt;/code&gt;）或回到顶部&lt;code&gt;href=&amp;quot;#&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;style&amp;gt;
+        *{margin:0; padding:0px;}
+        #div1{width:712px;height:108px;margin:100px auto;position:relative; overflow:hidden;}
+        //让ul移动能高效，用li移动复杂
+        #div1 ul{position:absolute;}
+        #div1 ul li{float:left; width:178px; height:108px;list-style:none;}
+    &amp;lt;/style&amp;gt;
+    &amp;lt;script&amp;gt;
+       window.onload=function(){
+           //获取标签
+            var oDiv=document.getElementId(&amp;quot;div1&amp;quot;);
+            var oUl=oDiv.getElementsByTypeName(&amp;quot;ul&amp;quot;);
+            var aLi=oUl.getElementsByTypeName(&amp;quot;li&amp;quot;);
+           
+            var speed=2;
+           //增加长度到二倍
+           oUl.innerHTML=oUl.innerHTML+oUl.innerHTML;
+           //宽度设置为动态的
+           oUl.style.width=aLi[0].offsetWidth*aLi.length+&amp;quot;px&amp;quot;;
+           function move(){
+               //当滚动过半时（回到第一张图）清零left边距
+               //取复制是因为ul为相对位置，最左边边界出为0，再向左走则为负值，而width不能为负
+               if(oUl.offsetLeft&amp;lt;-oUl.offsetWidth/2){
+                    oUl.style.left=&amp;quot;0&amp;quot;;
+                  }
+               //设置滚动速度
+               oUl.style.left=oUl.offsetLeft-2+&amp;quot;px&amp;quot;;
+               //取30在学习运动时分析
+           }
+           var timer = setInterval(move,30);
+           
+           //设置鼠标移入移出的暂停与运动
+           oDiv.onmouseover=function(){
+                clearInterval(timer);
+           };
+           oDiv.onmouseout=function(){
+                timer = setInterval(move,30);
+           };
+           //更改speed，更改走的方向
+           document.getElementsByTagName(&amp;quot;a&amp;quot;)[0].onclick=function(){
+               speed=-2;
+           };
+           document.getElementsByTagName(&amp;quot;a&amp;quot;)[1].onclick=function(){
+               speed=2;
+           };
+       };
+    &amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;a href=&amp;quot;javascript:;&amp;quot;&amp;gt;向左走&amp;lt;/a&amp;gt;
+    &amp;lt;a href=&amp;quot;javascript:;&amp;quot;&amp;gt;向右走&amp;lt;/a&amp;gt;
+    &amp;lt;div id=&amp;quot;div1&amp;quot;&amp;gt;
+        &amp;lt;ul&amp;gt;
+            &amp;lt;li&amp;gt;&amp;lt;img src=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/li&amp;gt;
+            &amp;lt;li&amp;gt;&amp;lt;img src=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/li&amp;gt;
+            &amp;lt;li&amp;gt;&amp;lt;img src=&amp;quot;&amp;quot;&amp;gt;&amp;lt;/li&amp;gt;
+        &amp;lt;/ul&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>javascript学习一——基础语法</title>
+      <link>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%80/</link>
+      <pubDate>Sun, 16 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid>
+      <description>
+
+&lt;h1 id=&#34;一-js基础语法知识&#34;&gt;一、JS基础语法知识&lt;/h1&gt;
+
+&lt;h4 id=&#34;1-javascript组成&#34;&gt;1. JavaScript组成：&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;ECMAscript&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;DOM：文档&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;BOM：浏览器&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-属性&#34;&gt;2. 属性：&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;type=&amp;lsquo;text/javascript&amp;rsquo;说明标签内的文本格式&lt;/li&gt;
+&lt;li&gt;src引入外部js文件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;script src=&amp;quot;demo.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;3-注意点&#34;&gt;3. 注意点：&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;可以有多个&amp;lt;script&amp;gt;标签，但js是按代码顺序执行的&lt;/li&gt;
+&lt;li&gt;一个标签只能做一件事情（要么引入，要么直接在里面写代码）&lt;/li&gt;
+&lt;li&gt;js代码需要有分号！&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-js中的输出方法&#34;&gt;4. js中的输出方法：&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;alert()&lt;/code&gt;：弹出一个警告框&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;document.write()&lt;/code&gt;：在页面上输出内容
+
+&lt;ul&gt;
+&lt;li&gt;如果括号内有html标签会自动解析，不会以文本形式输出&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;console.log()&lt;/code&gt;：在控制台上输入内容
+
+&lt;ul&gt;
+&lt;li&gt;一般用于代码调试，不影响用户（招聘简介放在）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;5-常量&#34;&gt;5、常量&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;数据类型：
+
+&lt;ul&gt;
+&lt;li&gt;数字：&lt;/li&gt;
+&lt;li&gt;类型：number&lt;/li&gt;
+&lt;li&gt;例子：100、-20、3.14&lt;/li&gt;
+&lt;li&gt;布尔值：&lt;/li&gt;
+&lt;li&gt;类型：Boolean&lt;/li&gt;
+&lt;li&gt;例子：true、false&lt;/li&gt;
+&lt;li&gt;字符串：&lt;/li&gt;
+&lt;li&gt;类型：所有单引号或双引号的内容（都一样）&lt;/li&gt;
+&lt;li&gt;例子：“100”，“hello”&lt;/li&gt;
+&lt;li&gt;复合/引用数据类型：&lt;/li&gt;
+&lt;li&gt;特殊数据类型：null、undefined（没有初始化）、NaN&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;6-变量&#34;&gt;6、变量&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;声明变量关键字：var&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;7-变量弱引用&#34;&gt;7、变量弱引用&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;定义：变量赋值是什么类型，就是什么类型&lt;/li&gt;
+&lt;li&gt;注意：不建议改变变量的数据类型&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;8-三目运算符&#34;&gt;8、三目运算符&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;num % 2 = 0 ? alert(偶数):alert(奇数)；
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;9-函数&#34;&gt;9、函数&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;语法：声明函数&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;function 函数名(形参){}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;执行时需要用&lt;code&gt;函数名(参数);&lt;/code&gt;调用&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;事件驱动函数&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;1.1 onclick：失去光标时触发&lt;/p&gt;
+
+&lt;p&gt;1.2 onblur：失去焦点时触发&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;匿名函数：无函数名，通过变量调用或直接调用&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;   &amp;lt;script&amp;gt;
+       window.onload()=function(){
+           //1.通过变量调用
+           var obj1=function(){
+               alert(&amp;quot;通过变量调用&amp;quot;);
+           }
+           obj1();
+           
+           //2.直接调用，函数必须加括号包裹，且让其执行需在尾部添加括号
+           (function(){
+               alert(&amp;quot;直接调用&amp;quot;)
+           })();
+       }
+   &amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;10-字符串&#34;&gt;10、字符串&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;字符串重点方法：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;substring：&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;格式：&lt;code&gt;字符串.substring(start,end);&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;功能：将字符串中的[start,end]提出出来生成新的字符串&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;返回值：新生成的字符串&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;substr：&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;格式：&lt;code&gt;字符串.substr(start,end)&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;返回值：新生成的字符串&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;slice（是数组）&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;格式：&lt;code&gt;字符串.slice(start,end)&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;replace():&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;格式：&lt;code&gt;字符串.replace(oldstr,newstr)&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;功能：用newstr替换oldstr&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;参数：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;第一个参数传入的是字符串则只能替换一次&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;第一个参数传入正则表达式&lt;code&gt;/xxx/ig&lt;/code&gt; ，参数i代表忽略大小写，g代表全局匹配&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;字符串.replace(/xxx/ig,newstr)&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;split()：&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;格式：&lt;code&gt;字符串.split(分隔符, length)&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;参数：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;第一个参数，用这个分隔符对愿字符串进行分割&lt;/li&gt;
+&lt;li&gt;第二个参数，控制返回数组的元素格式，一般不用&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;注意：分隔符是空字符串时&lt;code&gt;&amp;quot;&amp;quot;&lt;/code&gt;，直接将每一个字符单独分割为字串返回&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;toLowerCase()&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;toUperCase()&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;concat:字符串拼接（一般情况下用+比较多）&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;格式：&lt;code&gt;字符串.concat(字符串1，字符串2，……)&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;indexof&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;表单验证实例&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;script&amp;gt;
+        function func(){
+            //根据id获取标签的方法——&amp;gt;document.getElementId(&amp;quot;id&amp;quot;)
+            var oUsername=document.getElementId(&amp;quot;username&amp;quot;);
+            var oUsernameSpan=document.getElementId(&amp;quot;username_span&amp;quot;);
+            
+            //拿到输入框中的内容
+            var oValue=oUsername.value;
+            
+            //判断
+            //用户名是否复合长度
+            if(oValue.length&amp;gt;18 || oValue.length&amp;lt;6){
+                oUsernameSpan.innerHTML=&amp;quot;!长度必须在6~18个字符内&amp;quot;；
+            }else if(!isABC(oValue[0])){
+                oUsernameSpan.innerHTML=&amp;quot;地址必须以英文字母开头&amp;quot;；
+            }
+        }
+        
+        function isABC(charStr){
+            if(charStr &amp;gt;= &amp;quot;a&amp;quot;&amp;amp;&amp;amp; charStr&amp;lt;=&amp;quot;z&amp;quot; || charStr&amp;gt;=&amp;quot;A&amp;quot;&amp;amp;&amp;amp;charStr &amp;lt;=&amp;quot;Z&amp;quot;){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    &amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div id=&amp;quot;div1&amp;quot;&amp;gt;
+        &amp;lt;input id = &amp;quot;username&amp;quot; type=&amp;quot;text&amp;quot; placeholder=&amp;quot;用户名&amp;quot; onblur=&amp;quot;func();&amp;quot;&amp;gt;
+        &amp;lt;span id=&amp;quot;username_span&amp;quot;&amp;gt;6~18个字符，可使用、字母、数字、下划线开头&amp;lt;/span&amp;gt;
+        &amp;lt;input type=&amp;quot;text&amp;quot; placeholder=&amp;quot;密码&amp;quot;&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;二-js与html部分交互的部分函数&#34;&gt;二、js与html部分交互的部分函数&lt;/h1&gt;
+
+&lt;h4 id=&#34;1-getelementid&#34;&gt;1.getElementId&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;语法：&lt;code&gt;x=document.getElementId(&amp;quot;id&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;作用：用id返回（获取）某个标签&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-getelementsbytagname&#34;&gt;2.getElementsByTagName&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;语法：&lt;code&gt;var x=document.getElementByTagName(&amp;quot;标签名&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;作用：返回所有该标签，每一个存入一个数组中，可以计算标签个数&lt;code&gt;x.length&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;3-innerhtml&#34;&gt;3.innerHTML&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;语法：&lt;code&gt;x.innerHTML&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;作用：用于表示标签中的内容&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-onmouseover&#34;&gt;4.onmouseover&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;语法：可写入html作为一个属性、也可写入js中&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;element onmouseover=&amp;quot;&amp;quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;object.onmouseover=function(){};&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;作用：事件会在鼠标移入到指定元素上发生&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;5-onmouseout&#34;&gt;5.onmouseout&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;语法同上&lt;/li&gt;
+&lt;li&gt;作用：事件会在鼠标移出到指定元素上发生&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;三-认识bom&#34;&gt;三、认识BOM&lt;/h1&gt;
+
+&lt;h4 id=&#34;1-系统对话框&#34;&gt;1.系统对话框&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;window方法（一般情况下window可以省略）
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;window.alert()&lt;/code&gt;：弹出警告框&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;window.confirm()&lt;/code&gt;：弹出一个带确定和取消的提示框（确定返回值为true，点击取消返回false）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;window.prompt()&lt;/code&gt;：弹出一个带输入框的提示框&lt;/li&gt;
+&lt;li&gt;参数：第一个参数：面板上显示的内容；第二个参数输入框里的默认（可以不填）&lt;/li&gt;
+&lt;li&gt;返回值：点击确定返回输入框的内容，点击取消返回null&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;window.onload()=fuction(){}&lt;/code&gt;：在方法用于在网页加载完毕后立刻执行操作&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;open方法
+
+&lt;ul&gt;
+&lt;li&gt;第一个参数：url，跳转该url&lt;/li&gt;
+&lt;li&gt;第二个参数：字符串，给打开的窗口起一个名字，随后继续点则打开该名字的窗口&lt;/li&gt;
+&lt;li&gt;第三个参数：一串特殊含义的字符串，可以设置很多属性……&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;四-认识this-未完&#34;&gt;四、认识this(未完)&lt;/h1&gt;
+
+&lt;h4 id=&#34;1-方法中的this&#34;&gt;1.方法中的this&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;含义：在对象方法中，this指向调用它所在的方法的对象&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;body&amp;gt;
+    &amp;lt;p id=&amp;quot;demo&amp;quot;&amp;gt;&amp;lt;/p&amp;gt;
+    &amp;lt;script&amp;gt;
+        //创建一个对象
+        var person={
+            
+        }
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CSS进阶学习一</title>
+      <link>https://bellamy0.gitHub.io/2020/css%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E4%B8%80/</link>
+      <pubDate>Sat, 15 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/css%E8%BF%9B%E9%98%B6%E5%AD%A6%E4%B9%A0%E4%B8%80/</guid>
+      <description>
+
+&lt;h2 id=&#34;一-b标签与i标签&#34;&gt;一、b标签与i标签&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;strong与b、em与i的相同点：都可以实现相同效果（加粗与斜体），但前者是语义化的（有含义的），后者不具备语义化（无含义）&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;b与i存在的意义：简化选择器的操作，可以直接区分，而不用额外添加class&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;二-引用相关标签&#34;&gt;二、引用相关标签&lt;/h2&gt;
+</description>
+    </item>
     
     <item>
       <title>Css阶段实战作业—企业首页</title>
@@ -2032,6 +2905,7 @@ body{ font-family: Arial; }
 &lt;li&gt;&amp;lt;textarea&amp;gt;&amp;lt;/textarea&amp;gt;：多行文本框&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;&amp;lt;select&amp;gt;……&amp;lt;option&amp;gt;&amp;lt;/option&amp;gt;……&amp;lt;/select&amp;gt;:下拉菜单&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;&amp;lt;lable&amp;gt;&amp;lt;/lable&amp;gt;：辅助表单，提升用户体验（点字也能选中）&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;文本框中的内容为该标签的value值&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;形式&lt;/p&gt;
@@ -2075,7 +2949,8 @@ body{ font-family: Arial; }
 
 &lt;ul&gt;
 &lt;li&gt;空格：插入&amp;amp;nbsp;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt;：换行&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt;：换行&lt;/li&gt;
+&lt;li&gt;左右尖括号：&lt;code&gt;&amp;amp;lt&lt;/code&gt; &lt;code&gt;&amp;amp;gt&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;十二-div与span&#34;&gt;十二.div与span&lt;/h1&gt;
@@ -2110,14 +2985,15 @@ body{ font-family: Arial; }
 &lt;h2 id=&#34;准备&#34;&gt;准备&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;文件操作
+&lt;li&gt;&lt;p&gt;文件操作&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;创建一个新文件夹，D:\Hugo&lt;/li&gt;
 &lt;li&gt;创建一个新文件夹，D:\Hugo\bin&lt;/li&gt;
 &lt;li&gt;创建一个新文件夹，D:\Hugo\Sites&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
-&lt;li&gt;下载hugo
+
+&lt;li&gt;&lt;p&gt;下载hugo&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;在浏览器中打开 &lt;a href=&#34;https://github.com/spf13/hugo/releases。&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/spf13/hugo/releases。&lt;/a&gt;&lt;/li&gt;
@@ -2126,8 +3002,7 @@ body{ font-family: Arial; }
 &lt;li&gt;解压之后得到三个文件hugo.exe、LICENSE、README.md&lt;/li&gt;
 &lt;li&gt;确保 hugo.exe 文件在 D:\Hugo\bin 文件夹。（如果你没有在D:\Hugo\bin 请把它移动去）&lt;/li&gt;
 &lt;li&gt;把 hugo.exe 可执行文件添加到你的 PATH路径中。把hugo添加到path中的操作：&lt;br /&gt;
-我的电脑邮件右键属性，在高级里面，选择环境变量，在系统变量里面找到path。双击打开path编辑，新建路径输入D:\hugo\bin（作者这里是D:\hugo\bin，其他的自己改路径）&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
+我的电脑邮件右键属性，在高级里面，选择环境变量，在系统变量里面找到path。双击打开path编辑，新建路径输入D:\hugo\bin（作者这里是D:\hugo\bin，其他的自己改路径）&lt;br /&gt;&lt;/li&gt;
 &lt;/ol&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -2135,9 +3010,12 @@ body{ font-family: Arial; }
 
 &lt;ol&gt;
 &lt;li&gt;验证：打开cmd，用hugo help 验证，有提示输出则为安装成功&lt;/li&gt;
-&lt;li&gt;输入cmd命令&lt;br /&gt;
-&lt;code&gt;D:\Hugo\Sites&amp;gt; hugo new site 你的昵称.org&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;建网站
+
+&lt;li&gt;&lt;p&gt;输入cmd命令&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;D:\Hugo\Sites&amp;gt; hugo new site 你的昵称.org&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;建网站&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;用cmd输入(bellamy0处改为你自己站点的名字):&lt;br /&gt;
@@ -2178,357 +3056,24 @@ body{ font-family: Arial; }
    &lt;code&gt;git push -u origin master&lt;/code&gt;&lt;br /&gt;
    按要求输入用户名和密码，即成功&lt;/p&gt;
 
+&lt;p&gt;​&lt;/p&gt;
+
 &lt;h1 id=&#34;四-问题&#34;&gt;四、问题&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;中文乱码：修改编码方式为UTF-8
-&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;中文乱码：修改编码方式为UTF-8&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;五-后续修改方式&#34;&gt;五、后续修改方式&lt;/h1&gt;
 
 &lt;ol&gt;
 &lt;li&gt;用cmd进入站点，执行：&lt;br /&gt;
-&lt;code&gt;hugo&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;code&gt;hugo&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;进入public执行：&lt;br /&gt;
-&lt;code&gt;git add -A&lt;/code&gt;&lt;br /&gt;
-&lt;code&gt;git commit -m &amp;quot;xxxx&amp;quot;&lt;/code&gt;&lt;br /&gt;
-&lt;code&gt;git push -u origin master&lt;/code&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/li&gt;
+  &lt;code&gt;git add -A&lt;/code&gt;&lt;br /&gt;
+  &lt;code&gt;git commit -m &amp;quot;xxxx&amp;quot;&lt;/code&gt;&lt;br /&gt;
+  &lt;code&gt;git push -u origin master&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>MarkDown语法学习</title>
-      <link>https://bellamy0.gitHub.io/2019/markdown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/</link>
-      <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://bellamy0.gitHub.io/2019/markdown%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/</guid>
-      <description>
-
-&lt;h1 id=&#34;1-标题&#34;&gt;1.标题&lt;/h1&gt;
-
-&lt;p&gt;1.1 方法一: 在前面加对应个数#&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;# 第一级标题&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;## 第二级标题&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;### 第三级标题&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;#### 第四级标题&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;##### 第五级标题&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;###### 第六级标题&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;注意：在最后一个#后必须有空格！&lt;/p&gt;
-
-&lt;p&gt;1.2 方法二: 在第一/二级标题下分别加=====/&amp;mdash;&amp;mdash;&amp;ndash;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;效果&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;第一级标题&#34;&gt;第一级标题&lt;/h1&gt;
-
-&lt;h2 id=&#34;第二级标题&#34;&gt;第二级标题&lt;/h2&gt;
-
-&lt;h3 id=&#34;第三级标题&#34;&gt;第三级标题&lt;/h3&gt;
-
-&lt;h4 id=&#34;第四级标题&#34;&gt;第四级标题&lt;/h4&gt;
-
-&lt;h5 id=&#34;第五级标题&#34;&gt;第五级标题&lt;/h5&gt;
-
-&lt;h6 id=&#34;第六级标题&#34;&gt;第六级标题&lt;/h6&gt;
-
-&lt;h1 id=&#34;2-段落格式&#34;&gt;2.段落格式&lt;/h1&gt;
-
-&lt;p&gt;2.1 段落换行方法一：末尾添加两个以上空格+回车&lt;/p&gt;
-
-&lt;p&gt;2.2 段落换行方法二：段落之间空一行&lt;/p&gt;
-
-&lt;p&gt;2.3 斜体：&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;*斜体文本*&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;_斜体文本_&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;效果：&lt;em&gt;斜体文本&lt;/em&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;2.4 粗体：&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;**粗体文本**&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;__粗体文本__&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;效果：&lt;strong&gt;粗体文本&lt;/strong&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;2.5 粗斜体：&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;***粗斜体文本***&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;___粗斜体文本___&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;效果：&lt;strong&gt;&lt;em&gt;粗斜体文本&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;2.6 分割线：在一行中用三个以上的星号、减号、底线来建立分割线、行内不能有其他东西（除空格）&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;***&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;---&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;___&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;效果：&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;2.7 删除线：&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;~~删除的文本~~&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;效果: &lt;del&gt;删除的文本&lt;/del&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;2.8 下划线：&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;&amp;lt;u&amp;gt;带下划线文本&amp;lt;/u&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;效果：&lt;u&gt;带下划线文本&lt;/u&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;3-列表&#34;&gt;3.列表&lt;/h1&gt;
-
-&lt;p&gt;3.1 无序列表：用 * 、+、 -&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;* 第一项&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;+ 第一项&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;- 第一项&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;效果：&lt;br /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;第一项&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;第一项&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;第一项&lt;br /&gt;
-
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;3.2 有序列表：数字+.+空格&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;1. 第一项&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;2. 第二项&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;效果：&lt;br /&gt;
-
-&lt;ol&gt;
-&lt;li&gt;第一项&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;第二项&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;3.3 列表嵌套：  在子列表的选项中添加四个空格or一个tab键&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;效果 :&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;第一项：&lt;br /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;第一项嵌套元素&lt;br /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;第二项嵌套元素&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;第二项：&lt;br /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;第一项嵌套元素&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;第二项嵌套元素&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;4-区块&#34;&gt;4.区块&lt;/h1&gt;
-
-&lt;p&gt;4.1 单个区块：&amp;gt; + 空格 +区块内文字&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;&amp;gt; 内容&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;效果：&amp;mdash;-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;4.2 嵌套区块： &amp;gt;/&amp;gt;&amp;gt;/&amp;gt;&amp;gt;&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;&amp;gt; 最外层&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;&amp;gt; &amp;gt; 第一层嵌套&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;&amp;gt; &amp;gt; &amp;gt; 第二层嵌套&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;效果 ：&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;第一层&lt;br /&gt;
- &amp;gt; 第二层&lt;br /&gt;
- &amp;gt;
- &amp;gt; &amp;gt; 第三层&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;5-代码&#34;&gt;5.代码&lt;/h1&gt;
-
-&lt;p&gt;5.1 函数片段： ``   包起来&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;效果： &lt;code&gt;printf()&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;5.2 代码区块法一：四个空格或一个tab&lt;/p&gt;
-
-&lt;p&gt;5.3 代码区块法二：用```包裹一段代码&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;效果：&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;  $(document).ready(function(){
-      alert(&#39;RUNOOB&#39;);
-  });
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;6-链接&#34;&gt;6.链接&lt;/h1&gt;
-
-&lt;p&gt;6.1 链接使用方法一：&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;[连接名称](链接地址)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;6.2 链接使用方法二：&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;&amp;lt;链接地址&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;这是一个链接:&lt;a href=&#34;https://bellamy0.github.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;博客首页&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;这是一个链接：&lt;a href=&#34;https://bellamy0.github.io/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://bellamy0.github.io/&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;6.3 高级链接：  链接可以用变量替代&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;这是一个链接：[博客首页][bokeshouye]&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;[bokeshouye]: &lt;a href=&#34;https://bellamy0.github.io&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://bellamy0.github.io&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;7-图片&#34;&gt;7.图片&lt;/h1&gt;
-
-&lt;p&gt;7.1 图片语法：&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;![属性文本](图片地址)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;![属性文本](图片地址 &amp;quot;可选标题&amp;quot;)&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;效果：&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://github.com/bellamy0/bellamy0.github.io/blob/master/images/0.jpg?raw=true&#34; alt=&#34;表情包&#34; title=&#34;cat&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;7.2 对图片地址使用变量：&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;![属性文本][1]&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;[1]:https://github.com/bellamy0/bellamy0.github.io/blob/master/images/0.jpg?raw=true&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;7.3 指定图片高度与宽度：&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;https://github.com/bellamy0/bellamy0.github.io/blob/master/images/0.jpg?raw=true&amp;quot; width=&amp;quot;50%&amp;quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;效果：&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://github.com/bellamy0/bellamy0.github.io/blob/master/images/0.jpg?raw=true&#34; width=&#34;50%&#34;&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;8-表格&#34;&gt;8.表格&lt;/h1&gt;
-
-&lt;p&gt;8.1 基础语法格式： 用&lt;code&gt;|&lt;/code&gt;分隔单元格、用&lt;code&gt;-&lt;/code&gt;来分割表头与其他行&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;| 表头 | 表头 |
-| --- | ---- |
-|单元格|单元格 |
-|单元格|单元格 |
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;效果：&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;表头&lt;/th&gt;
-&lt;th&gt;表头&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;单元格&lt;/td&gt;
-&lt;td&gt;单元格&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;单元格&lt;/td&gt;
-&lt;td&gt;单元格&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;8.2 对齐方式&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;-:右对齐&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;:-左对齐&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;:-: 居中对齐&lt;/code&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;9-转义&#34;&gt;9.转义&lt;/h1&gt;
-
-&lt;p&gt;9.1 方法：前面加\&lt;/p&gt;
 </description>
     </item>
     
