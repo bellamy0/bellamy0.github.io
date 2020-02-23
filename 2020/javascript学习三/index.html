@@ -10,7 +10,7 @@
   
   
   <link rel="prev" href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%8C/" />
-  
+  <link rel="next" href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E5%9B%9B/" />
   <link rel="canonical" href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%89/" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -22,10 +22,10 @@
   <title>
        
        
-           javascript学习二——DOM | Bellamy
+           javascript学习三——DOM | Bellamy
        
   </title>
-  <meta name="title" content="javascript学习二——DOM | Bellamy">
+  <meta name="title" content="javascript学习三——DOM | Bellamy">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -44,8 +44,8 @@
          "@id": "https:\/\/bellamy0.gitHub.io"
     },
     "articleSection" : "posts",
-    "name" : "javascript学习二——DOM",
-    "headline" : "javascript学习二——DOM",
+    "name" : "javascript学习三——DOM",
+    "headline" : "javascript学习三——DOM",
     "description" : "1.节点  DOM——\x26gt;document\n 节点\n 文本节点：无标签包裹的 元素节点：标签中的  获取子节点：\n childNotes：获取某标签下所有节点 children：获取某标签下元素节点 oUl.children\n 只算第一层  父节点：\n 查找父节点：parentNode  父节点应用：隐藏列表项\n  \x26lt;head\x26gt; \x26lt;script\x26gt; window.onload=function(){ var aA=document.getElementsByTypeName(\x26quot;a\x26quot;); for(var i=0;i\x26lt;aA.lenght;i\x2b\x2b){ aA[i].onclick=function(){ this.parentNode.display=hidden; }; }; }; \x26lt;\/script\x26gt; \x26lt;\/head\x26gt; \x26lt;body\x26gt; \x26lt;ul\x26gt; \x26lt;li\x26gt;\x26lt;a href=\x26quot;javascript:;\x26quot;\x26gt;a\x26lt;\/a\x26gt;\x26lt;\/li\x26gt; \x26lt;li\x26gt;\x26lt;a href=\x26quot;javascript:;\x26quot;\x26gt;b\x26lt;\/a\x26gt;\x26lt;\/li\x26gt; \x26lt;li\x26gt;\x26lt;a href=\x26quot;javascript:;\x26quot;\x26gt;c\x26lt;\/a\x26gt;\x26lt;\/li\x26gt; \x26lt;\/ul\x26gt; \x26lt;\/body\x26gt;   offsetParent：获取元素在页面上的实际位置 firstChild\/lastChild：获取收尾子节点 nextSibling\/previousSibling：兄弟节点  2.操作元素的方式：  用点操作 用方括号操作 DOM：（一般不用）  setAttribute(\x26ldquo;属性名\x26rdquo;,\x26ldquo;值\x26rdquo;)：设置某属性的值 getAttribute（\x26rdquo;属性名\x26rdquo;）：获取某属性的值 removeAttribute(\x26ldquo;属性名\x26rdquo;)：删除某属性的值   \x26lt;head\x26gt; \x26lt;script\x26gt; window.onload=function(){ var oTxt=document.",
     "inLanguage" : "en-us",
     "author" : "Bellamy",
@@ -57,7 +57,7 @@
     "datePublished": "2020-02-21 00:00:00 \x2b0000 UTC",
     "dateModified" : "2020-02-21 00:00:00 \x2b0000 UTC",
     "url" : "https:\/\/bellamy0.gitHub.io\/2020\/javascript%E5%AD%A6%E4%B9%A0%E4%B8%89\/",
-    "wordCount" : "181",
+    "wordCount" : "325",
     "keywords" : [ "JavaScript","前端", "Bellamy"]
 }
 </script>
@@ -116,7 +116,7 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">javascript学习二——DOM</h1>
+        <h1 class="post-title" itemprop="name headline">javascript学习三——DOM</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://bellamy0.gitHub.io" rel="author">Bellamy</a> with ♥ 
                 <span class="post-time">
@@ -327,18 +327,28 @@ var aBox=getByClass(oUl,&quot;box&quot;);
 <li><p><code>var oFrag=document.createDocumentFragment();</code>：创建文档碎片的语句</p></li>
 </ul>
 
-<h1 id="5-表格">5.表格</h1>
+<h2 id="5-表格">5.表格</h2>
 
-<h4 id="5-1">5.1</h4>
+<h4 id="5-1-表格的简便操作">5.1 表格的简便操作</h4>
+
+<ul>
+<li>tBodies(是个数组需要加[])、tHead、tFoot、rows、cells的使用</li>
+</ul>
 
 <pre><code class="language-html">&lt;head&gt;
     &lt;script&gt;
-        
+        window.onload=function(){
+            var oTab=document.getElementById(&quot;tab1&quot;);
+            
+            alert(oTab.getElementByTagName(&quot;tbody&quot;)[0].getElementByTagName(&quot;tr&quot;)[1].getElementByTagName[&quot;td&quot;][1].innerHTML);
+            //可以简便的写作
+            alert(oTab.tBodies[0].rows[1].cells[1].innerHTML);
+        };
     &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;table&gt;
-        &lt;thead border=&quot;1px&quot; width=&quot;500px&quot;&gt;
+    &lt;table id=&quot;tab1&quot; border=&quot;1px&quot; width=&quot;500px&quot;&gt;
+        &lt;thead&gt;
             &lt;td&gt;ID&lt;/td&gt;
             &lt;td&gt;姓名&lt;/td&gt;
             &lt;td&gt;年龄&lt;/td&gt;
@@ -359,9 +369,144 @@ var aBox=getByClass(oUl,&quot;box&quot;);
 &lt;/body&gt;
 </code></pre>
 
-<h1 id="6-表单">6.表单</h1>
+<h4 id="5-2-表格的添加与删除">5.2 表格的添加与删除</h4>
 
-<h4 id="6-1">6.1</h4>
+<ul>
+<li>注意点：tBodies不能忘！</li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;script&gt;
+        window.onload=function(){
+            var oTab=document.getElementById(&quot;tab1&quot;);
+            var oName=document.getElementById(&quot;name&quot;);
+            var oBtn=document.getElementById(&quot;btn1&quot;);
+            var oAge=document.getElementById(&quot;age&quot;);
+            var id=oTab.tbodies[0].rows.length;
+            
+            oBtn.onclick=function(){
+                var oTr=document.creatElement(&quot;tr&quot;);
+                
+                var oTd=document.creatElement(&quot;td&quot;);
+                oTd.innerHTML=id++;
+                oTr.appendChild(oTd);
+                
+                var oTd=document.creatElement(&quot;td&quot;);
+                oTd.innerHTML=oName.value;
+                oTr.appendChild(oTd);
+                
+                var oTd=document.creatElement(&quot;td&quot;);
+                oTd.innerHTML=oAge.value;
+                oTr.appendChild(oTd);
+                
+                var oTd=document.creatElement(&quot;td&quot;);
+                oTd.innerHTML='&lt;a href=&quot;javascript:;&quot;&gt;删除&lt;/a&gt;';
+                oTr.appendChild(oTd);
+                //*****tBodies一定不能忘！从tBodies里面添加
+                oTab.tBodies.appendChild(oTr);
+                
+                oTd.getElementByTagName(&quot;a&quot;).onclick=function(){
+                    oTab.tBodies.removeChild(this.parentNode.parentNode);  
+                };
+            };
+        };
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    姓名：&lt;input type=&quot;text&quot; id=&quot;name&quot;&gt;
+    年龄：&lt;input type=&quot;text&quot; id=&quot;age&quot;&gt;
+    &lt;input type=&quot;button&quot; id=&quot;btn1&quot; value=&quot;添加&quot;&gt;
+    &lt;table id=&quot;tab1&quot; border=&quot;1px&quot; width=&quot;500px&quot;&gt;
+        &lt;thead&gt;
+            &lt;td&gt;ID&lt;/td&gt;
+            &lt;td&gt;姓名&lt;/td&gt;
+            &lt;td&gt;年龄&lt;/td&gt;
+            &lt;td&gt;操作&lt;/td&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;1&lt;/td&gt;
+                &lt;td&gt;Red&lt;/td&gt;
+                &lt;td&gt;27&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;2&lt;/td&gt;
+                &lt;td&gt;Blue&lt;/td&gt;
+                &lt;td&gt;28&lt;/td&gt;
+                &lt;td&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+</code></pre>
+
+<p>#### 5.3 搜索</p>
+
+<ul>
+<li>search：找到并且返回字符串出现的位置，未找到则返回-1</li>
+<li>版本一：基础版本——字符串比较</li>
+<li>版本二：忽略大小写——toLowerCase的使用</li>
+<li>版本三：模糊搜索——search的使用</li>
+<li>版本四：多关键词——split的使用</li>
+</ul>
+
+<h4 id="5-4-排序">5.4 排序</h4>
+
+<ul>
+<li>appendChild：先把该元素从原父级删掉，再添加到新父级</li>
+<li>按数据结构的排序方法分别appendChild</li>
+</ul>
+
+<h2 id="6-表单">6.表单</h2>
+
+<ul>
+<li>form的action属性：提交到哪</li>
+<li>前端通过id对应，后端通过name对应</li>
+<li>表单事件：
+
+<ul>
+<li>onsubmit：提交时发生</li>
+<li>onreset：重置时发生</li>
+</ul></li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;script&gt;
+        window.onload=function(){
+            var oForm=document.getElementById(&quot;form1&quot;);
+            
+            //onsubmit的使用
+            oForm.onsubmit=function(){
+                alert(&quot;提交成功&quot;);
+            };
+            
+            oForm.onreset=function(){
+                alert(&quot;重置成功&quot;);
+            };
+        };
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form id=&quot;form1&quot; action=&quot;http://……&quot;&gt;
+        用户名：&lt;input type=&quot;text&quot; name=&quot;user&quot;&gt;&lt;br&gt;
+        密码：&lt;input type=&quot;password&quot; name=&quot;pass&quot;&gt;
+        &lt;input type=&quot;submit&quot;&gt;
+        &lt;input type=&quot;reset&quot;&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+
+<ul>
+<li>表单验证：
+
+<ul>
+<li>阻止用户输入非法字符——阻止事件</li>
+<li>输入时、失去焦点时验证——onkeyup、onblur</li>
+<li>提交时检查——onsubmit</li>
+<li>后台数据检查</li>
+</ul></li>
+</ul>
 
     </div>
 
@@ -406,6 +551,8 @@ var aBox=getByClass(oUl,&quot;box&quot;);
         
         <a href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%8C/" class="prev" rel="prev" title="javascript学习二——定时器"><i class="iconfont icon-left"></i>&nbsp;javascript学习二——定时器</a>
          
+        
+        <a href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E5%9B%9B/" class="next" rel="next" title="javascript学习四——运动基础">javascript学习四——运动基础&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 

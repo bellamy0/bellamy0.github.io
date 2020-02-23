@@ -5,11 +5,107 @@
     <description>Recent content in Bellamy on Bellamy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Feb 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>javascript学习二——DOM</title>
+      <title>javascript学习四——运动基础</title>
+      <link>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E5%9B%9B/</link>
+      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E5%9B%9B/</guid>
+      <description>
+
+&lt;h2 id=&#34;1-div的运动&#34;&gt;1.div的运动&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;运动中的bug解决：
+
+&lt;ul&gt;
+&lt;li&gt;不会停止——清除timer&lt;/li&gt;
+&lt;li&gt;速度取到某些值无法停止——用&amp;gt;=判断而非==&lt;/li&gt;
+&lt;li&gt;到达位置点击还会再运动：clearInterval是clear了下一次的——用if else&lt;/li&gt;
+&lt;li&gt;重复点击速度加快——在前面先清除所有Interval&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;style&amp;gt;
+        #div1{width:200; height:200px; background:red; position:absolute; top:50px; left:0px;}
+    &amp;lt;/style&amp;gt;
+    &amp;lt;script&amp;gt;
+        var timer=null;
+        function startMove(){
+            var oDiv=document.getElementById(&amp;quot;div1&amp;quot;);
+            //clearInterval是防止开启多个定时器
+            clearInterval(timer);
+            timer=setInterval(function(){
+                if(oDiv.offsetLeft&amp;gt;=300){
+                   clearInterval(timer);
+                }else{
+                    oDiv.style.left=oDiv.offsetLeft+10+&amp;quot;px&amp;quot;;
+                }
+            },30);
+        };
+    &amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;input id=&amp;quot;btn1&amp;quot; type=&amp;quot;button&amp;quot; value=&amp;quot;开始运动&amp;quot; onclick=&amp;quot;startMove()&amp;quot;&amp;gt;
+    &amp;lt;div id=&amp;quot;div1&amp;quot;&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;2-运动框架&#34;&gt;2.运动框架&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;开始运动时关闭已有定时器&lt;/li&gt;
+&lt;li&gt;把运动和停止隔开（if/else）&lt;/li&gt;
+&lt;li&gt;“分享到”实例：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;style&amp;gt;
+        #div1{width:150px; height:200px; background:green; position:absolute; left:-150;}
+        #div1 span{position:absolut; width:20px; height:60px;line-height:20px; background:blue; tight:-20px; top:70px;}
+    &amp;lt;/style&amp;gt;
+    &amp;lt;script&amp;gt;
+        window.onload=function(){
+            var oDiv=document.getElementById(&amp;quot;div1&amp;quot;);
+            
+            oDiv.onmouseover=function(){
+                startMove(10,0);
+            };
+            oDiv.onmouseout=function(){
+                startMove(-10,-150);
+            };
+            
+        };
+        var timer=null;
+        function startMove(speed,iTarget){
+            var oDiv=document.getElementById(&amp;quot;div1&amp;quot;);
+            clearInterval(timer);
+            timer=setInterval(function(){
+                if(oDiv.offsetLeft == iTarget){
+                    clearInterval(timer);
+                }else{
+                    oDiv.style.left=oDiv.offsetLeft+speed+&amp;quot;px&amp;quot;;
+                }
+            },30);
+        };
+    &amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div id=&amp;quot;div1&amp;quot;&amp;gt;
+        &amp;lt;span&amp;gt;分享到&amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>javascript学习三——DOM</title>
       <link>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%89/</link>
       <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
       
@@ -195,18 +291,28 @@ var aBox=getByClass(oUl,&amp;quot;box&amp;quot;);
 &lt;li&gt;&lt;p&gt;&lt;code&gt;var oFrag=document.createDocumentFragment();&lt;/code&gt;：创建文档碎片的语句&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;5-表格&#34;&gt;5.表格&lt;/h1&gt;
+&lt;h2 id=&#34;5-表格&#34;&gt;5.表格&lt;/h2&gt;
 
-&lt;h4 id=&#34;5-1&#34;&gt;5.1&lt;/h4&gt;
+&lt;h4 id=&#34;5-1-表格的简便操作&#34;&gt;5.1 表格的简便操作&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;tBodies(是个数组需要加[])、tHead、tFoot、rows、cells的使用&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
     &amp;lt;script&amp;gt;
-        
+        window.onload=function(){
+            var oTab=document.getElementById(&amp;quot;tab1&amp;quot;);
+            
+            alert(oTab.getElementByTagName(&amp;quot;tbody&amp;quot;)[0].getElementByTagName(&amp;quot;tr&amp;quot;)[1].getElementByTagName[&amp;quot;td&amp;quot;][1].innerHTML);
+            //可以简便的写作
+            alert(oTab.tBodies[0].rows[1].cells[1].innerHTML);
+        };
     &amp;lt;/script&amp;gt;
 &amp;lt;/head&amp;gt;
 &amp;lt;body&amp;gt;
-    &amp;lt;table&amp;gt;
-        &amp;lt;thead border=&amp;quot;1px&amp;quot; width=&amp;quot;500px&amp;quot;&amp;gt;
+    &amp;lt;table id=&amp;quot;tab1&amp;quot; border=&amp;quot;1px&amp;quot; width=&amp;quot;500px&amp;quot;&amp;gt;
+        &amp;lt;thead&amp;gt;
             &amp;lt;td&amp;gt;ID&amp;lt;/td&amp;gt;
             &amp;lt;td&amp;gt;姓名&amp;lt;/td&amp;gt;
             &amp;lt;td&amp;gt;年龄&amp;lt;/td&amp;gt;
@@ -227,9 +333,144 @@ var aBox=getByClass(oUl,&amp;quot;box&amp;quot;);
 &amp;lt;/body&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h1 id=&#34;6-表单&#34;&gt;6.表单&lt;/h1&gt;
+&lt;h4 id=&#34;5-2-表格的添加与删除&#34;&gt;5.2 表格的添加与删除&lt;/h4&gt;
 
-&lt;h4 id=&#34;6-1&#34;&gt;6.1&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;注意点：tBodies不能忘！&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;script&amp;gt;
+        window.onload=function(){
+            var oTab=document.getElementById(&amp;quot;tab1&amp;quot;);
+            var oName=document.getElementById(&amp;quot;name&amp;quot;);
+            var oBtn=document.getElementById(&amp;quot;btn1&amp;quot;);
+            var oAge=document.getElementById(&amp;quot;age&amp;quot;);
+            var id=oTab.tbodies[0].rows.length;
+            
+            oBtn.onclick=function(){
+                var oTr=document.creatElement(&amp;quot;tr&amp;quot;);
+                
+                var oTd=document.creatElement(&amp;quot;td&amp;quot;);
+                oTd.innerHTML=id++;
+                oTr.appendChild(oTd);
+                
+                var oTd=document.creatElement(&amp;quot;td&amp;quot;);
+                oTd.innerHTML=oName.value;
+                oTr.appendChild(oTd);
+                
+                var oTd=document.creatElement(&amp;quot;td&amp;quot;);
+                oTd.innerHTML=oAge.value;
+                oTr.appendChild(oTd);
+                
+                var oTd=document.creatElement(&amp;quot;td&amp;quot;);
+                oTd.innerHTML=&#39;&amp;lt;a href=&amp;quot;javascript:;&amp;quot;&amp;gt;删除&amp;lt;/a&amp;gt;&#39;;
+                oTr.appendChild(oTd);
+                //*****tBodies一定不能忘！从tBodies里面添加
+                oTab.tBodies.appendChild(oTr);
+                
+                oTd.getElementByTagName(&amp;quot;a&amp;quot;).onclick=function(){
+                    oTab.tBodies.removeChild(this.parentNode.parentNode);  
+                };
+            };
+        };
+    &amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    姓名：&amp;lt;input type=&amp;quot;text&amp;quot; id=&amp;quot;name&amp;quot;&amp;gt;
+    年龄：&amp;lt;input type=&amp;quot;text&amp;quot; id=&amp;quot;age&amp;quot;&amp;gt;
+    &amp;lt;input type=&amp;quot;button&amp;quot; id=&amp;quot;btn1&amp;quot; value=&amp;quot;添加&amp;quot;&amp;gt;
+    &amp;lt;table id=&amp;quot;tab1&amp;quot; border=&amp;quot;1px&amp;quot; width=&amp;quot;500px&amp;quot;&amp;gt;
+        &amp;lt;thead&amp;gt;
+            &amp;lt;td&amp;gt;ID&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;姓名&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;年龄&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;操作&amp;lt;/td&amp;gt;
+        &amp;lt;/thead&amp;gt;
+        &amp;lt;tbody&amp;gt;
+            &amp;lt;tr&amp;gt;
+                &amp;lt;td&amp;gt;1&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;Red&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;27&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
+            &amp;lt;/tr&amp;gt;
+            &amp;lt;tr&amp;gt;
+                &amp;lt;td&amp;gt;2&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;Blue&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;28&amp;lt;/td&amp;gt;
+                &amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
+            &amp;lt;/tr&amp;gt;
+        &amp;lt;/tbody&amp;gt;
+    &amp;lt;/table&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;#### 5.3 搜索&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;search：找到并且返回字符串出现的位置，未找到则返回-1&lt;/li&gt;
+&lt;li&gt;版本一：基础版本——字符串比较&lt;/li&gt;
+&lt;li&gt;版本二：忽略大小写——toLowerCase的使用&lt;/li&gt;
+&lt;li&gt;版本三：模糊搜索——search的使用&lt;/li&gt;
+&lt;li&gt;版本四：多关键词——split的使用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;5-4-排序&#34;&gt;5.4 排序&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;appendChild：先把该元素从原父级删掉，再添加到新父级&lt;/li&gt;
+&lt;li&gt;按数据结构的排序方法分别appendChild&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;6-表单&#34;&gt;6.表单&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;form的action属性：提交到哪&lt;/li&gt;
+&lt;li&gt;前端通过id对应，后端通过name对应&lt;/li&gt;
+&lt;li&gt;表单事件：
+
+&lt;ul&gt;
+&lt;li&gt;onsubmit：提交时发生&lt;/li&gt;
+&lt;li&gt;onreset：重置时发生&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+    &amp;lt;script&amp;gt;
+        window.onload=function(){
+            var oForm=document.getElementById(&amp;quot;form1&amp;quot;);
+            
+            //onsubmit的使用
+            oForm.onsubmit=function(){
+                alert(&amp;quot;提交成功&amp;quot;);
+            };
+            
+            oForm.onreset=function(){
+                alert(&amp;quot;重置成功&amp;quot;);
+            };
+        };
+    &amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;form id=&amp;quot;form1&amp;quot; action=&amp;quot;http://……&amp;quot;&amp;gt;
+        用户名：&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;user&amp;quot;&amp;gt;&amp;lt;br&amp;gt;
+        密码：&amp;lt;input type=&amp;quot;password&amp;quot; name=&amp;quot;pass&amp;quot;&amp;gt;
+        &amp;lt;input type=&amp;quot;submit&amp;quot;&amp;gt;
+        &amp;lt;input type=&amp;quot;reset&amp;quot;&amp;gt;
+    &amp;lt;/form&amp;gt;
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;表单验证：
+
+&lt;ul&gt;
+&lt;li&gt;阻止用户输入非法字符——阻止事件&lt;/li&gt;
+&lt;li&gt;输入时、失去焦点时验证——onkeyup、onblur&lt;/li&gt;
+&lt;li&gt;提交时检查——onsubmit&lt;/li&gt;
+&lt;li&gt;后台数据检查&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -534,6 +775,32 @@ var oHours=oDate.getHours();
     &amp;lt;/div&amp;gt;
 &amp;lt;/body&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OpenGL踩坑记录</title>
+      <link>https://bellamy0.gitHub.io/2020/opengl%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/opengl%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</guid>
+      <description>
+
+&lt;h2 id=&#34;一-opengl程序的初始设置&#34;&gt;一、OpenGL程序的初始设置&lt;/h2&gt;
+
+&lt;h4 id=&#34;1-1-更改项目windows-sdk版本&#34;&gt;1.1 更改项目Windows SDK版本&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在项目上右键——属性——配置属性——常规——Windows SDK版本——改为10.0.17763.0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;1-2-更改项目调试信息格式&#34;&gt;1.2 更改项目调试信息格式&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;接上条，配置属性——C/C++——常规——调试信息格式——改为无&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;二-opengl程序导入-h文件&#34;&gt;二、OpenGL程序导入.h文件&lt;/h2&gt;
 </description>
     </item>
     
@@ -2959,121 +3226,6 @@ body{ font-family: Arial; }
 &lt;li&gt;div（块）：划分区域的容器&lt;br /&gt;&lt;/li&gt;
 &lt;li&gt;span（内联）：修饰文字&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About page</title>
-      <link>https://bellamy0.gitHub.io/about/</link>
-      <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://bellamy0.gitHub.io/about/</guid>
-      <description>&lt;p&gt;一只学习中的程序媛&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hugo学习指南</title>
-      <link>https://bellamy0.gitHub.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</link>
-      <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://bellamy0.gitHub.io/2019/hugo%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</guid>
-      <description>
-
-&lt;h1 id=&#34;一-安装hugo&#34;&gt;一、安装hugo&lt;/h1&gt;
-
-&lt;h2 id=&#34;准备&#34;&gt;准备&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;文件操作&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;创建一个新文件夹，D:\Hugo&lt;/li&gt;
-&lt;li&gt;创建一个新文件夹，D:\Hugo\bin&lt;/li&gt;
-&lt;li&gt;创建一个新文件夹，D:\Hugo\Sites&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;下载hugo&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;在浏览器中打开 &lt;a href=&#34;https://github.com/spf13/hugo/releases。&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://github.com/spf13/hugo/releases。&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;当前的版本是 hugo_0.55.6_Windows-64bit.zip。&lt;/li&gt;
-&lt;li&gt;下载那个 ZIP 文件，并保存到 D:\Hugo\bin 文件夹中。&lt;/li&gt;
-&lt;li&gt;解压之后得到三个文件hugo.exe、LICENSE、README.md&lt;/li&gt;
-&lt;li&gt;确保 hugo.exe 文件在 D:\Hugo\bin 文件夹。（如果你没有在D:\Hugo\bin 请把它移动去）&lt;/li&gt;
-&lt;li&gt;把 hugo.exe 可执行文件添加到你的 PATH路径中。把hugo添加到path中的操作：&lt;br /&gt;
-我的电脑邮件右键属性，在高级里面，选择环境变量，在系统变量里面找到path。双击打开path编辑，新建路径输入D:\hugo\bin（作者这里是D:\hugo\bin，其他的自己改路径）&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;二-部署hugo&#34;&gt;二、部署hugo&lt;/h1&gt;
-
-&lt;ol&gt;
-&lt;li&gt;验证：打开cmd，用hugo help 验证，有提示输出则为安装成功&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;输入cmd命令&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;D:\Hugo\Sites&amp;gt; hugo new site 你的昵称.org&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;建网站&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;用cmd输入(bellamy0处改为你自己站点的名字):&lt;br /&gt;
-&lt;code&gt;D:\Hugo\Sites&amp;gt; hugo new site bellamy0.org&lt;/code&gt;&lt;br /&gt;
-这样就会在sites目录里面生成bellamy0.org的文件夹用来存放网站文件等。&lt;/li&gt;
-&lt;li&gt;创建about页面，输入：&lt;br /&gt;
-&lt;code&gt;hugo new post/first.md&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;创建第一篇文章，输入：&lt;br /&gt;
-&lt;code&gt;hugo new about.md&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;打开 post/first.md 编辑blog内容。&lt;br /&gt;
-发布时需要将draft：true改为draft：false&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;安装皮肤&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;在站点目录下生成themes文件夹，随后用cmd在站点下运行：&lt;br /&gt;
-&lt;code&gt;cd themes&lt;/code&gt;&lt;br /&gt;
-&lt;code&gt;git clone + 皮肤的github地址&lt;/code&gt;
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;皮肤下载地址：&lt;a href=&#34;https://www.gohugo.org/theme/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.gohugo.org/theme/&lt;/a&gt;&lt;br /&gt;
-  根据不同皮肤的提示安装。&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&#34;三-部署到github&#34;&gt;三、部署到github&lt;/h1&gt;
-
-&lt;p&gt;1.在GitHub上选择右上角 new repository，第一行待输入处输入:你的GitHub用户名.github.io，点击下方绿色生成。&lt;br /&gt;
-   2.点击最上方setting，下翻至大标题github pages，选择source中的master分支&lt;br /&gt;
-   3.将个人博客部署到远端，cmd在站点目录下输入命令&lt;br /&gt;
-   &lt;code&gt;hugo --theme=你的主题名 --baseUrl=&amp;quot;https://你的仓库名.github.io/&amp;quot; --buildDrafts&lt;/code&gt;&lt;br /&gt;
-    4.cmd中进入public文件夹，输入：&lt;br /&gt;
-   &lt;code&gt;git init&lt;/code&gt;&lt;br /&gt;
-   &lt;code&gt;git add .&lt;/code&gt;&lt;br /&gt;
-   &lt;code&gt;git commit -m &amp;quot;firstcommit&amp;quot;&lt;/code&gt;&lt;br /&gt;
-   &lt;code&gt;git remote add origin https://github.com/yourgithubname/仓库地址.git&lt;/code&gt;&lt;br /&gt;
-   &lt;code&gt;git push -u origin master&lt;/code&gt;&lt;br /&gt;
-   按要求输入用户名和密码，即成功&lt;/p&gt;
-
-&lt;p&gt;​&lt;/p&gt;
-
-&lt;h1 id=&#34;四-问题&#34;&gt;四、问题&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;中文乱码：修改编码方式为UTF-8&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;五-后续修改方式&#34;&gt;五、后续修改方式&lt;/h1&gt;
-
-&lt;ol&gt;
-&lt;li&gt;用cmd进入站点，执行：&lt;br /&gt;
-  &lt;code&gt;hugo&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;进入public执行：&lt;br /&gt;
-  &lt;code&gt;git add -A&lt;/code&gt;&lt;br /&gt;
-  &lt;code&gt;git commit -m &amp;quot;xxxx&amp;quot;&lt;/code&gt;&lt;br /&gt;
-  &lt;code&gt;git push -u origin master&lt;/code&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ol&gt;
 </description>
     </item>
     

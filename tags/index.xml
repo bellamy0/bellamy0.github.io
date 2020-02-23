@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Bellamy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 22 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bellamy0.gitHub.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>JavaScript</title>
       <link>https://bellamy0.gitHub.io/tags/javascript/</link>
-      <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bellamy0.gitHub.io/tags/javascript/</guid>
       <description></description>
@@ -23,9 +23,18 @@
     <item>
       <title>前端</title>
       <link>https://bellamy0.gitHub.io/tags/%E5%89%8D%E7%AB%AF/</link>
-      <pubDate>Fri, 21 Feb 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 22 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bellamy0.gitHub.io/tags/%E5%89%8D%E7%AB%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OpenGL</title>
+      <link>https://bellamy0.gitHub.io/tags/opengl/</link>
+      <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/tags/opengl/</guid>
       <description></description>
     </item>
     
