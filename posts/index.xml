@@ -6,10 +6,66 @@
     <description>Recent content in Posts on Bellamy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bellamy0.gitHub.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>javascript学习七——js面向对象基础</title>
+      <link>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%83/</link>
+      <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%83/</guid>
+      <description>20</description>
+    </item>
+    
+    <item>
+      <title>javascript学习六——Ajax</title>
+      <link>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E5%85%AD/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E5%85%AD/</guid>
+      <description>1.服务器配置  安装nodejs与python并进行配置 在文件存放目录下使用cmd，输入命令http-server启动服务器，此时可根据网址localhost:8080/index.html访问（端口号与页面名称自己更改） Ajax不能以本地路径执行，必须进行服务器配置  2.Ajax基础  ajax读取文件：ajax(url,成功时执行的函数，失败时执行的函数);  ajax(&amp;quot;aaa.txt&amp;quot;,funtion(str){//str作用，获取服务器返回的内容 alert(str); },funtion(){ alert(&amp;quot;失败&amp;quot;); });   字符集编码：需要读的文件跟所有文件必须统一编码，否则易乱码 eval：将某个东西解析为js可以分析的内容（？）—可以解析json
+ get请求：不填method默认为get
+ 通过网址传递
+ 被提交到网址后面，在url后加：username=xxx&amp;amp;password=xxx
+ 容量小（网址长度有限制）
+  post请求：
+ 不通过网址传递
+ 不提交倒网址后面，只能通过network查看到
+ 容量大
+   &amp;lt;head&amp;gt; &amp;lt;script&amp;gt; &amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;form action=&amp;quot;www...&amp;quot; method=&amp;quot;get&amp;quot;&amp;gt; //action为提交地址 用户名：&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;username&amp;quot;&amp;gt;&amp;lt;br&amp;gt; //name与id相像，id给前台看，name数据传递给后台 密码：&amp;lt;input type=&amp;quot;password&amp;quot; name=&amp;quot;password&amp;quot;&amp;gt;&amp;lt;br&amp;gt; &amp;lt;input type=&amp;quot;submit&amp;quot;&amp;gt; //submit用于提交表单 &amp;lt;/form&amp;gt; &amp;lt;/body&amp;gt;  3.Ajax中级  编写ajax 补：全局变量是window上一个属性window.a  a(存在形式变量)、window.a(存在形式属性)——未定义的变量会报错、未定义的属性只会undefined
+ 防止缓存：在文件名后加&amp;rdquo;a.txt?t=&amp;ldquo;+new Date().</description>
+    </item>
+    
+    <item>
+      <title>javascript学习五——事件基础</title>
+      <link>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%94/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%94/</guid>
+      <description>1.event事件和事件冒泡  document：代表整个页面  document.onclick=function(){};
+ body:需要撑起来才有内容
+ event.clientX/ev.clientX：获取鼠标的横坐标(两种有兼容性的问题)
+ event.clientY/ev.clientY：获取鼠标的纵坐标
+ ev事件处理函数有参数，是系统传的
+ 解决event/ev兼容性
+  某个var对象or整个document.onclick=funtion(ev){ var oEvent=ev||event; alert(oEvent.clientX+&amp;quot;,&amp;quot;+oEvent.clientY); };   事件冒泡——典型事件流：事件会一直顺着层级传，直到最外层document
+ 取消冒泡的应用：下拉菜单，点击外面时菜单消失
+  oEvent.cancelBubble=true;
+2.鼠标事件  onmousemove:鼠标移动时发生  某个var对象or整个document.onmousemove=function(ev){ var oEvent=ev||event; …… };   scrolltop：（？）  3.键盘事件  onkeydown：按键按下  某个var对象or整个document.onkeydown=funtion(ev){ var oEvent=ev||event; alert(oEvent.keyCode); };   onkeyup：按键抬起 eg：按键控制div移动 ctrlkey、shiftkey、altkey：判断ctrl/shift/alt是否被按下 eg：提交留言在输入框的对象中加onkeydown  if(oEvent.keyCode==13 &amp;amp;&amp;amp; oEvent.ctrlKey){ //判断是否是ctrl和回车 };  4.默认行为  当用户点右键弹出菜单时的事件：  某个var对象or整个document.</description>
+    </item>
+    
+    <item>
+      <title>win10的ubuntu踩坑记录</title>
+      <link>https://bellamy0.gitHub.io/2020/ubuntu%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/ubuntu%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</guid>
+      <description> 1.Linux需要root user操作时： 使用命令su 输入密码进入root
+2.Ubuntu下使用vim编写运行c，c++程序：  sudo su ：转换为超级用户 vim hello.c/hello.cpp、vi hello创建hello.c并打开vim 键入i或a，进入输入模式 编写程序 按ESC键退出输入模式 :wq输入该命令保存并退出 编译hello.c/hello.cpp：编译后均生成a.out文件  对于c程序：用gcc hello.c 便可以编译 对于c++程序：用g++ hello.cpp可编译  输入指令./a.out运行程序 在terminal上显示“hello world”即成功  </description>
+    </item>
     
     <item>
       <title>javascript学习四——运动基础</title>
@@ -50,7 +106,14 @@
       <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bellamy0.gitHub.io/2020/opengl%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</guid>
-      <description> 一、OpenGL程序的初始设置 1.1 更改项目Windows SDK版本  在项目上右键——属性——配置属性——常规——Windows SDK版本——改为10.0.17763.0  1.2 更改项目调试信息格式  接上条，配置属性——C/C++——常规——调试信息格式——改为无  二、OpenGL程序导入.h文件 </description>
+      <description>一、OpenGL程序的初始设置（vs） 1.1 更改项目Windows SDK版本  VS 2017提示无法打开包括文件:“Windows.h”:No such file or director的解决办法 首先看有没有安装windows sdk，如果没有安装，请打开visual Stdio Installer，然后选择修改，勾上最新版的windows SDK
+ 在项目上右键——属性——配置属性——常规——Windows SDK版本——改为10.0.17763.0（或刚刚安装的版本
+ 测试一下是否可以包含，如果还不行。在上面属性页的VC++目录-&amp;gt;包含目录中打开，查看um文件夹是否在里面，如果不在的话添加到包含目录。windows.h文件就在这个目录C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\um\windows.h
+  1.2 更改项目调试信息格式  又为 vs的“错误 D8016 “/ZI”和“/Gy-”命令行选项不兼容”问题解决办法
+ 接上条，配置属性——C/C++——常规——调试信息格式——改为无
+  二、OpenGL程序导入.h文件 将h文件和cpp文件放在不同的目录中，但是会报错，解决方法：
+1.找到.h文件目录。 2.将所以的.h文件剪切到“include”目录中。 3.这时编译会出错，提示“f:\c++实战\stdafx.cpp(5): fatal error C1083: 无法打开包括文件:“stdafx.h”: No such file or directory” 4.找到.h存放的目录，复制地址。 5.项目-&amp;gt;右击-&amp;gt;属性-&amp;gt;配置属性-&amp;gt;C/C++-&amp;gt;常规-&amp;gt;附加包含目录-&amp;gt;ADD-&amp;gt;“F:\C++实战\c++_training_camp\zhujq-a\DLL_DBEngine\include”或着“....\include”。 6.这时再编译就会出现成功的提示了。
+7.但是这个时候，你会发现，之前的.h文件双击进不去了。 8.选中.h文件-&amp;gt;右击-&amp;gt;移除。 9.项目-&amp;gt;右击-&amp;gt;添加-&amp;gt;现有项-&amp;gt;选中.h文件-&amp;gt;添加。 10.这时候双击，又可以看到.h文件内容了。</description>
     </item>
     
     <item>

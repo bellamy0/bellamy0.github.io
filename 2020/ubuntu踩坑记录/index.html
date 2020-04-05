@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Bellamy">
+  
+  
+  
+  <link rel="prev" href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E5%9B%9B/" />
+  <link rel="next" href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%94/" />
+  <link rel="canonical" href="https://bellamy0.gitHub.io/2020/ubuntu%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           win10的ubuntu踩坑记录 | Bellamy
+       
+  </title>
+  <meta name="title" content="win10的ubuntu踩坑记录 | Bellamy">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/bellamy0.gitHub.io"
+    },
+    "articleSection" : "posts",
+    "name" : "win10的ubuntu踩坑记录",
+    "headline" : "win10的ubuntu踩坑记录",
+    "description" : " 1.Linux需要root user操作时： 使用命令su 输入密码进入root\n2.Ubuntu下使用vim编写运行c，c\x2b\x2b程序：  sudo su ：转换为超级用户 vim hello.c\/hello.cpp、vi hello创建hello.c并打开vim 键入i或a，进入输入模式 编写程序 按ESC键退出输入模式 :wq输入该命令保存并退出 编译hello.c\/hello.cpp：编译后均生成a.out文件  对于c程序：用gcc hello.c 便可以编译 对于c\x2b\x2b程序：用g\x2b\x2b hello.cpp可编译  输入指令.\/a.out运行程序 在terminal上显示“hello world”即成功  ",
+    "inLanguage" : "en-us",
+    "author" : "Bellamy",
+    "creator" : "Bellamy",
+    "publisher": "Bellamy",
+    "accountablePerson" : "Bellamy",
+    "copyrightHolder" : "Bellamy",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-02-24 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2020-02-24 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/bellamy0.gitHub.io\/2020\/ubuntu%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95\/",
+    "wordCount" : "24",
+    "keywords" : [ "Ubuntu","Linux", "Bellamy"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">win10的ubuntu踩坑记录</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://bellamy0.gitHub.io" rel="author">Bellamy</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-02-24 itemprop="datePublished">February 24, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://bellamy0.gitHub.io/categories/linux/"> Linux </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h4 id="1-linux需要root-user操作时">1.Linux需要root user操作时：</h4>
+
+<p>使用命令<code>su</code> 输入密码进入root</p>
+
+<h4 id="2-ubuntu下使用vim编写运行c-c-程序">2.Ubuntu下使用vim编写运行c，c++程序：</h4>
+
+<ul>
+<li><code>sudo su</code> ：转换为超级用户</li>
+<li><code>vim hello.c/hello.cpp</code>、<code>vi hello</code>创建hello.c并打开vim</li>
+<li>键入i或a，进入输入模式</li>
+<li>编写程序</li>
+<li>按ESC键退出输入模式</li>
+<li><code>:wq</code>输入该命令保存并退出</li>
+<li>编译hello.c/hello.cpp：编译后均生成a.out文件
+
+<ul>
+<li>对于c程序：用<code>gcc hello.c</code> 便可以编译</li>
+<li>对于c++程序：用<code>g++ hello.cpp</code>可编译</li>
+</ul></li>
+<li>输入指令<code>./a.out</code>运行程序</li>
+<li>在terminal上显示“hello world”即成功</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Bellamy </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://bellamy0.gitHub.io/2020/ubuntu%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/>https://bellamy0.gitHub.io/2020/ubuntu%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/ubuntu/">
+                    #Ubuntu</a></span>
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/linux/">
+                    #Linux</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://bellamy0.gitHub.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E5%9B%9B/" class="prev" rel="prev" title="javascript学习四——运动基础"><i class="iconfont icon-left"></i>&nbsp;javascript学习四——运动基础</a>
+         
+        
+        <a href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%94/" class="next" rel="next" title="javascript学习五——事件基础">javascript学习五——事件基础&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://bellamy0.gitHub.io">Bellamy</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

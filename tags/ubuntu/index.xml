@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on Bellamy</title>
+    <link>https://bellamy0.gitHub.io/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on Bellamy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bellamy0.gitHub.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>win10的ubuntu踩坑记录</title>
+      <link>https://bellamy0.gitHub.io/2020/ubuntu%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/ubuntu%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</guid>
+      <description> 1.Linux需要root user操作时： 使用命令su 输入密码进入root
+2.Ubuntu下使用vim编写运行c，c++程序：  sudo su ：转换为超级用户 vim hello.c/hello.cpp、vi hello创建hello.c并打开vim 键入i或a，进入输入模式 编写程序 按ESC键退出输入模式 :wq输入该命令保存并退出 编译hello.c/hello.cpp：编译后均生成a.out文件  对于c程序：用gcc hello.c 便可以编译 对于c++程序：用g++ hello.cpp可编译  输入指令./a.out运行程序 在terminal上显示“hello world”即成功  </description>
+    </item>
+    
+  </channel>
+</rss>

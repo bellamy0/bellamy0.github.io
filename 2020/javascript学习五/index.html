@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Bellamy">
+  
+  
+  
+  <link rel="prev" href="https://bellamy0.gitHub.io/2020/ubuntu%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" />
+  <link rel="next" href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E5%85%AD/" />
+  <link rel="canonical" href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%94/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           javascript学习五——事件基础 | Bellamy
+       
+  </title>
+  <meta name="title" content="javascript学习五——事件基础 | Bellamy">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/bellamy0.gitHub.io"
+    },
+    "articleSection" : "posts",
+    "name" : "javascript学习五——事件基础",
+    "headline" : "javascript学习五——事件基础",
+    "description" : "1.event事件和事件冒泡  document：代表整个页面  document.onclick=function(){};\n body:需要撑起来才有内容\n event.clientX\/ev.clientX：获取鼠标的横坐标(两种有兼容性的问题)\n event.clientY\/ev.clientY：获取鼠标的纵坐标\n ev事件处理函数有参数，是系统传的\n 解决event\/ev兼容性\n  某个var对象or整个document.onclick=funtion(ev){ var oEvent=ev||event; alert(oEvent.clientX\x2b\x26quot;,\x26quot;\x2boEvent.clientY); };   事件冒泡——典型事件流：事件会一直顺着层级传，直到最外层document\n 取消冒泡的应用：下拉菜单，点击外面时菜单消失\n  oEvent.cancelBubble=true;\n2.鼠标事件  onmousemove:鼠标移动时发生  某个var对象or整个document.onmousemove=function(ev){ var oEvent=ev||event; …… };   scrolltop：（？）  3.键盘事件  onkeydown：按键按下  某个var对象or整个document.onkeydown=funtion(ev){ var oEvent=ev||event; alert(oEvent.keyCode); };   onkeyup：按键抬起 eg：按键控制div移动 ctrlkey、shiftkey、altkey：判断ctrl\/shift\/alt是否被按下 eg：提交留言在输入框的对象中加onkeydown  if(oEvent.keyCode==13 \x26amp;\x26amp; oEvent.ctrlKey){ \/\/判断是否是ctrl和回车 };  4.默认行为  当用户点右键弹出菜单时的事件：  某个var对象or整个document.",
+    "inLanguage" : "en-us",
+    "author" : "Bellamy",
+    "creator" : "Bellamy",
+    "publisher": "Bellamy",
+    "accountablePerson" : "Bellamy",
+    "copyrightHolder" : "Bellamy",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-03-16 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2020-03-16 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/bellamy0.gitHub.io\/2020\/javascript%E5%AD%A6%E4%B9%A0%E4%BA%94\/",
+    "wordCount" : "48",
+    "keywords" : [ "JavaScript","前端", "Bellamy"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">javascript学习五——事件基础</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://bellamy0.gitHub.io" rel="author">Bellamy</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-03-16 itemprop="datePublished">March 16, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://bellamy0.gitHub.io/categories/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"> 前端学习 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="1-event事件和事件冒泡">1.event事件和事件冒泡</h2>
+
+<ul>
+<li>document：代表整个页面</li>
+</ul>
+
+<p><code>document.onclick=function(){};</code></p>
+
+<ul>
+<li><p>body:需要撑起来才有内容</p></li>
+
+<li><p><code>event.clientX</code>/<code>ev.clientX</code>：获取鼠标的横坐标(两种有兼容性的问题)</p></li>
+
+<li><p><code>event.clientY</code>/<code>ev.clientY</code>：获取鼠标的纵坐标</p></li>
+
+<li><p>ev事件处理函数有参数，是系统传的</p></li>
+
+<li><p>解决event/ev兼容性</p></li>
+</ul>
+
+<pre><code class="language-js">  某个var对象or整个document.onclick=funtion(ev){
+      var oEvent=ev||event;
+    alert(oEvent.clientX+&quot;,&quot;+oEvent.clientY);
+  };
+</code></pre>
+
+<ul>
+<li><p>事件冒泡——典型事件流：事件会一直顺着层级传，直到最外层document</p></li>
+
+<li><p>取消冒泡的应用：下拉菜单，点击外面时菜单消失</p></li>
+</ul>
+
+<p><code>oEvent.cancelBubble=true;</code></p>
+
+<h2 id="2-鼠标事件">2.鼠标事件</h2>
+
+<ul>
+<li>onmousemove:鼠标移动时发生</li>
+</ul>
+
+<pre><code class="language-js">某个var对象or整个document.onmousemove=function(ev){
+    var oEvent=ev||event;
+    ……
+};
+</code></pre>
+
+<ul>
+<li>scrolltop：（？）</li>
+</ul>
+
+<h2 id="3-键盘事件">3.键盘事件</h2>
+
+<ul>
+<li>onkeydown：按键按下</li>
+</ul>
+
+<pre><code class="language-js">某个var对象or整个document.onkeydown=funtion(ev){
+    var oEvent=ev||event;
+    alert(oEvent.keyCode);
+};
+</code></pre>
+
+<ul>
+<li>onkeyup：按键抬起</li>
+<li>eg：按键控制div移动</li>
+<li>ctrlkey、shiftkey、altkey：判断ctrl/shift/alt是否被按下</li>
+<li>eg：提交留言在输入框的对象中加onkeydown</li>
+</ul>
+
+<pre><code class="language-js">if(oEvent.keyCode==13 &amp;&amp; oEvent.ctrlKey){
+    //判断是否是ctrl和回车
+};
+</code></pre>
+
+<h2 id="4-默认行为">4.默认行为</h2>
+
+<ul>
+<li>当用户点右键弹出菜单时的事件：</li>
+</ul>
+
+<pre><code class="language-js">某个var对象or整个document.oncontextmenu=funtion(){
+    //return false;阻止菜单弹出
+};
+</code></pre>
+
+<p>//事件中级5</p>
+
+<h2 id="5-拖拽">5.拖拽</h2>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Bellamy </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%94/>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%94/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/javascript/">
+                    #JavaScript</a></span>
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/%E5%89%8D%E7%AB%AF/">
+                    #前端</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://bellamy0.gitHub.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://bellamy0.gitHub.io/2020/ubuntu%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" class="prev" rel="prev" title="win10的ubuntu踩坑记录"><i class="iconfont icon-left"></i>&nbsp;win10的ubuntu踩坑记录</a>
+         
+        
+        <a href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E5%85%AD/" class="next" rel="next" title="javascript学习六——Ajax">javascript学习六——Ajax&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://bellamy0.gitHub.io">Bellamy</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

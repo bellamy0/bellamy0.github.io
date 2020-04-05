@@ -6,10 +6,56 @@
     <description>Recent content in 前端学习 on Bellamy</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://bellamy0.gitHub.io/categories/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>javascript学习七——js面向对象基础</title>
+      <link>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%83/</link>
+      <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%83/</guid>
+      <description>20</description>
+    </item>
+    
+    <item>
+      <title>javascript学习六——Ajax</title>
+      <link>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E5%85%AD/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E5%85%AD/</guid>
+      <description>1.服务器配置  安装nodejs与python并进行配置 在文件存放目录下使用cmd，输入命令http-server启动服务器，此时可根据网址localhost:8080/index.html访问（端口号与页面名称自己更改） Ajax不能以本地路径执行，必须进行服务器配置  2.Ajax基础  ajax读取文件：ajax(url,成功时执行的函数，失败时执行的函数);  ajax(&amp;quot;aaa.txt&amp;quot;,funtion(str){//str作用，获取服务器返回的内容 alert(str); },funtion(){ alert(&amp;quot;失败&amp;quot;); });   字符集编码：需要读的文件跟所有文件必须统一编码，否则易乱码 eval：将某个东西解析为js可以分析的内容（？）—可以解析json
+ get请求：不填method默认为get
+ 通过网址传递
+ 被提交到网址后面，在url后加：username=xxx&amp;amp;password=xxx
+ 容量小（网址长度有限制）
+  post请求：
+ 不通过网址传递
+ 不提交倒网址后面，只能通过network查看到
+ 容量大
+   &amp;lt;head&amp;gt; &amp;lt;script&amp;gt; &amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;form action=&amp;quot;www...&amp;quot; method=&amp;quot;get&amp;quot;&amp;gt; //action为提交地址 用户名：&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;username&amp;quot;&amp;gt;&amp;lt;br&amp;gt; //name与id相像，id给前台看，name数据传递给后台 密码：&amp;lt;input type=&amp;quot;password&amp;quot; name=&amp;quot;password&amp;quot;&amp;gt;&amp;lt;br&amp;gt; &amp;lt;input type=&amp;quot;submit&amp;quot;&amp;gt; //submit用于提交表单 &amp;lt;/form&amp;gt; &amp;lt;/body&amp;gt;  3.Ajax中级  编写ajax 补：全局变量是window上一个属性window.a  a(存在形式变量)、window.a(存在形式属性)——未定义的变量会报错、未定义的属性只会undefined
+ 防止缓存：在文件名后加&amp;rdquo;a.txt?t=&amp;ldquo;+new Date().</description>
+    </item>
+    
+    <item>
+      <title>javascript学习五——事件基础</title>
+      <link>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%94/</link>
+      <pubDate>Mon, 16 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%94/</guid>
+      <description>1.event事件和事件冒泡  document：代表整个页面  document.onclick=function(){};
+ body:需要撑起来才有内容
+ event.clientX/ev.clientX：获取鼠标的横坐标(两种有兼容性的问题)
+ event.clientY/ev.clientY：获取鼠标的纵坐标
+ ev事件处理函数有参数，是系统传的
+ 解决event/ev兼容性
+  某个var对象or整个document.onclick=funtion(ev){ var oEvent=ev||event; alert(oEvent.clientX+&amp;quot;,&amp;quot;+oEvent.clientY); };   事件冒泡——典型事件流：事件会一直顺着层级传，直到最外层document
+ 取消冒泡的应用：下拉菜单，点击外面时菜单消失
+  oEvent.cancelBubble=true;
+2.鼠标事件  onmousemove:鼠标移动时发生  某个var对象or整个document.onmousemove=function(ev){ var oEvent=ev||event; …… };   scrolltop：（？）  3.键盘事件  onkeydown：按键按下  某个var对象or整个document.onkeydown=funtion(ev){ var oEvent=ev||event; alert(oEvent.keyCode); };   onkeyup：按键抬起 eg：按键控制div移动 ctrlkey、shiftkey、altkey：判断ctrl/shift/alt是否被按下 eg：提交留言在输入框的对象中加onkeydown  if(oEvent.keyCode==13 &amp;amp;&amp;amp; oEvent.ctrlKey){ //判断是否是ctrl和回车 };  4.默认行为  当用户点右键弹出菜单时的事件：  某个var对象or整个document.</description>
+    </item>
     
     <item>
       <title>javascript学习四——运动基础</title>

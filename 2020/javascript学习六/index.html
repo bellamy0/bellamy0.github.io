@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Bellamy">
+  
+  
+  
+  <link rel="prev" href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%94/" />
+  <link rel="next" href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%83/" />
+  <link rel="canonical" href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E5%85%AD/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           javascript学习六——Ajax | Bellamy
+       
+  </title>
+  <meta name="title" content="javascript学习六——Ajax | Bellamy">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/bellamy0.gitHub.io"
+    },
+    "articleSection" : "posts",
+    "name" : "javascript学习六——Ajax",
+    "headline" : "javascript学习六——Ajax",
+    "description" : "1.服务器配置  安装nodejs与python并进行配置 在文件存放目录下使用cmd，输入命令http-server启动服务器，此时可根据网址localhost:8080\/index.html访问（端口号与页面名称自己更改） Ajax不能以本地路径执行，必须进行服务器配置  2.Ajax基础  ajax读取文件：ajax(url,成功时执行的函数，失败时执行的函数);  ajax(\x26quot;aaa.txt\x26quot;,funtion(str){\/\/str作用，获取服务器返回的内容 alert(str); },funtion(){ alert(\x26quot;失败\x26quot;); });   字符集编码：需要读的文件跟所有文件必须统一编码，否则易乱码 eval：将某个东西解析为js可以分析的内容（？）—可以解析json\n get请求：不填method默认为get\n 通过网址传递\n 被提交到网址后面，在url后加：username=xxx\x26amp;password=xxx\n 容量小（网址长度有限制）\n  post请求：\n 不通过网址传递\n 不提交倒网址后面，只能通过network查看到\n 容量大\n   \x26lt;head\x26gt; \x26lt;script\x26gt; \x26lt;\/script\x26gt; \x26lt;\/head\x26gt; \x26lt;body\x26gt; \x26lt;form action=\x26quot;www...\x26quot; method=\x26quot;get\x26quot;\x26gt; \/\/action为提交地址 用户名：\x26lt;input type=\x26quot;text\x26quot; name=\x26quot;username\x26quot;\x26gt;\x26lt;br\x26gt; \/\/name与id相像，id给前台看，name数据传递给后台 密码：\x26lt;input type=\x26quot;password\x26quot; name=\x26quot;password\x26quot;\x26gt;\x26lt;br\x26gt; \x26lt;input type=\x26quot;submit\x26quot;\x26gt; \/\/submit用于提交表单 \x26lt;\/form\x26gt; \x26lt;\/body\x26gt;  3.Ajax中级  编写ajax 补：全局变量是window上一个属性window.a  a(存在形式变量)、window.a(存在形式属性)——未定义的变量会报错、未定义的属性只会undefined\n 防止缓存：在文件名后加\x26rdquo;a.txt?t=\x26ldquo;\x2bnew Date().",
+    "inLanguage" : "en-us",
+    "author" : "Bellamy",
+    "creator" : "Bellamy",
+    "publisher": "Bellamy",
+    "accountablePerson" : "Bellamy",
+    "copyrightHolder" : "Bellamy",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-03-19 00:00:00 \x2b0000 UTC",
+    "dateModified" : "2020-03-19 00:00:00 \x2b0000 UTC",
+    "url" : "https:\/\/bellamy0.gitHub.io\/2020\/javascript%E5%AD%A6%E4%B9%A0%E5%85%AD\/",
+    "wordCount" : "127",
+    "keywords" : [ "JavaScript","前端", "Bellamy"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://bellamy0.gitHub.io">Bellamy</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">javascript学习六——Ajax</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://bellamy0.gitHub.io" rel="author">Bellamy</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2020-03-19 itemprop="datePublished">March 19, 2020</time>
+                </span>
+                in
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        <a href="https://bellamy0.gitHub.io/categories/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0/"> 前端学习 </a>
+                        
+                </span>
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          
+
+<h2 id="1-服务器配置">1.服务器配置</h2>
+
+<ul>
+<li>安装nodejs与python并进行配置</li>
+<li>在文件存放目录下使用cmd，输入命令<code>http-server</code>启动服务器，此时可根据网址localhost:8080/index.html访问（端口号与页面名称自己更改）</li>
+<li>Ajax不能以本地路径执行，必须进行服务器配置</li>
+</ul>
+
+<h2 id="2-ajax基础">2.Ajax基础</h2>
+
+<ul>
+<li>ajax读取文件：<code>ajax(url,成功时执行的函数，失败时执行的函数);</code></li>
+</ul>
+
+<pre><code class="language-js">ajax(&quot;aaa.txt&quot;,funtion(str){//str作用，获取服务器返回的内容
+     alert(str);
+     },funtion(){
+         alert(&quot;失败&quot;);
+     });
+</code></pre>
+
+<ul>
+<li>字符集编码：需要读的文件跟所有文件必须统一编码，否则易乱码</li>
+
+<li><p>eval：将某个东西解析为js可以分析的内容（？）—可以解析json</p></li>
+
+<li><p>get请求：不填method默认为get</p>
+
+<ul>
+<li><p>通过网址传递</p></li>
+
+<li><p>被提交到网址后面，在url后加：username=xxx&amp;password=xxx</p></li>
+
+<li><p>容量小（网址长度有限制）</p></li>
+</ul></li>
+
+<li><p>post请求：</p>
+
+<ul>
+<li><p>不通过网址传递</p></li>
+
+<li><p>不提交倒网址后面，只能通过network查看到</p></li>
+
+<li><p>容量大</p></li>
+</ul></li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;script&gt;
+        
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form action=&quot;www...&quot; method=&quot;get&quot;&gt; //action为提交地址
+        用户名：&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;&lt;br&gt;
+        //name与id相像，id给前台看，name数据传递给后台
+        密码：&lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;&lt;br&gt;
+        &lt;input type=&quot;submit&quot;&gt;   //submit用于提交表单
+    &lt;/form&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h2 id="3-ajax中级">3.Ajax中级</h2>
+
+<ul>
+<li>编写ajax</li>
+<li>补：全局变量是window上一个属性<code>window.a</code></li>
+</ul>
+
+<p><code>a</code>(存在形式变量)、<code>window.a</code>(存在形式属性)——未定义的变量会报错、未定义的属性只会undefined</p>
+
+<ul>
+<li>防止缓存：在文件名后加&rdquo;a.txt?t=&ldquo;+new Date().getTime()</li>
+</ul>
+
+<pre><code class="language-html">&lt;head&gt;
+    &lt;script&gt;
+        window.onload=function(){
+            var oBtn=document.getElementById(&quot;obtn1&quot;);
+            oBtn.onclick=function(){
+                //1.创建Ajax对象
+                if(window.XMLHttpRequest()){
+                    //非ie6
+                    var oAjax=new XMLHttpRequest();
+                }else{
+                    //ie6
+                    var oAjax=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+                }
+                
+                //2.连接服务器
+                //open(方法get/post，文件名,异步传输)
+                //同步——事情一件一件来、异步——事情一起做
+                oAjax.open(&quot;get&quot;,&quot;a.txt?t=&quot;+new Date().getTime(),true);
+                
+                //3.发送请求
+                oAjax.send();
+                
+                //4。接受请求
+                oAjax.onreadystatechange=function(){
+                    //检查运行到哪一步了，是否完全完成,完全完成则可以调用数据
+                    if(oAjax.readyState==4){
+                        if(oAjax.status==200){
+                            alert(&quot;成功:&quot;+oAjax.responseText);
+                        }else{
+                            alert(&quot;失败&quot;);
+                        }
+                    }
+                };
+            };
+        };
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type=&quot;button&quot; id=&quot;obtn1&quot; value=&quot;读取&quot;&gt;
+&lt;/body&gt;
+</code></pre>
+
+<p>ajax文件：</p>
+
+<pre><code class="language-js">function ajax(url,fnSucc,fnFailed){
+    //1.创建Ajax对象
+    if(window.XMLHttpRequest()){
+        //非ie6
+        var oAjax=new XMLHttpRequest();
+    }else{
+        //ie6
+        var oAjax=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+    }
+                
+    //2.连接服务器
+    //open(方法get/post，文件名,异步传输)
+    //同步——事情一件一件来、异步——事情一起做
+    oAjax.open(&quot;get&quot;,&quot;a.txt?t=&quot;+new Date().getTime(),true);
+                
+    //3.发送请求
+    oAjax.send();
+                
+    //4。接受请求
+    oAjax.onreadystatechange=function(){
+    //检查运行到哪一步了，是否完全完成,完全完成则可以调用数据
+    if(oAjax.readyState==4){
+        if(oAjax.status==200){
+            fnSucc(oAjax.responseText);
+        }else{
+            fnFailed(oAjax.status);
+        }
+    }
+}
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Bellamy </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E5%85%AD/>https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E5%85%AD/</span>
+            </p>
+            
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s): 
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/javascript/">
+                    #JavaScript</a></span>
+            
+            <span class="tag"><a href="https://bellamy0.gitHub.io/tags/%E5%89%8D%E7%AB%AF/">
+                    #前端</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://bellamy0.gitHub.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%BA%94/" class="prev" rel="prev" title="javascript学习五——事件基础"><i class="iconfont icon-left"></i>&nbsp;javascript学习五——事件基础</a>
+         
+        
+        <a href="https://bellamy0.gitHub.io/2020/javascript%E5%AD%A6%E4%B9%A0%E4%B8%83/" class="next" rel="next" title="javascript学习七——js面向对象基础">javascript学习七——js面向对象基础&nbsp;<i class="iconfont icon-right"></i></a>
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2019 - 2020</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://bellamy0.gitHub.io">Bellamy</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>
