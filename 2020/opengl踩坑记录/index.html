@@ -22,10 +22,10 @@
   <title>
        
        
-           OpenGL踩坑记录 | Bellamy
+           OpenGL踩坑记录（vs2017） | Bellamy
        
   </title>
-  <meta name="title" content="OpenGL踩坑记录 | Bellamy">
+  <meta name="title" content="OpenGL踩坑记录（vs2017） | Bellamy">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -44,9 +44,9 @@
          "@id": "https:\/\/bellamy0.gitHub.io"
     },
     "articleSection" : "posts",
-    "name" : "OpenGL踩坑记录",
-    "headline" : "OpenGL踩坑记录",
-    "description" : "一、OpenGL程序的初始设置（vs） 1.1 更改项目Windows SDK版本  VS 2017提示无法打开包括文件:“Windows.h”:No such file or director的解决办法 首先看有没有安装windows sdk，如果没有安装，请打开visual Stdio Installer，然后选择修改，勾上最新版的windows SDK\n 在项目上右键——属性——配置属性——常规——Windows SDK版本——改为10.0.17763.0（或刚刚安装的版本\n 测试一下是否可以包含，如果还不行。在上面属性页的VC\x2b\x2b目录-\x26gt;包含目录中打开，查看um文件夹是否在里面，如果不在的话添加到包含目录。windows.h文件就在这个目录C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.17763.0\\um\\windows.h\n  1.2 更改项目调试信息格式  又为 vs的“错误 D8016 “\/ZI”和“\/Gy-”命令行选项不兼容”问题解决办法\n 接上条，配置属性——C\/C\x2b\x2b——常规——调试信息格式——改为无\n  二、OpenGL程序导入.h文件 将h文件和cpp文件放在不同的目录中，但是会报错，解决方法：\n1.找到.h文件目录。 2.将所以的.h文件剪切到“include”目录中。 3.这时编译会出错，提示“f:\\c\x2b\x2b实战\\stdafx.cpp(5): fatal error C1083: 无法打开包括文件:“stdafx.h”: No such file or directory” 4.找到.h存放的目录，复制地址。 5.项目-\x26gt;右击-\x26gt;属性-\x26gt;配置属性-\x26gt;C\/C\x2b\x2b-\x26gt;常规-\x26gt;附加包含目录-\x26gt;ADD-\x26gt;“F:\\C\x2b\x2b实战\\c\x2b\x2b_training_camp\\zhujq-a\\DLL_DBEngine\\include”或着“....\\include”。 6.这时再编译就会出现成功的提示了。\n7.但是这个时候，你会发现，之前的.h文件双击进不去了。 8.选中.h文件-\x26gt;右击-\x26gt;移除。 9.项目-\x26gt;右击-\x26gt;添加-\x26gt;现有项-\x26gt;选中.h文件-\x26gt;添加。 10.这时候双击，又可以看到.h文件内容了。",
+    "name" : "OpenGL踩坑记录（vs2017）",
+    "headline" : "OpenGL踩坑记录（vs2017）",
+    "description" : "一、opengl的环境配置  引用自：https:\/\/www.cnblogs.com\/flylinmu\/p\/7823019.html\n 新建opengl项目：\n 空项目-\x26gt;项目-\x26gt;管理NuGet程序包-\x26gt;浏览-\x26gt;搜索nupengl-\x26gt;两个都安装\n 作用：用别人的项目时会提示“找不到xxx.h\/xxx.lib”或“x86与x64冲突”或者各种link错误，是由于工程中使用了第三方库，二又不能找到。这时在C\/C\x2b\x2b →常规-\x26gt;附加包含目录添加各种头文件路径，链接器 → 常规 → 附加库目录 添加各种lib的路径，然后还需要在链接器 → 输入 → 附加依赖项填写工程中使用的lib名称。\n  而NuGet则是帮助你管理Package的。\n 不用第三方库时新建opengl项目：\n visual C\x2b\x2b -\x26gt; windows桌面 -\x26gt;windows桌面向导-\x26gt;确定-\x26gt;windows应用程序-\x26gt;空文件勾选，去掉预编译标头与SDL检查 选了控制台应用程序可能会造成链接失败（exe找不到文件）   二 、OpenGL程序的初始设置（vs） 1.1 更改项目Windows SDK版本  VS 2017提示无法打开包括文件:“Windows.h”:No such file or director的解决办法 首先看有没有安装windows sdk，如果没有安装，请打开visual Stdio Installer，然后选择修改，勾上最新版的windows SDK\n 在项目上右键——属性——配置属性——常规——Windows SDK版本——改为10.0.17763.0（或刚刚安装的版本\n 测试一下是否可以包含，如果还不行。在上面属性页的VC\x2b\x2b目录-\x26gt;包含目录中打开，查看um文件夹是否在里面，如果不在的话添加到包含目录。windows.h文件就在这个目录C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.17763.0\\um\\windows.h\n  1.2 更改项目调试信息格式  又为 vs的“错误 D8016 “\/ZI”和“\/Gy-”命令行选项不兼容”问题解决办法\n 接上条，配置属性——C\/C\x2b\x2b——常规——调试信息格式——改为无",
     "inLanguage" : "en-us",
     "author" : "Bellamy",
     "creator" : "Bellamy",
@@ -57,7 +57,7 @@
     "datePublished": "2020-02-18 00:00:00 \x2b0000 UTC",
     "dateModified" : "2020-02-18 00:00:00 \x2b0000 UTC",
     "url" : "https:\/\/bellamy0.gitHub.io\/2020\/opengl%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95\/",
-    "wordCount" : "49",
+    "wordCount" : "80",
     "keywords" : [ "OpenGL","前端", "Bellamy"]
 }
 </script>
@@ -116,7 +116,7 @@
       		
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">OpenGL踩坑记录</h1>
+        <h1 class="post-title" itemprop="name headline">OpenGL踩坑记录（vs2017）</h1>
         <div class="post-meta">
                 Written by <a itemprop="name" href="https://bellamy0.gitHub.io" rel="author">Bellamy</a> with ♥ 
                 <span class="post-time">
@@ -148,7 +148,30 @@
 
           
 
-<h2 id="一-opengl程序的初始设置-vs">一、OpenGL程序的初始设置（vs）</h2>
+<h2 id="一-opengl的环境配置">一、opengl的环境配置</h2>
+
+<ul>
+<li><p>引用自：<a href="https://www.cnblogs.com/flylinmu/p/7823019.html" rel="nofollow noreferrer" target="_blank">https://www.cnblogs.com/flylinmu/p/7823019.html</a></p></li>
+
+<li><p>新建opengl项目：</p>
+
+<ul>
+<li><p>空项目-&gt;项目-&gt;管理NuGet程序包-&gt;浏览-&gt;搜索nupengl-&gt;两个都安装</p></li>
+
+<li><p>作用：用别人的项目时会提示“找不到xxx.h/xxx.lib”或“x86与x64冲突”或者各种link错误，是由于工程中使用了第三方库，二又不能找到。这时在C/C++ →常规-&gt;附加包含目录添加各种头文件路径，链接器 → 常规 → 附加库目录 添加各种lib的路径，然后还需要在链接器 → 输入 → 附加依赖项填写工程中使用的lib名称。</p></li>
+</ul>
+
+<p>而NuGet则是帮助你管理Package的。</p></li>
+
+<li><p>不用第三方库时新建opengl项目：</p>
+
+<ul>
+<li>visual C++ -&gt; windows桌面 -&gt;windows桌面向导-&gt;确定-&gt;windows应用程序-&gt;空文件勾选，去掉预编译标头与SDL检查</li>
+<li>选了控制台应用程序可能会造成链接失败（exe找不到文件）</li>
+</ul></li>
+</ul>
+
+<h2 id="二-opengl程序的初始设置-vs">二 、OpenGL程序的初始设置（vs）</h2>
 
 <h4 id="1-1-更改项目windows-sdk版本">1.1 更改项目Windows SDK版本</h4>
 
@@ -170,7 +193,7 @@
 <li><p>接上条，配置属性——C/C++——常规——调试信息格式——改为无</p></li>
 </ul>
 
-<h2 id="二-opengl程序导入-h文件">二、OpenGL程序导入.h文件</h2>
+<h2 id="三-opengl程序导入-h文件">三、OpenGL程序导入.h文件</h2>
 
 <p><strong>将h文件和cpp文件放在不同的目录中，但是会报错，解决方法：</strong></p>
 
@@ -185,6 +208,19 @@
 8.选中.h文件-&gt;右击-&gt;移除。
 9.项目-&gt;右击-&gt;添加-&gt;现有项-&gt;选中.h文件-&gt;添加。
 10.这时候双击，又可以看到.h文件内容了。</p>
+
+<h3 id="四-opengl程序导入-lib与-h文件">四、opengl程序导入.lib与.h文件</h3>
+
+<p>A、添加工程的头文件目录：工程&mdash;属性&mdash;配置属性&mdash;c/c++&mdash;常规&mdash;附加包含目录：加上头文件存放目录。</p>
+
+<p>B、添加文件引用的lib静态库路径：工程&mdash;属性&mdash;配置属性&mdash;链接器&mdash;常规&mdash;附加库目录：加上lib文件存放目录。
+C  然后添加工程引用的lib文件名：工程&mdash;属性&mdash;配置属性&mdash;链接器&mdash;输入&mdash;附加依赖项：加上lib文件名</p>
+
+<h2 id="五-opengl注意点">五、OpenGL注意点</h2>
+
+<ul>
+<li>在include时要让c++标准库放在glut图形库前</li>
+</ul>
 
     </div>
 

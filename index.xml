@@ -1094,14 +1094,37 @@ var oHours=oDate.getHours();
     </item>
     
     <item>
-      <title>OpenGL踩坑记录</title>
+      <title>OpenGL踩坑记录（vs2017）</title>
       <link>https://bellamy0.gitHub.io/2020/opengl%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</link>
       <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://bellamy0.gitHub.io/2020/opengl%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</guid>
       <description>
 
-&lt;h2 id=&#34;一-opengl程序的初始设置-vs&#34;&gt;一、OpenGL程序的初始设置（vs）&lt;/h2&gt;
+&lt;h2 id=&#34;一-opengl的环境配置&#34;&gt;一、opengl的环境配置&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;引用自：&lt;a href=&#34;https://www.cnblogs.com/flylinmu/p/7823019.html&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://www.cnblogs.com/flylinmu/p/7823019.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;新建opengl项目：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;空项目-&amp;gt;项目-&amp;gt;管理NuGet程序包-&amp;gt;浏览-&amp;gt;搜索nupengl-&amp;gt;两个都安装&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;作用：用别人的项目时会提示“找不到xxx.h/xxx.lib”或“x86与x64冲突”或者各种link错误，是由于工程中使用了第三方库，二又不能找到。这时在C/C++ →常规-&amp;gt;附加包含目录添加各种头文件路径，链接器 → 常规 → 附加库目录 添加各种lib的路径，然后还需要在链接器 → 输入 → 附加依赖项填写工程中使用的lib名称。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;而NuGet则是帮助你管理Package的。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;不用第三方库时新建opengl项目：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;visual C++ -&amp;gt; windows桌面 -&amp;gt;windows桌面向导-&amp;gt;确定-&amp;gt;windows应用程序-&amp;gt;空文件勾选，去掉预编译标头与SDL检查&lt;/li&gt;
+&lt;li&gt;选了控制台应用程序可能会造成链接失败（exe找不到文件）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;二-opengl程序的初始设置-vs&#34;&gt;二 、OpenGL程序的初始设置（vs）&lt;/h2&gt;
 
 &lt;h4 id=&#34;1-1-更改项目windows-sdk版本&#34;&gt;1.1 更改项目Windows SDK版本&lt;/h4&gt;
 
@@ -1123,7 +1146,7 @@ var oHours=oDate.getHours();
 &lt;li&gt;&lt;p&gt;接上条，配置属性——C/C++——常规——调试信息格式——改为无&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;二-opengl程序导入-h文件&#34;&gt;二、OpenGL程序导入.h文件&lt;/h2&gt;
+&lt;h2 id=&#34;三-opengl程序导入-h文件&#34;&gt;三、OpenGL程序导入.h文件&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;将h文件和cpp文件放在不同的目录中，但是会报错，解决方法：&lt;/strong&gt;&lt;/p&gt;
 
@@ -1138,6 +1161,19 @@ var oHours=oDate.getHours();
 8.选中.h文件-&amp;gt;右击-&amp;gt;移除。
 9.项目-&amp;gt;右击-&amp;gt;添加-&amp;gt;现有项-&amp;gt;选中.h文件-&amp;gt;添加。
 10.这时候双击，又可以看到.h文件内容了。&lt;/p&gt;
+
+&lt;h3 id=&#34;四-opengl程序导入-lib与-h文件&#34;&gt;四、opengl程序导入.lib与.h文件&lt;/h3&gt;
+
+&lt;p&gt;A、添加工程的头文件目录：工程&amp;mdash;属性&amp;mdash;配置属性&amp;mdash;c/c++&amp;mdash;常规&amp;mdash;附加包含目录：加上头文件存放目录。&lt;/p&gt;
+
+&lt;p&gt;B、添加文件引用的lib静态库路径：工程&amp;mdash;属性&amp;mdash;配置属性&amp;mdash;链接器&amp;mdash;常规&amp;mdash;附加库目录：加上lib文件存放目录。
+C  然后添加工程引用的lib文件名：工程&amp;mdash;属性&amp;mdash;配置属性&amp;mdash;链接器&amp;mdash;输入&amp;mdash;附加依赖项：加上lib文件名&lt;/p&gt;
+
+&lt;h2 id=&#34;五-opengl注意点&#34;&gt;五、OpenGL注意点&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;在include时要让c++标准库放在glut图形库前&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
